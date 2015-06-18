@@ -1,0 +1,2222 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F4AF9BF91955B1649904C7 /* Pods-Grocery Store ClientUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E49EDF7EA2AD6A0B7F5333C /* Pods-Grocery Store ClientUITests-dummy.m */; };
+		04007CD49113C4234D4B3796 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A17BC6211AB729EC17F5FAB /* UIWebView+AFNetworking.m */; };
+		04CEA1983B9DDFF8ED9310B1 /* VOKCoreDataManagerInternalMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0E13B7C2615D557811EF3A /* VOKCoreDataManagerInternalMacros.h */; };
+		0592DA54D495F2D1A6AED00F /* KIFTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D5434529DCCE9658B21190 /* KIFTestCase.h */; };
+		07A344E6120D6218BBD3A9B0 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD631E99C3089150E7EFEB61 /* AFNetworkReachabilityManager.m */; };
+		08080234A506D4C8AEFA968D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F7FB69E1129D32321FA040 /* CoreData.framework */; };
+		08DF4D8D780C415C3000F5E7 /* HTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D4750C1CB3353DD532680E /* HTTPStatusCodes.h */; };
+		09D484853B1C74BB92FB31B2 /* KIFUITestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 306D01AA29899ACE2E418A77 /* KIFUITestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		0AD4ABFA38C621A58377F80C /* VOKFetchedResultsDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6EF9F3131F2CE52C2FBCD3 /* VOKFetchedResultsDataSource.h */; };
+		0AE97E7640716DFAFD237D28 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0D6AF2EDF0C8B8AF2D9F5A /* UIAlertView+AFNetworking.m */; };
+		0CD6136D229D46C12A2FC84D /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = FADC9FA29CB271AAFC606D53 /* AFURLResponseSerialization.h */; };
+		0CE6031103A2E754BC203AA9 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63068D9AEC48F556384B634F /* AFSecurityPolicy.m */; };
+		0DEA4996AD988C282665B337 /* VOKCollectionDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 985C280868B7084CC45DC7D1 /* VOKCollectionDataSource.h */; };
+		0F77866A6938536482073F52 /* KIFUITestActor-ConditionalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE46343D0E5B23D6BD08438 /* KIFUITestActor-ConditionalTests.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		0FA9947DB75F8CAD3376B3E2 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A90A85CE5AE16732D159D0B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m */; };
+		1411B9E224271CC432E6D0B5 /* KIFSystemTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD7D9ACFE490AD73C97551E /* KIFSystemTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		17107985D65DFFC0349E823F /* VOKManagedObjectMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D7EC13C70A498D861D90D2D /* VOKManagedObjectMap.h */; };
+		187427D5AE98E56DD77735D8 /* NSException-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AF5D50BC1B427B91952C5EA6 /* NSException-KIFAdditions.h */; };
+		1A81EEC67CC360B9EBB0E535 /* UIView-Debugging.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CBB27C264552FCDE4DE4EB /* UIView-Debugging.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		1A9742126E620DEEB4EDC072 /* HTTPMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48281369CADD496F7FA023 /* HTTPMethods.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1AABBFF984348C2C87470679 /* NSException-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B412550F351E417BD12526C /* NSException-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		1C3A93327D194EC5ADAB57E7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F8AEAD598104C094A95558 /* MobileCoreServices.framework */; };
+		1F3779DD2B094288F10A620C /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 21E471BE38AC79767BC42294 /* UIImageView+AFNetworking.h */; };
+		20178C234429639C4982E615 /* UITouch-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE1D88C6DDE406B0BB2B479 /* UITouch-KIFAdditions.h */; };
+		203321B5334E09453AA682A0 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 41805E66D3E738C7E95D3030 /* UIButton+AFNetworking.h */; };
+		208207BB6CF78E08D8AE3F94 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E603CF36BA7243954CF8FF3A /* UIActivityIndicatorView+AFNetworking.m */; };
+		244401BBACDDB1DF0BB3D94D /* KIF.h in Headers */ = {isa = PBXBuildFile; fileRef = 21AD89BD608E924A2749542D /* KIF.h */; };
+		25607A28071F59E77F6FEE00 /* NSError-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 285031CEB34A654C419062EB /* NSError-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		262896EF42CD4C9F3898FFBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		28D52BD0A31262E35FC246A6 /* VOKDefaultPagingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 446648658ADF718DCA40A058 /* VOKDefaultPagingAccessory.m */; };
+		28FCE65A52AB9C3F85DAE8E1 /* XCTestCase-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1C28462A912B78B3AA5325 /* XCTestCase-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		2CC613E0E0EDDE69A3F287EC /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7231100A12187F6821D58F28 /* AFNetworkActivityIndicatorManager.m */; };
+		2D3FA07439F812743ECF9B16 /* VOKBenkode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99761270B0FF423A229C8574 /* VOKBenkode.m */; };
+		31C3412EC32E85A6D6630548 /* UIAccessibilityElement-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 776B5A4ACB1B815BA5B9D9A7 /* UIAccessibilityElement-KIFAdditions.h */; };
+		3233326A7126DBE024FC4B85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9609325ED2954109CC63D3 /* CoreGraphics.framework */; };
+		34557E625EB2A473A2F1E8C6 /* UITableView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0565A69533F781C8074335 /* UITableView-KIFAdditions.h */; };
+		35023110911E3837814E2E90 /* VOKBenkode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99761270B0FF423A229C8574 /* VOKBenkode.m */; };
+		38F41DEB9802F26AB4DA1548 /* UIAccessibilityElement-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 278C0FD7CB9F898131EEBF6E /* UIAccessibilityElement-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		3BFB137F391170D30547903F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65916BA5AC2169E8F91357B9 /* AFHTTPRequestOperationManager.m */; };
+		3CBE1698AADDB220CBA488FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		3DAA31CEFF8B47B3BBE19C84 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E84777FEA6A8B02AB966450 /* AFHTTPSessionManager.h */; };
+		3F57D5E9EE2A91948435CEBC /* VOKCoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2803B89886E3A25C6C911C95 /* VOKCoreDataManager.h */; };
+		4412BD5B44FC7FB07A4F8F1B /* UIAutomationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF1E79F682B00E69F9138B0 /* UIAutomationHelper.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		44E98C6CE64FA215A205A399 /* KIFTestStepValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE9FE50775E3964FF4E48F /* KIFTestStepValidation.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		492206C5C1110DA9D0C92EA7 /* UIWindow-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77691E33B8D364FF937F45 /* UIWindow-KIFAdditions.h */; };
+		49B9B12F240E9D92CB70CC92 /* VOKDefaultPagingAccessory.h in Headers */ = {isa = PBXBuildFile; fileRef = ECB2EF655AF3A9391427E80F /* VOKDefaultPagingAccessory.h */; };
+		4B1E68990412B300CB6564BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		4BC41042E4FA6648DE9F18BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		4C1AB569208B8AA457014A44 /* UIScrollView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D4F0A81BB994BD7C0BBB79C /* UIScrollView-KIFAdditions.h */; };
+		4EFDDB6ABDEF9FDDE755559D /* NSError-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9DE0F7D47B487EB6CB317C /* NSError-KIFAdditions.h */; };
+		509BC9E1134C30DBE86D942B /* Pods-Vokoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC303191C7958427B90E8BFA /* Pods-Vokoder-dummy.m */; };
+		51BEF9ADE3B75CF10EE9C3C7 /* UIApplication-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F4399EE61AFD16A3D4B5F270 /* UIApplication-KIFAdditions.h */; };
+		5207DCED038D71AABA7FF902 /* UIApplication-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5B9A84F6A217D9CFDD9AE1 /* UIApplication-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		52E20EA76D947A0596431B19 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D7D31DD51A3265A69F134A /* Security.framework */; };
+		531AAACB7B5CE2E53BCF1C03 /* KIFTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D30E8043441B72C55CA8A5 /* KIFTestCase.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		53A4875971F2387FA9BE6F8E /* UIView-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FBB93F6621A63AE903EEEE7 /* UIView-KIFAdditions.h */; };
+		554A1F10D37136AF640E6F09 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D2F6BE56D12A41882B3C53 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m */; };
+		59E4BA0D9CB74F7F8AA299CD /* NSManagedObject+VOKManagedObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D79B9AE576138D8281839C01 /* NSManagedObject+VOKManagedObjectAdditions.m */; };
+		5C5BC586E4E8D3D2A3F1ED70 /* Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2F1AE99BBDE295FA8B1BDE /* Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m */; };
+		5CD2E82DD9ECBAF7F9F3467E /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 499E80897998D8ADBF5D0E86 /* UIKit+AFNetworking.h */; };
+		5DC68BC122A9AA603F0E3530 /* HTTPMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B09AA51B35E3CCD064E93A /* HTTPMethods.h */; };
+		5E5568D75448849740115964 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C02F5698C38BF9CD3CDA02 /* UIRefreshControl+AFNetworking.m */; };
+		5F0CBEBF54164F41AC57C59B /* Pods-Grocery Store ClientTests-VOKBenkode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 056ED39D2B5AB1AF2214ECD3 /* Pods-Grocery Store ClientTests-VOKBenkode-dummy.m */; };
+		5F5A4E8869699E439C405FD7 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA37CB349ACA466B15CDD50 /* AFHTTPRequestOperation.h */; };
+		609661B219339A47EA419296 /* Pods-Grocery Store ClientUITests-KIF-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 184546DC1749ABCF80150FC8 /* Pods-Grocery Store ClientUITests-KIF-dummy.m */; };
+		63E420CDFF81428C7F3F1EDF /* HTTPHeaderFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C10547D064CC1EFA5C7B212 /* HTTPHeaderFields.h */; };
+		64856A2AAA73C78A11116B32 /* HTTPHeaderFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A61F81E582E1F099B4ABAA9 /* HTTPHeaderFields.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		650BB337DBFC768789ED6868 /* KIFTestActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D87D273DCFF5BA538579E4 /* KIFTestActor.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		660AA3776DDC27D1E4DCD6DD /* VOKBenkode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D0831461A5F04F6A73EA22A /* VOKBenkode.h */; };
+		682889C6834590323607A236 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B252E81D18EBB738A710C59 /* IOKit.framework */; };
+		6A1CBE5B884ECD6DF75FDC14 /* UITableView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D93906271067CADCC11A1B41 /* UITableView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		6E1D826CBC52A48FB2898E5E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACD167208F37D02CEE23FA /* AFHTTPSessionManager.m */; };
+		6F34E194C04A921E42B50226 /* UIAutomationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C593346691F996080CB6E4D /* UIAutomationHelper.h */; };
+		70EBB542AB420A1D6E52612D /* HTTPMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DF48281369CADD496F7FA023 /* HTTPMethods.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		74C0B13BAB9E09F92524EF80 /* NSBundle-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E19C2FCD9B602133E5781597 /* NSBundle-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		74FCFEF0D23630B88F0BEF08 /* VOKBenkode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D0831461A5F04F6A73EA22A /* VOKBenkode.h */; };
+		79D08DC0F125D918D77B6C8F /* AFHTTPRequestOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7F6CDF9D708036F9E7BDD1 /* AFHTTPRequestOperationManager.h */; };
+		7DF32BF756CBD948227EE07E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		7E3B760033BE1F56D16DA008 /* NSManagedObject+VOKManagedObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 97BC698AA5786A7910B507D3 /* NSManagedObject+VOKManagedObjectAdditions.h */; };
+		7EAE37A90170EF47618E3764 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6257F1183488E104054D51B5 /* XCTest.framework */; };
+		8158D17C6CF1B47179743B0B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F73A0D9C37FD22E356782CFC /* SystemConfiguration.framework */; };
+		8212DCE51852CC30149374A8 /* VOKFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A7664A4222F7D6777164E7C8 /* VOKFetchedResultsDataSource.m */; };
+		85581FE3F675284C109A352F /* KIFTypist.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D790E63745FFD861F19F7D0 /* KIFTypist.h */; };
+		88DD9B3E9E0F523ACDD61D78 /* NSBundle-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E976DB80B79B37C0F3C69A28 /* NSBundle-KIFAdditions.h */; };
+		8945B1C7D2663851541BAC76 /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 754C2B3C30066AE73F20E1F4 /* AFNetworkActivityIndicatorManager.h */; };
+		8A7F0E78A3614AE6780CA7A8 /* Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D4822445080FC70CBB673D /* Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m */; };
+		902D83AA10D59E0122D10246 /* VOKMockUrlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A94F9262C0D89CD2B968623 /* VOKMockUrlProtocol.h */; };
+		907B64015034CD74D3AD23F9 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = AC43C32062EFE64E73DDBBCE /* UIWebView+AFNetworking.h */; };
+		9086850DB89E29E17E8838DA /* HTTPHeaderFields.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A61F81E582E1F099B4ABAA9 /* HTTPHeaderFields.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		927C0FB46B2372DF1CF1C2C5 /* HTTPHeaderFields.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C10547D064CC1EFA5C7B212 /* HTTPHeaderFields.h */; };
+		948DCFE6D768E99B96C94129 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D0F2B2F7088500E944085B /* AFURLRequestSerialization.m */; };
+		97BA74E1187980D9CC1C6CBF /* VOKMockUrlProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A94F9262C0D89CD2B968623 /* VOKMockUrlProtocol.h */; };
+		9E3956B1E3E967E6126FC9DB /* UIView-Debugging.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D026B65C53C8AA079D877C /* UIView-Debugging.h */; };
+		9E9FBBE5682F160685EA7585 /* CGGeometry-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 443D2A94F135257C416551A1 /* CGGeometry-KIFAdditions.h */; };
+		9F3FD2B9C37F107D2FD03910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		A3212F729017E83A37AD40BF /* KIFSystemTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = EEDAADD07C3613F66458F0B5 /* KIFSystemTestActor.h */; };
+		A3A2C54CEACF600CC46CDCCE /* VOKManagedObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 35307583873C3ECE4F9A8D47 /* VOKManagedObjectMap.m */; };
+		A3F0AFD6404544F5787FB97A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		A90A16CC3F7A3CB8877FDF71 /* UIScrollView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E42AFB3EE0DA9091C597D45A /* UIScrollView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		A91A99F15927EC3AAAFAF036 /* KIFTestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3547949ED3CA7C3B85509C /* KIFTestActor.h */; };
+		ABA5455A9C9157259E21FF1F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B7953ABEC695B7B1D7CB30 /* UIImageView+AFNetworking.m */; };
+		AC1611647309176BCF3D70E5 /* XCTestCase-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4562CB8E6D799DC65F110A6 /* XCTestCase-KIFAdditions.h */; };
+		ACBEDDE91E649105F478E2B5 /* KIFTypist.m in Sources */ = {isa = PBXBuildFile; fileRef = 507E221D7B31F9E36C8DB2FA /* KIFTypist.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		AE5F0F885854372A351B8656 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CB2353C09122B6E3975D33 /* AFURLSessionManager.h */; };
+		AF9279501126035E9364D026 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E40EDDE9402914B2FA9233C1 /* AFURLSessionManager.m */; };
+		AFE5FFB9A947816C88A6CF1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		B13FDBFA5C1AAE0CC44C6690 /* VOKManagedObjectMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F849BF987D723A0700E427D /* VOKManagedObjectMapper.h */; };
+		B156DBE8FA1B594AA9C5B968 /* Pods-Grocery Store ClientTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D888A4930BC835668358CD41 /* Pods-Grocery Store ClientTests-dummy.m */; };
+		B23425E0629527BC107C943F /* KIFUITestActor.h in Headers */ = {isa = PBXBuildFile; fileRef = D5628CAF8CC945B7F5CE464D /* KIFUITestActor.h */; };
+		B3B6B094F3FCA49D6AA8FA84 /* KIFTestStepValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F64AB66AB0AFF8A1E92140C /* KIFTestStepValidation.h */; };
+		B6509A5899F3C87781BE1567 /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CC877F137545C684E03906 /* AFNetworkReachabilityManager.h */; };
+		B650C2FD4960E6C3979866E7 /* VOKMockUrlProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 90733CD64D6881FE10A72D48 /* VOKMockUrlProtocol.m */; };
+		B688D2FA534EE593F26BA4BD /* CGGeometry-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D08BD6E1AFB6F8BAC4257C /* CGGeometry-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		B8F7AE420B4652E68FEA1F9F /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 737CE26D64E074BA4F05C1C8 /* UIButton+AFNetworking.m */; };
+		B9EA009ECE88EA7D0A3ED070 /* HTTPMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 65B09AA51B35E3CCD064E93A /* HTTPMethods.h */; };
+		BC76951686CF165D6597D2C3 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 32124F0F4EAD6644EF6060B3 /* UIProgressView+AFNetworking.m */; };
+		BDA588407A79C8FA92A32F98 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C25FFB59CBFBAF8F5127D938 /* AFHTTPRequestOperation.m */; };
+		BDC0E7E4CFB0FA69962CC29B /* VOKCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A5139279E52A1C6A371C4562 /* VOKCollectionDataSource.m */; };
+		BF2B3ECB7E88D3B9AA7D8FA6 /* VOKCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DD46C17D6A481960E7110AF4 /* VOKCoreDataManager.m */; };
+		C096426C600C27BF6E401549 /* VOKMockUrlProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 90733CD64D6881FE10A72D48 /* VOKMockUrlProtocol.m */; };
+		C28B955186B47560197EDA1F /* UIEvent+KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D3A6A7E837079E5DC69893 /* UIEvent+KIFAdditions.h */; };
+		C3D13AFD303635DB3FB78C65 /* VOKPagingFetchedResultsDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6CE3454E0330A861988D79 /* VOKPagingFetchedResultsDataSource.h */; };
+		C3D93EE9281AA077F1696371 /* AFURLConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 24E7C9F4C9E6BE47A6CDA27F /* AFURLConnectionOperation.h */; };
+		C6C591B4F1A51D2333B0C276 /* Pods-AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAECA978B4D599E80CE6DE1 /* Pods-AFNetworking-dummy.m */; };
+		C87F14148B65415107C51429 /* VOKManagedObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DF5E70738F2519778AB5DC /* VOKManagedObjectMapper.m */; };
+		CC3CED0BA3937C4B8F0BA81A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		CC672461C83CFDA0A9B9F1ED /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB6AC6B54C0AFC1EA017AC6 /* AFURLConnectionOperation.m */; };
+		CD65680BA0A6C73BA24DEB62 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = BDAFCD3ECABA76BA15E49878 /* AFSecurityPolicy.h */; };
+		CE8074FD0187DFA06F730177 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		CEC99D79FF9A164D95D7AD3D /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 4030424BFD4EB0E19FD237AC /* AFURLResponseSerialization.m */; };
+		CF30C134CC4B1000689037B3 /* NSFileManager-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDC7D245CA26F668DCB3EB9 /* NSFileManager-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		D147E911755F93A994F495E1 /* UIEvent+KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50755DC623F08092BE48D758 /* UIEvent+KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		D4A61CA90D50422B232AEA2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9609325ED2954109CC63D3 /* CoreGraphics.framework */; };
+		D64DE253446CDF8734D496F8 /* UIWindow-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFD0F8B13B67E3AAD220A73 /* UIWindow-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		D6FE658507250A843251EDDE /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C0488639F7187F8C377118 /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m */; };
+		D708A8DC605817ED20D6188A /* KIFUITestActor-ConditionalTests.h in Headers */ = {isa = PBXBuildFile; fileRef = B40508350ABDA57A23B4CE31 /* KIFUITestActor-ConditionalTests.h */; };
+		DDF42D1236168B96520BF9A0 /* NSFileManager-KIFAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9029542D1BD58FF24BED367E /* NSFileManager-KIFAdditions.h */; };
+		E26C6E7ADC0E1967322108D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		E5543DEBC2B92B0BA29E4F8A /* HTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D4750C1CB3353DD532680E /* HTTPStatusCodes.h */; };
+		EC83F6229700FE308AF06F5B /* VOKPagingFetchedResultsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E92B3A7F0FA98D03F189503 /* VOKPagingFetchedResultsDataSource.m */; };
+		EDA4A26667611A9049EB38B8 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 00EE2F66377D3B854DDDAB7C /* UIProgressView+AFNetworking.h */; };
+		F023ECF9D6FDFD2D16A06A52 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E64129A678647C1B062622 /* UIActivityIndicatorView+AFNetworking.h */; };
+		F16FD1C33240471FC82511E3 /* UITouch-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D7C88415DC997AF59895E7 /* UITouch-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		F4D22DFC7523E0F4EFCF8D9C /* LoadableCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3554F23D950671F6D95C7072 /* LoadableCategory.h */; };
+		F5C6D17E9354E224AC530281 /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FD074C35E0C777D2B45006A /* AFURLRequestSerialization.h */; };
+		F7F8728188BEF52EB7D5A9D1 /* UIView-KIFAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 277049EAF8DA5FF501F3E31A /* UIView-KIFAdditions.m */; settings = {COMPILER_FLAGS = "-DKIF_XCTEST -DOS_OBJECT_USE_OBJC=0"; }; };
+		F8C396409002B9BA408C889C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB8CBCE9E941976F290F005 /* Foundation.framework */; };
+		F8F9E5B53D1D086935C09030 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E13B8DACF2954603722DA30 /* UIRefreshControl+AFNetworking.h */; };
+		FA1540A0DC0A9BCC0B98460B /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = D19BE10EBB2CDE18ECE8DC65 /* AFNetworking.h */; };
+		FA7FD099FFACC0354F1350F8 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E7ADF73F2A026742B5FF71B /* Pods-dummy.m */; };
+		FBC4F4F1C97D3C9FE385159E /* UIAlertView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = E413B6C44C070EB3988070CA /* UIAlertView+AFNetworking.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B101C597F7453E59CEF3D3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A5A84621E73E70F975156E;
+			remoteInfo = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+		};
+		26D4EBA5799A55A56C4CEE74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 820A122634AEA6111A85B288;
+			remoteInfo = "Pods-Vokoder";
+		};
+		2A371CE4E9DFDEE028C401B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48ED6FA1ED0F40A03B89D09F;
+			remoteInfo = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol";
+		};
+		3B7B70913D6238E0973BD49C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B0218C246AA9BDD6F15E0F0;
+			remoteInfo = "Pods-Grocery Store ClientUITests-VOKBenkode";
+		};
+		50F1ADB194162A87AB72E95D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99EA93EAD058D2EC13003986;
+			remoteInfo = "Pods-AFNetworking";
+		};
+		59EAC7A0740FB12B8431D3FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E43BB5D50783EA1090362A;
+			remoteInfo = "Pods-Grocery Store ClientTests-VOKBenkode";
+		};
+		66D99E6F9A851ABD1DEE6A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7A5A84621E73E70F975156E;
+			remoteInfo = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+		};
+		67C4471BE112A34508FC2C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E43BB5D50783EA1090362A;
+			remoteInfo = "Pods-Grocery Store ClientTests-VOKBenkode";
+		};
+		6FFF3FC1B51EDECBC77BF377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3BA515E42155BBF522CF556;
+			remoteInfo = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+		};
+		71285C28439BA04CD02D6039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D62B9D4A490A48EFD7E2E2B5;
+			remoteInfo = "Pods-Grocery Store ClientUITests-KIF";
+		};
+		7D0895079B366720B0C9068D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 064ECCD3CFA7557B609E06B1;
+			remoteInfo = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol";
+		};
+		993D51301DB7616FF1127378 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B0218C246AA9BDD6F15E0F0;
+			remoteInfo = "Pods-Grocery Store ClientUITests-VOKBenkode";
+		};
+		ACF3643453B66B1299E2C4A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CFB9091E2771326F8E66C39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3BA515E42155BBF522CF556;
+			remoteInfo = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00EE2F66377D3B854DDDAB7C /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		03B61A9872CC1776E29F3148 /* Pods-Vokoder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Vokoder-prefix.pch"; sourceTree = "<group>"; };
+		04CB2353C09122B6E3975D33 /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		04E64129A678647C1B062622 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		056ED39D2B5AB1AF2214ECD3 /* Pods-Grocery Store ClientTests-VOKBenkode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientTests-VOKBenkode-dummy.m"; sourceTree = "<group>"; };
+		06D077B174E021645BF089B5 /* Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch"; path = "../Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch"; sourceTree = "<group>"; };
+		08B7953ABEC695B7B1D7CB30 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		0A0D30352FAF9CD79187F414 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		0E457B3FF94E297EF9CBD910 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		0EB8CBCE9E941976F290F005 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0F64AB66AB0AFF8A1E92140C /* KIFTestStepValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestStepValidation.h; path = Classes/KIFTestStepValidation.h; sourceTree = "<group>"; };
+		100D18B8DB8E501A9628CD69 /* Pods-Grocery Store ClientTests-VOKBenkode-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-VOKBenkode-Private.xcconfig"; sourceTree = "<group>"; };
+		1142FEF0A7CEF18CB645EF27 /* libPods-Grocery Store ClientTests-VOKMockUrlProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests-VOKMockUrlProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		127EAF5CF6B7E494352BAD19 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13D08BD6E1AFB6F8BAC4257C /* CGGeometry-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CGGeometry-KIFAdditions.m"; path = "Additions/CGGeometry-KIFAdditions.m"; sourceTree = "<group>"; };
+		15D30E8043441B72C55CA8A5 /* KIFTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestCase.m; path = Classes/KIFTestCase.m; sourceTree = "<group>"; };
+		176A64C8DD20D9B97595C732 /* Pods-Vokoder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vokoder.xcconfig"; sourceTree = "<group>"; };
+		184546DC1749ABCF80150FC8 /* Pods-Grocery Store ClientUITests-KIF-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientUITests-KIF-dummy.m"; sourceTree = "<group>"; };
+		1A671953855CBF1254EDAD73 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		1EE46343D0E5B23D6BD08438 /* KIFUITestActor-ConditionalTests.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "KIFUITestActor-ConditionalTests.m"; path = "Classes/KIFUITestActor-ConditionalTests.m"; sourceTree = "<group>"; };
+		21AD89BD608E924A2749542D /* KIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIF.h; path = Classes/KIF.h; sourceTree = "<group>"; };
+		21E471BE38AC79767BC42294 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		22D87D273DCFF5BA538579E4 /* KIFTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestActor.m; path = Classes/KIFTestActor.m; sourceTree = "<group>"; };
+		23963019803064B7E8F0B5F5 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig"; path = "../Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig"; sourceTree = "<group>"; };
+		23F8AEAD598104C094A95558 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		241C2935E4FF19F85512DE6F /* Pods-Grocery Store ClientTests-ILGHttpConstants.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-ILGHttpConstants.xcconfig"; sourceTree = "<group>"; };
+		24E7C9F4C9E6BE47A6CDA27F /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		277049EAF8DA5FF501F3E31A /* UIView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-KIFAdditions.m"; path = "Additions/UIView-KIFAdditions.m"; sourceTree = "<group>"; };
+		278C0FD7CB9F898131EEBF6E /* UIAccessibilityElement-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAccessibilityElement-KIFAdditions.m"; path = "Additions/UIAccessibilityElement-KIFAdditions.m"; sourceTree = "<group>"; };
+		2803B89886E3A25C6C911C95 /* VOKCoreDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKCoreDataManager.h; path = Pod/Classes/VOKCoreDataManager.h; sourceTree = "<group>"; };
+		280B20B99412D084C4AD8A95 /* libPods-Grocery Store ClientTests-VOKBenkode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests-VOKBenkode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		285031CEB34A654C419062EB /* NSError-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError-KIFAdditions.m"; path = "Additions/NSError-KIFAdditions.m"; sourceTree = "<group>"; };
+		2A6CE3454E0330A861988D79 /* VOKPagingFetchedResultsDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKPagingFetchedResultsDataSource.h; path = "Pod/Classes/Optional Data Sources/VOKPagingFetchedResultsDataSource.h"; sourceTree = "<group>"; };
+		2B252E81D18EBB738A710C59 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		2CE1D88C6DDE406B0BB2B479 /* UITouch-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch-KIFAdditions.h"; path = "Additions/UITouch-KIFAdditions.h"; sourceTree = "<group>"; };
+		2D0831461A5F04F6A73EA22A /* VOKBenkode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKBenkode.h; path = Pod/Classes/VOKBenkode.h; sourceTree = "<group>"; };
+		2E13B8DACF2954603722DA30 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		306D01AA29899ACE2E418A77 /* KIFUITestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFUITestActor.m; path = Classes/KIFUITestActor.m; sourceTree = "<group>"; };
+		31AE9FE50775E3964FF4E48F /* KIFTestStepValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTestStepValidation.m; path = Classes/KIFTestStepValidation.m; sourceTree = "<group>"; };
+		32124F0F4EAD6644EF6060B3 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		33DF5E70738F2519778AB5DC /* VOKManagedObjectMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKManagedObjectMapper.m; path = Pod/Classes/VOKManagedObjectMapper.m; sourceTree = "<group>"; };
+		35307583873C3ECE4F9A8D47 /* VOKManagedObjectMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKManagedObjectMap.m; path = Pod/Classes/VOKManagedObjectMap.m; sourceTree = "<group>"; };
+		3554F23D950671F6D95C7072 /* LoadableCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LoadableCategory.h; path = Additions/LoadableCategory.h; sourceTree = "<group>"; };
+		37F5BD82F4310ECC5CFC04EA /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig"; path = "../Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig"; sourceTree = "<group>"; };
+		3DB6AC6B54C0AFC1EA017AC6 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		3DB7CE10FA38CA58225C4525 /* Pods-Grocery Store ClientUITests-KIF-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientUITests-KIF-Private.xcconfig"; sourceTree = "<group>"; };
+		4030424BFD4EB0E19FD237AC /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		4115018779E353A4385B0FF1 /* Pods-Grocery Store ClientUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Grocery Store ClientUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4135697ADABD6C66C63B4E42 /* Pods-Grocery Store ClientUITests-ILGHttpConstants.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-ILGHttpConstants.xcconfig"; path = "../Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants.xcconfig"; sourceTree = "<group>"; };
+		41805E66D3E738C7E95D3030 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		41D7C88415DC997AF59895E7 /* UITouch-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITouch-KIFAdditions.m"; path = "Additions/UITouch-KIFAdditions.m"; sourceTree = "<group>"; };
+		443D2A94F135257C416551A1 /* CGGeometry-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CGGeometry-KIFAdditions.h"; path = "Additions/CGGeometry-KIFAdditions.h"; sourceTree = "<group>"; };
+		446648658ADF718DCA40A058 /* VOKDefaultPagingAccessory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKDefaultPagingAccessory.m; path = "Pod/Classes/Optional Data Sources/VOKDefaultPagingAccessory.m"; sourceTree = "<group>"; };
+		472CD9429C60EB7F535C442A /* Pods-Grocery Store ClientTests-ILGHttpConstants-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-ILGHttpConstants-Private.xcconfig"; sourceTree = "<group>"; };
+		499E80897998D8ADBF5D0E86 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		4A61F81E582E1F099B4ABAA9 /* HTTPHeaderFields.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HTTPHeaderFields.m; sourceTree = "<group>"; };
+		4A94F9262C0D89CD2B968623 /* VOKMockUrlProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VOKMockUrlProtocol.h; sourceTree = "<group>"; };
+		4BAECA978B4D599E80CE6DE1 /* Pods-AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		4BD14C69C0044B19D392AE3C /* Pods-Grocery Store ClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BD1D8CBBB91C410080202DA /* Pods-Grocery Store ClientUITests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientUITests-environment.h"; sourceTree = "<group>"; };
+		4C9DE0F7D47B487EB6CB317C /* NSError-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError-KIFAdditions.h"; path = "Additions/NSError-KIFAdditions.h"; sourceTree = "<group>"; };
+		4D0A15428E38453EBE469295 /* Pods-Grocery Store ClientTests-ILGHttpConstants-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientTests-ILGHttpConstants-prefix.pch"; sourceTree = "<group>"; };
+		50755DC623F08092BE48D758 /* UIEvent+KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIEvent+KIFAdditions.m"; path = "Additions/UIEvent+KIFAdditions.m"; sourceTree = "<group>"; };
+		507E221D7B31F9E36C8DB2FA /* KIFTypist.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFTypist.m; path = Classes/KIFTypist.m; sourceTree = "<group>"; };
+		52D4750C1CB3353DD532680E /* HTTPStatusCodes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
+		5624DF6CD195BD5D1BBEBCAF /* Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig"; path = "../Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig"; sourceTree = "<group>"; };
+		57D9F8BD67BE22A8361C9D2E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol.xcconfig"; sourceTree = "<group>"; };
+		59E940C7DEB7D74A600F1BBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		5B412550F351E417BD12526C /* NSException-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSException-KIFAdditions.m"; path = "Additions/NSException-KIFAdditions.m"; sourceTree = "<group>"; };
+		5B6EF9F3131F2CE52C2FBCD3 /* VOKFetchedResultsDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKFetchedResultsDataSource.h; path = "Pod/Classes/Optional Data Sources/VOKFetchedResultsDataSource.h"; sourceTree = "<group>"; };
+		5BA37CB349ACA466B15CDD50 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		5C4B47460EB5A23F302749EF /* Pods-Grocery Store ClientTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grocery Store ClientTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5D7EC13C70A498D861D90D2D /* VOKManagedObjectMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKManagedObjectMap.h; path = Pod/Classes/VOKManagedObjectMap.h; sourceTree = "<group>"; };
+		5FAD84AA425CBB907D558BD1 /* libPods-Grocery Store ClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FDC7D245CA26F668DCB3EB9 /* NSFileManager-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager-KIFAdditions.m"; path = "Additions/NSFileManager-KIFAdditions.m"; sourceTree = "<group>"; };
+		60CC877F137545C684E03906 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		624104FF9B26EC4E35F8FC96 /* Pods-AFNetworking-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking-Private.xcconfig"; sourceTree = "<group>"; };
+		6257F1183488E104054D51B5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		63068D9AEC48F556384B634F /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		64D3A6A7E837079E5DC69893 /* UIEvent+KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIEvent+KIFAdditions.h"; path = "Additions/UIEvent+KIFAdditions.h"; sourceTree = "<group>"; };
+		65916BA5AC2169E8F91357B9 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		65B09AA51B35E3CCD064E93A /* HTTPMethods.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HTTPMethods.h; sourceTree = "<group>"; };
+		67695CCE0C3332E0A8C3B324 /* Pods-Grocery Store ClientUITests-KIF-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientUITests-KIF-prefix.pch"; sourceTree = "<group>"; };
+		691BB90CE1E8D39348EEEA69 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol-prefix.pch"; sourceTree = "<group>"; };
+		6BD960BDF5D3E23F77A255DB /* libPods-Vokoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Vokoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C593346691F996080CB6E4D /* UIAutomationHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIAutomationHelper.h; path = Classes/UIAutomationHelper.h; sourceTree = "<group>"; };
+		6D0A5758C1B6DEA412DED54C /* libPods-Grocery Store ClientTests-ILGHttpConstants.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests-ILGHttpConstants.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4F0A81BB994BD7C0BBB79C /* UIScrollView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView-KIFAdditions.h"; path = "Additions/UIScrollView-KIFAdditions.h"; sourceTree = "<group>"; };
+		6D790E63745FFD861F19F7D0 /* KIFTypist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTypist.h; path = Classes/KIFTypist.h; sourceTree = "<group>"; };
+		6DF1E79F682B00E69F9138B0 /* UIAutomationHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIAutomationHelper.m; path = Classes/UIAutomationHelper.m; sourceTree = "<group>"; };
+		6E0565A69533F781C8074335 /* UITableView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView-KIFAdditions.h"; path = "Additions/UITableView-KIFAdditions.h"; sourceTree = "<group>"; };
+		6E84777FEA6A8B02AB966450 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		6E92B3A7F0FA98D03F189503 /* VOKPagingFetchedResultsDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKPagingFetchedResultsDataSource.m; path = "Pod/Classes/Optional Data Sources/VOKPagingFetchedResultsDataSource.m"; sourceTree = "<group>"; };
+		6F5B9A84F6A217D9CFDD9AE1 /* UIApplication-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication-KIFAdditions.m"; path = "Additions/UIApplication-KIFAdditions.m"; sourceTree = "<group>"; };
+		7231100A12187F6821D58F28 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		737CE26D64E074BA4F05C1C8 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		754C2B3C30066AE73F20E1F4 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		76F7FB69E1129D32321FA040 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		776B5A4ACB1B815BA5B9D9A7 /* UIAccessibilityElement-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAccessibilityElement-KIFAdditions.h"; path = "Additions/UIAccessibilityElement-KIFAdditions.h"; sourceTree = "<group>"; };
+		77D0F2B2F7088500E944085B /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		7A17BC6211AB729EC17F5FAB /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		7E7ADF73F2A026742B5FF71B /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		7F849BF987D723A0700E427D /* VOKManagedObjectMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKManagedObjectMapper.h; path = Pod/Classes/VOKManagedObjectMapper.h; sourceTree = "<group>"; };
+		7FBB93F6621A63AE903EEEE7 /* UIView-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-KIFAdditions.h"; path = "Additions/UIView-KIFAdditions.h"; sourceTree = "<group>"; };
+		7FD074C35E0C777D2B45006A /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		80909FBD80E1FAED8F0CE4E4 /* Pods-Grocery Store ClientUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grocery Store ClientUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		80C16F6921DF48D8241A47E0 /* Pods-Grocery Store ClientTests-VOKBenkode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientTests-VOKBenkode-prefix.pch"; sourceTree = "<group>"; };
+		84A9C9F2A4ECE91F2B638861 /* Pods-Grocery Store ClientTests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Grocery Store ClientTests-environment.h"; sourceTree = "<group>"; };
+		88B373427B5C3239B0B7EFF2 /* Pods-Vokoder-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Vokoder-Private.xcconfig"; sourceTree = "<group>"; };
+		89365B3617973445B51D8C24 /* Pods-Grocery Store ClientTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Grocery Store ClientTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C10547D064CC1EFA5C7B212 /* HTTPHeaderFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HTTPHeaderFields.h; sourceTree = "<group>"; };
+		8E49EDF7EA2AD6A0B7F5333C /* Pods-Grocery Store ClientUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientUITests-dummy.m"; sourceTree = "<group>"; };
+		8F3F64247A4BD0B23333BFE0 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AFNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9029542D1BD58FF24BED367E /* NSFileManager-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager-KIFAdditions.h"; path = "Additions/NSFileManager-KIFAdditions.h"; sourceTree = "<group>"; };
+		90733CD64D6881FE10A72D48 /* VOKMockUrlProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VOKMockUrlProtocol.m; sourceTree = "<group>"; };
+		914227529E439D76C2671835 /* Pods-Grocery Store ClientUITests-VOKBenkode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-VOKBenkode.xcconfig"; path = "../Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode.xcconfig"; sourceTree = "<group>"; };
+		91D4822445080FC70CBB673D /* Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m"; path = "../Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m"; sourceTree = "<group>"; };
+		922A79508F2C70238CA56FE0 /* Pods-Grocery Store ClientTests-VOKBenkode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-VOKBenkode.xcconfig"; sourceTree = "<group>"; };
+		95512F221B9DAA34CEEAC55E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol-Private.xcconfig"; sourceTree = "<group>"; };
+		97BC698AA5786A7910B507D3 /* NSManagedObject+VOKManagedObjectAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+VOKManagedObjectAdditions.h"; path = "Pod/Classes/NSManagedObject+VOKManagedObjectAdditions.h"; sourceTree = "<group>"; };
+		985C280868B7084CC45DC7D1 /* VOKCollectionDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKCollectionDataSource.h; path = "Pod/Classes/Optional Data Sources/VOKCollectionDataSource.h"; sourceTree = "<group>"; };
+		99761270B0FF423A229C8574 /* VOKBenkode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKBenkode.m; path = Pod/Classes/VOKBenkode.m; sourceTree = "<group>"; };
+		9A9609325ED2954109CC63D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A08E0562AEE1A71A8B835AA0 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		A0D7D31DD51A3265A69F134A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		A2D5434529DCCE9658B21190 /* KIFTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestCase.h; path = Classes/KIFTestCase.h; sourceTree = "<group>"; };
+		A5139279E52A1C6A371C4562 /* VOKCollectionDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKCollectionDataSource.m; path = "Pod/Classes/Optional Data Sources/VOKCollectionDataSource.m"; sourceTree = "<group>"; };
+		A6ACD79842890B9C2C241EC5 /* libPods-Grocery Store ClientUITests-VOKBenkode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests-VOKBenkode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7664A4222F7D6777164E7C8 /* VOKFetchedResultsDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKFetchedResultsDataSource.m; path = "Pod/Classes/Optional Data Sources/VOKFetchedResultsDataSource.m"; sourceTree = "<group>"; };
+		A90A85CE5AE16732D159D0B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m"; sourceTree = "<group>"; };
+		A9ACD167208F37D02CEE23FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		AC43C32062EFE64E73DDBBCE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		AD631E99C3089150E7EFEB61 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		AE2F1AE99BBDE295FA8B1BDE /* Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m"; sourceTree = "<group>"; };
+		AF5D50BC1B427B91952C5EA6 /* NSException-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSException-KIFAdditions.h"; path = "Additions/NSException-KIFAdditions.h"; sourceTree = "<group>"; };
+		B24B6DA99D4846F75B1DF810 /* libPods-Grocery Store ClientUITests-ILGHttpConstants.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests-ILGHttpConstants.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C0488639F7187F8C377118 /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m"; path = "../Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m"; sourceTree = "<group>"; };
+		B40508350ABDA57A23B4CE31 /* KIFUITestActor-ConditionalTests.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "KIFUITestActor-ConditionalTests.h"; path = "Classes/KIFUITestActor-ConditionalTests.h"; sourceTree = "<group>"; };
+		B4CBB27C264552FCDE4DE4EB /* UIView-Debugging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView-Debugging.m"; path = "Additions/UIView-Debugging.m"; sourceTree = "<group>"; };
+		B9B419AEFF30ACBB1A540FBD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB0D6AF2EDF0C8B8AF2D9F5A /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
+		BD360CF9B3BD8DB539A14283 /* Pods-Grocery Store ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BDAFCD3ECABA76BA15E49878 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		C25FFB59CBFBAF8F5127D938 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		C6DF6BBD71B5440B31E36EBC /* libPods-Grocery Store ClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF3B3728A91EAA34C99C4A5 /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol.xcconfig"; path = "../Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol.xcconfig"; sourceTree = "<group>"; };
+		CDD7D9ACFE490AD73C97551E /* KIFSystemTestActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KIFSystemTestActor.m; path = Classes/KIFSystemTestActor.m; sourceTree = "<group>"; };
+		D0D2F6BE56D12A41882B3C53 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m"; path = "../Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m"; sourceTree = "<group>"; };
+		D19BE10EBB2CDE18ECE8DC65 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		D5628CAF8CC945B7F5CE464D /* KIFUITestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFUITestActor.h; path = Classes/KIFUITestActor.h; sourceTree = "<group>"; };
+		D79B9AE576138D8281839C01 /* NSManagedObject+VOKManagedObjectAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+VOKManagedObjectAdditions.m"; path = "Pod/Classes/NSManagedObject+VOKManagedObjectAdditions.m"; sourceTree = "<group>"; };
+		D8492626EF0DD1E09B2D503F /* libPods-Grocery Store ClientUITests-KIF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests-KIF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D888A4930BC835668358CD41 /* Pods-Grocery Store ClientTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grocery Store ClientTests-dummy.m"; sourceTree = "<group>"; };
+		D93906271067CADCC11A1B41 /* UITableView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView-KIFAdditions.m"; path = "Additions/UITableView-KIFAdditions.m"; sourceTree = "<group>"; };
+		D9E630AF6FF403539C39403C /* Pods-AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		DA7F6CDF9D708036F9E7BDD1 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		DC5467DF633ABBC6D42788EF /* Pods-AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AFNetworking.xcconfig"; sourceTree = "<group>"; };
+		DD46C17D6A481960E7110AF4 /* VOKCoreDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VOKCoreDataManager.m; path = Pod/Classes/VOKCoreDataManager.m; sourceTree = "<group>"; };
+		DE1C28462A912B78B3AA5325 /* XCTestCase-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase-KIFAdditions.m"; path = "Additions/XCTestCase-KIFAdditions.m"; sourceTree = "<group>"; };
+		DF48281369CADD496F7FA023 /* HTTPMethods.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HTTPMethods.m; sourceTree = "<group>"; };
+		E19C2FCD9B602133E5781597 /* NSBundle-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle-KIFAdditions.m"; path = "Additions/NSBundle-KIFAdditions.m"; sourceTree = "<group>"; };
+		E40EDDE9402914B2FA9233C1 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		E413B6C44C070EB3988070CA /* UIAlertView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+AFNetworking.h"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.h"; sourceTree = "<group>"; };
+		E42AFB3EE0DA9091C597D45A /* UIScrollView-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView-KIFAdditions.m"; path = "Additions/UIScrollView-KIFAdditions.m"; sourceTree = "<group>"; };
+		E44E2CF5A20A3121C17F7EF5 /* libPods-Grocery Store ClientUITests-VOKMockUrlProtocol.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests-VOKMockUrlProtocol.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4562CB8E6D799DC65F110A6 /* XCTestCase-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "XCTestCase-KIFAdditions.h"; path = "Additions/XCTestCase-KIFAdditions.h"; sourceTree = "<group>"; };
+		E603CF36BA7243954CF8FF3A /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		E976DB80B79B37C0F3C69A28 /* NSBundle-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle-KIFAdditions.h"; path = "Additions/NSBundle-KIFAdditions.h"; sourceTree = "<group>"; };
+		EA77691E33B8D364FF937F45 /* UIWindow-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWindow-KIFAdditions.h"; path = "Additions/UIWindow-KIFAdditions.h"; sourceTree = "<group>"; };
+		EB235F5FE998E5FC3877D8EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECB2EF655AF3A9391427E80F /* VOKDefaultPagingAccessory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKDefaultPagingAccessory.h; path = "Pod/Classes/Optional Data Sources/VOKDefaultPagingAccessory.h"; sourceTree = "<group>"; };
+		EEDA7F467544AD6A6F4AA94D /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch"; path = "../Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch"; sourceTree = "<group>"; };
+		EEDAADD07C3613F66458F0B5 /* KIFSystemTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFSystemTestActor.h; path = Classes/KIFSystemTestActor.h; sourceTree = "<group>"; };
+		EF0E13B7C2615D557811EF3A /* VOKCoreDataManagerInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VOKCoreDataManagerInternalMacros.h; path = Pod/Classes/Internal/VOKCoreDataManagerInternalMacros.h; sourceTree = "<group>"; };
+		EF3547949ED3CA7C3B85509C /* KIFTestActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KIFTestActor.h; path = Classes/KIFTestActor.h; sourceTree = "<group>"; };
+		EFFD0F8B13B67E3AAD220A73 /* UIWindow-KIFAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWindow-KIFAdditions.m"; path = "Additions/UIWindow-KIFAdditions.m"; sourceTree = "<group>"; };
+		F1D026B65C53C8AA079D877C /* UIView-Debugging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView-Debugging.h"; path = "Additions/UIView-Debugging.h"; sourceTree = "<group>"; };
+		F4399EE61AFD16A3D4B5F270 /* UIApplication-KIFAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication-KIFAdditions.h"; path = "Additions/UIApplication-KIFAdditions.h"; sourceTree = "<group>"; };
+		F73A0D9C37FD22E356782CFC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		F94BC3CC2B82DD6CA3848EB9 /* Pods-Grocery Store ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F9C02F5698C38BF9CD3CDA02 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		FAB948C6A77A13274A764AD8 /* Pods-Grocery Store ClientTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Grocery Store ClientTests-resources.sh"; sourceTree = "<group>"; };
+		FADC9FA29CB271AAFC606D53 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FBA581B3D27576D836982B57 /* Pods-Grocery Store ClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC303191C7958427B90E8BFA /* Pods-Vokoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Vokoder-dummy.m"; sourceTree = "<group>"; };
+		FE5479BF49CB4D2D4DC57CE8 /* Pods-Grocery Store ClientUITests-KIF.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grocery Store ClientUITests-KIF.xcconfig"; sourceTree = "<group>"; };
+		FE7C21EDC8012836A6D6CF4A /* Pods-Grocery Store ClientUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Grocery Store ClientUITests-resources.sh"; sourceTree = "<group>"; };
+		FE8FFBB2F6CBEE274E6441B6 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch"; path = "../Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		088BD4EEB95E1D9ED8597C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CBE1698AADDB220CBA488FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FBA74D5E25CA150EBB7580C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3FD2B9C37F107D2FD03910 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A7BC76EB9BFEE394F4339DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B1E68990412B300CB6564BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B50E43FB549DF9F333AF211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC41042E4FA6648DE9F18BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FC7FE8BC05C6A40C9BE2C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C396409002B9BA408C889C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72F22E0254E8D9C91CC4FD85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFE5FFB9A947816C88A6CF1E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1B69C0481014525DA268D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3CED0BA3937C4B8F0BA81A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87BC8ACEA656E92892C271DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3233326A7126DBE024FC4B85 /* CoreGraphics.framework in Frameworks */,
+				7DF32BF756CBD948227EE07E /* Foundation.framework in Frameworks */,
+				1C3A93327D194EC5ADAB57E7 /* MobileCoreServices.framework in Frameworks */,
+				52E20EA76D947A0596431B19 /* Security.framework in Frameworks */,
+				8158D17C6CF1B47179743B0B /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF7E2A30110A2C2528F0BBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4A61CA90D50422B232AEA2B /* CoreGraphics.framework in Frameworks */,
+				E26C6E7ADC0E1967322108D5 /* Foundation.framework in Frameworks */,
+				682889C6834590323607A236 /* IOKit.framework in Frameworks */,
+				7EAE37A90170EF47618E3764 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF8705DD8BA7663E4783235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08080234A506D4C8AEFA968D /* CoreData.framework in Frameworks */,
+				262896EF42CD4C9F3898FFBE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D50BC1B53E9CEA79A6853ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3F0AFD6404544F5787FB97A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4C370A78231DD5C11F851CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE8074FD0187DFA06F730177 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		062834E9609564D250895D67 /* NSURLConnection */ = {
+			isa = PBXGroup;
+			children = (
+				5BA37CB349ACA466B15CDD50 /* AFHTTPRequestOperation.h */,
+				C25FFB59CBFBAF8F5127D938 /* AFHTTPRequestOperation.m */,
+				DA7F6CDF9D708036F9E7BDD1 /* AFHTTPRequestOperationManager.h */,
+				65916BA5AC2169E8F91357B9 /* AFHTTPRequestOperationManager.m */,
+				24E7C9F4C9E6BE47A6CDA27F /* AFURLConnectionOperation.h */,
+				3DB6AC6B54C0AFC1EA017AC6 /* AFURLConnectionOperation.m */,
+			);
+			name = NSURLConnection;
+			sourceTree = "<group>";
+		};
+		0C2FCB693E139788720247EF /* ILGHttpConstants */ = {
+			isa = PBXGroup;
+			children = (
+				8C10547D064CC1EFA5C7B212 /* HTTPHeaderFields.h */,
+				4A61F81E582E1F099B4ABAA9 /* HTTPHeaderFields.m */,
+				65B09AA51B35E3CCD064E93A /* HTTPMethods.h */,
+				DF48281369CADD496F7FA023 /* HTTPMethods.m */,
+				52D4750C1CB3353DD532680E /* HTTPStatusCodes.h */,
+				F04D3320E8E39B111E2C4D32 /* Support Files */,
+			);
+			path = ILGHttpConstants;
+			sourceTree = "<group>";
+		};
+		11A45622F6387A7151FBC4F1 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				6E84777FEA6A8B02AB966450 /* AFHTTPSessionManager.h */,
+				A9ACD167208F37D02CEE23FA /* AFHTTPSessionManager.m */,
+				04CB2353C09122B6E3975D33 /* AFURLSessionManager.h */,
+				E40EDDE9402914B2FA9233C1 /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		22F87141DF8062966ECC4EDC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				D19BE10EBB2CDE18ECE8DC65 /* AFNetworking.h */,
+				062834E9609564D250895D67 /* NSURLConnection */,
+				11A45622F6387A7151FBC4F1 /* NSURLSession */,
+				2EC938E35384643599161783 /* Reachability */,
+				66F0CC35C6077B442E8A6363 /* Security */,
+				563AF5BED1FE33753C767990 /* Serialization */,
+				F8C9B3C8A931AC9B347B8E3A /* Support Files */,
+				49CFE97A92EA1F94D546703F /* UIKit */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		238709588D14FE39C9AFE8E7 /* KIF */ = {
+			isa = PBXGroup;
+			children = (
+				FD4F6CE561655ADE31A524C6 /* Support Files */,
+				D2DFCFEE978CD142EA37B2D6 /* XCTest */,
+			);
+			path = KIF;
+			sourceTree = "<group>";
+		};
+		2C5AAE9B4EC43A69B9AE5545 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				76F7FB69E1129D32321FA040 /* CoreData.framework */,
+				9A9609325ED2954109CC63D3 /* CoreGraphics.framework */,
+				0EB8CBCE9E941976F290F005 /* Foundation.framework */,
+				2B252E81D18EBB738A710C59 /* IOKit.framework */,
+				23F8AEAD598104C094A95558 /* MobileCoreServices.framework */,
+				A0D7D31DD51A3265A69F134A /* Security.framework */,
+				F73A0D9C37FD22E356782CFC /* SystemConfiguration.framework */,
+				6257F1183488E104054D51B5 /* XCTest.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2EC938E35384643599161783 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				60CC877F137545C684E03906 /* AFNetworkReachabilityManager.h */,
+				AD631E99C3089150E7EFEB61 /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		37DBA4AEFE54FD397F0E38C3 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				D94D894B6FA814DA22F1A5D1 /* Collection */,
+				D72EACE5B7F17D7FF2BD5DF0 /* FetchedResults */,
+				479FBB9D49846FAA5A14A725 /* PagingFetchedResults */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		3DBB4E78237D9AF0F6F74F30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB235F5FE998E5FC3877D8EA /* libPods.a */,
+				8F3F64247A4BD0B23333BFE0 /* libPods-AFNetworking.a */,
+				5FAD84AA425CBB907D558BD1 /* libPods-Grocery Store ClientTests.a */,
+				6D0A5758C1B6DEA412DED54C /* libPods-Grocery Store ClientTests-ILGHttpConstants.a */,
+				280B20B99412D084C4AD8A95 /* libPods-Grocery Store ClientTests-VOKBenkode.a */,
+				1142FEF0A7CEF18CB645EF27 /* libPods-Grocery Store ClientTests-VOKMockUrlProtocol.a */,
+				C6DF6BBD71B5440B31E36EBC /* libPods-Grocery Store ClientUITests.a */,
+				B24B6DA99D4846F75B1DF810 /* libPods-Grocery Store ClientUITests-ILGHttpConstants.a */,
+				D8492626EF0DD1E09B2D503F /* libPods-Grocery Store ClientUITests-KIF.a */,
+				A6ACD79842890B9C2C241EC5 /* libPods-Grocery Store ClientUITests-VOKBenkode.a */,
+				E44E2CF5A20A3121C17F7EF5 /* libPods-Grocery Store ClientUITests-VOKMockUrlProtocol.a */,
+				6BD960BDF5D3E23F77A255DB /* libPods-Vokoder.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		439C879230E586F1499DA0C8 /* Pods-Grocery Store ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				89365B3617973445B51D8C24 /* Pods-Grocery Store ClientTests-acknowledgements.markdown */,
+				5C4B47460EB5A23F302749EF /* Pods-Grocery Store ClientTests-acknowledgements.plist */,
+				D888A4930BC835668358CD41 /* Pods-Grocery Store ClientTests-dummy.m */,
+				84A9C9F2A4ECE91F2B638861 /* Pods-Grocery Store ClientTests-environment.h */,
+				FAB948C6A77A13274A764AD8 /* Pods-Grocery Store ClientTests-resources.sh */,
+				F94BC3CC2B82DD6CA3848EB9 /* Pods-Grocery Store ClientTests.debug.xcconfig */,
+				FBA581B3D27576D836982B57 /* Pods-Grocery Store ClientTests.release.xcconfig */,
+			);
+			name = "Pods-Grocery Store ClientTests";
+			path = "Target Support Files/Pods-Grocery Store ClientTests";
+			sourceTree = "<group>";
+		};
+		479FBB9D49846FAA5A14A725 /* PagingFetchedResults */ = {
+			isa = PBXGroup;
+			children = (
+				ECB2EF655AF3A9391427E80F /* VOKDefaultPagingAccessory.h */,
+				446648658ADF718DCA40A058 /* VOKDefaultPagingAccessory.m */,
+				2A6CE3454E0330A861988D79 /* VOKPagingFetchedResultsDataSource.h */,
+				6E92B3A7F0FA98D03F189503 /* VOKPagingFetchedResultsDataSource.m */,
+			);
+			name = PagingFetchedResults;
+			sourceTree = "<group>";
+		};
+		49CFE97A92EA1F94D546703F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				754C2B3C30066AE73F20E1F4 /* AFNetworkActivityIndicatorManager.h */,
+				7231100A12187F6821D58F28 /* AFNetworkActivityIndicatorManager.m */,
+				04E64129A678647C1B062622 /* UIActivityIndicatorView+AFNetworking.h */,
+				E603CF36BA7243954CF8FF3A /* UIActivityIndicatorView+AFNetworking.m */,
+				E413B6C44C070EB3988070CA /* UIAlertView+AFNetworking.h */,
+				BB0D6AF2EDF0C8B8AF2D9F5A /* UIAlertView+AFNetworking.m */,
+				41805E66D3E738C7E95D3030 /* UIButton+AFNetworking.h */,
+				737CE26D64E074BA4F05C1C8 /* UIButton+AFNetworking.m */,
+				21E471BE38AC79767BC42294 /* UIImageView+AFNetworking.h */,
+				08B7953ABEC695B7B1D7CB30 /* UIImageView+AFNetworking.m */,
+				499E80897998D8ADBF5D0E86 /* UIKit+AFNetworking.h */,
+				00EE2F66377D3B854DDDAB7C /* UIProgressView+AFNetworking.h */,
+				32124F0F4EAD6644EF6060B3 /* UIProgressView+AFNetworking.m */,
+				2E13B8DACF2954603722DA30 /* UIRefreshControl+AFNetworking.h */,
+				F9C02F5698C38BF9CD3CDA02 /* UIRefreshControl+AFNetworking.m */,
+				AC43C32062EFE64E73DDBBCE /* UIWebView+AFNetworking.h */,
+				7A17BC6211AB729EC17F5FAB /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		563AF5BED1FE33753C767990 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				7FD074C35E0C777D2B45006A /* AFURLRequestSerialization.h */,
+				77D0F2B2F7088500E944085B /* AFURLRequestSerialization.m */,
+				FADC9FA29CB271AAFC606D53 /* AFURLResponseSerialization.h */,
+				4030424BFD4EB0E19FD237AC /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		570A5166F79A3F574C490760 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22F87141DF8062966ECC4EDC /* AFNetworking */,
+				0C2FCB693E139788720247EF /* ILGHttpConstants */,
+				238709588D14FE39C9AFE8E7 /* KIF */,
+				80CE7B8C80A8E20154A9DA65 /* VOKBenkode */,
+				B8F324F43644D5116BDE7BCD /* VOKMockUrlProtocol */,
+				9198BB1816170B5CA4DCD1C6 /* Vokoder */,
+				FACC9E7CAEB3E19061593176 /* XcodeCoverage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66F0CC35C6077B442E8A6363 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				BDAFCD3ECABA76BA15E49878 /* AFSecurityPolicy.h */,
+				63068D9AEC48F556384B634F /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		7A8669EB3C5196669A191C18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				127EAF5CF6B7E494352BAD19 /* Pods-acknowledgements.markdown */,
+				A08E0562AEE1A71A8B835AA0 /* Pods-acknowledgements.plist */,
+				7E7ADF73F2A026742B5FF71B /* Pods-dummy.m */,
+				0E457B3FF94E297EF9CBD910 /* Pods-environment.h */,
+				1A671953855CBF1254EDAD73 /* Pods-resources.sh */,
+				59E940C7DEB7D74A600F1BBD /* Pods.debug.xcconfig */,
+				0A0D30352FAF9CD79187F414 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		80CE7B8C80A8E20154A9DA65 /* VOKBenkode */ = {
+			isa = PBXGroup;
+			children = (
+				2D0831461A5F04F6A73EA22A /* VOKBenkode.h */,
+				99761270B0FF423A229C8574 /* VOKBenkode.m */,
+				A7D23D06D093C78C12D97EDF /* Support Files */,
+			);
+			path = VOKBenkode;
+			sourceTree = "<group>";
+		};
+		8A0764E9803852C06938CF3A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				97BC698AA5786A7910B507D3 /* NSManagedObject+VOKManagedObjectAdditions.h */,
+				D79B9AE576138D8281839C01 /* NSManagedObject+VOKManagedObjectAdditions.m */,
+				2803B89886E3A25C6C911C95 /* VOKCoreDataManager.h */,
+				DD46C17D6A481960E7110AF4 /* VOKCoreDataManager.m */,
+				EF0E13B7C2615D557811EF3A /* VOKCoreDataManagerInternalMacros.h */,
+				5D7EC13C70A498D861D90D2D /* VOKManagedObjectMap.h */,
+				35307583873C3ECE4F9A8D47 /* VOKManagedObjectMap.m */,
+				7F849BF987D723A0700E427D /* VOKManagedObjectMapper.h */,
+				33DF5E70738F2519778AB5DC /* VOKManagedObjectMapper.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		8C8EA55FE9A14A2D9467C0C8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				176A64C8DD20D9B97595C732 /* Pods-Vokoder.xcconfig */,
+				88B373427B5C3239B0B7EFF2 /* Pods-Vokoder-Private.xcconfig */,
+				FC303191C7958427B90E8BFA /* Pods-Vokoder-dummy.m */,
+				03B61A9872CC1776E29F3148 /* Pods-Vokoder-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Vokoder";
+			sourceTree = "<group>";
+		};
+		9198BB1816170B5CA4DCD1C6 /* Vokoder */ = {
+			isa = PBXGroup;
+			children = (
+				8A0764E9803852C06938CF3A /* Core */,
+				37DBA4AEFE54FD397F0E38C3 /* DataSources */,
+				8C8EA55FE9A14A2D9467C0C8 /* Support Files */,
+			);
+			path = Vokoder;
+			sourceTree = "<group>";
+		};
+		9EA8E469D087F90FC623134D /* Pods-Grocery Store ClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4115018779E353A4385B0FF1 /* Pods-Grocery Store ClientUITests-acknowledgements.markdown */,
+				80909FBD80E1FAED8F0CE4E4 /* Pods-Grocery Store ClientUITests-acknowledgements.plist */,
+				8E49EDF7EA2AD6A0B7F5333C /* Pods-Grocery Store ClientUITests-dummy.m */,
+				4BD1D8CBBB91C410080202DA /* Pods-Grocery Store ClientUITests-environment.h */,
+				FE7C21EDC8012836A6D6CF4A /* Pods-Grocery Store ClientUITests-resources.sh */,
+				4BD14C69C0044B19D392AE3C /* Pods-Grocery Store ClientUITests.debug.xcconfig */,
+				BD360CF9B3BD8DB539A14283 /* Pods-Grocery Store ClientUITests.release.xcconfig */,
+			);
+			name = "Pods-Grocery Store ClientUITests";
+			path = "Target Support Files/Pods-Grocery Store ClientUITests";
+			sourceTree = "<group>";
+		};
+		A7D23D06D093C78C12D97EDF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				922A79508F2C70238CA56FE0 /* Pods-Grocery Store ClientTests-VOKBenkode.xcconfig */,
+				100D18B8DB8E501A9628CD69 /* Pods-Grocery Store ClientTests-VOKBenkode-Private.xcconfig */,
+				056ED39D2B5AB1AF2214ECD3 /* Pods-Grocery Store ClientTests-VOKBenkode-dummy.m */,
+				80C16F6921DF48D8241A47E0 /* Pods-Grocery Store ClientTests-VOKBenkode-prefix.pch */,
+				914227529E439D76C2671835 /* Pods-Grocery Store ClientUITests-VOKBenkode.xcconfig */,
+				5624DF6CD195BD5D1BBEBCAF /* Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig */,
+				91D4822445080FC70CBB673D /* Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m */,
+				06D077B174E021645BF089B5 /* Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Grocery Store ClientTests-VOKBenkode";
+			sourceTree = "<group>";
+		};
+		B8F324F43644D5116BDE7BCD /* VOKMockUrlProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				4A94F9262C0D89CD2B968623 /* VOKMockUrlProtocol.h */,
+				90733CD64D6881FE10A72D48 /* VOKMockUrlProtocol.m */,
+				CAF328876D4578278DDD1C0F /* Support Files */,
+			);
+			path = VOKMockUrlProtocol;
+			sourceTree = "<group>";
+		};
+		CAF328876D4578278DDD1C0F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				57D9F8BD67BE22A8361C9D2E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol.xcconfig */,
+				95512F221B9DAA34CEEAC55E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-Private.xcconfig */,
+				A90A85CE5AE16732D159D0B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m */,
+				691BB90CE1E8D39348EEEA69 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-prefix.pch */,
+				CBF3B3728A91EAA34C99C4A5 /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol.xcconfig */,
+				37F5BD82F4310ECC5CFC04EA /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig */,
+				B2C0488639F7187F8C377118 /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m */,
+				EEDA7F467544AD6A6F4AA94D /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Grocery Store ClientTests-VOKMockUrlProtocol";
+			sourceTree = "<group>";
+		};
+		CE4092EBB1793228F6C4D406 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A8669EB3C5196669A191C18 /* Pods */,
+				439C879230E586F1499DA0C8 /* Pods-Grocery Store ClientTests */,
+				9EA8E469D087F90FC623134D /* Pods-Grocery Store ClientUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D2DFCFEE978CD142EA37B2D6 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				443D2A94F135257C416551A1 /* CGGeometry-KIFAdditions.h */,
+				13D08BD6E1AFB6F8BAC4257C /* CGGeometry-KIFAdditions.m */,
+				21AD89BD608E924A2749542D /* KIF.h */,
+				EEDAADD07C3613F66458F0B5 /* KIFSystemTestActor.h */,
+				CDD7D9ACFE490AD73C97551E /* KIFSystemTestActor.m */,
+				EF3547949ED3CA7C3B85509C /* KIFTestActor.h */,
+				22D87D273DCFF5BA538579E4 /* KIFTestActor.m */,
+				A2D5434529DCCE9658B21190 /* KIFTestCase.h */,
+				15D30E8043441B72C55CA8A5 /* KIFTestCase.m */,
+				0F64AB66AB0AFF8A1E92140C /* KIFTestStepValidation.h */,
+				31AE9FE50775E3964FF4E48F /* KIFTestStepValidation.m */,
+				6D790E63745FFD861F19F7D0 /* KIFTypist.h */,
+				507E221D7B31F9E36C8DB2FA /* KIFTypist.m */,
+				D5628CAF8CC945B7F5CE464D /* KIFUITestActor.h */,
+				306D01AA29899ACE2E418A77 /* KIFUITestActor.m */,
+				B40508350ABDA57A23B4CE31 /* KIFUITestActor-ConditionalTests.h */,
+				1EE46343D0E5B23D6BD08438 /* KIFUITestActor-ConditionalTests.m */,
+				3554F23D950671F6D95C7072 /* LoadableCategory.h */,
+				E976DB80B79B37C0F3C69A28 /* NSBundle-KIFAdditions.h */,
+				E19C2FCD9B602133E5781597 /* NSBundle-KIFAdditions.m */,
+				4C9DE0F7D47B487EB6CB317C /* NSError-KIFAdditions.h */,
+				285031CEB34A654C419062EB /* NSError-KIFAdditions.m */,
+				AF5D50BC1B427B91952C5EA6 /* NSException-KIFAdditions.h */,
+				5B412550F351E417BD12526C /* NSException-KIFAdditions.m */,
+				9029542D1BD58FF24BED367E /* NSFileManager-KIFAdditions.h */,
+				5FDC7D245CA26F668DCB3EB9 /* NSFileManager-KIFAdditions.m */,
+				776B5A4ACB1B815BA5B9D9A7 /* UIAccessibilityElement-KIFAdditions.h */,
+				278C0FD7CB9F898131EEBF6E /* UIAccessibilityElement-KIFAdditions.m */,
+				F4399EE61AFD16A3D4B5F270 /* UIApplication-KIFAdditions.h */,
+				6F5B9A84F6A217D9CFDD9AE1 /* UIApplication-KIFAdditions.m */,
+				6C593346691F996080CB6E4D /* UIAutomationHelper.h */,
+				6DF1E79F682B00E69F9138B0 /* UIAutomationHelper.m */,
+				64D3A6A7E837079E5DC69893 /* UIEvent+KIFAdditions.h */,
+				50755DC623F08092BE48D758 /* UIEvent+KIFAdditions.m */,
+				6D4F0A81BB994BD7C0BBB79C /* UIScrollView-KIFAdditions.h */,
+				E42AFB3EE0DA9091C597D45A /* UIScrollView-KIFAdditions.m */,
+				6E0565A69533F781C8074335 /* UITableView-KIFAdditions.h */,
+				D93906271067CADCC11A1B41 /* UITableView-KIFAdditions.m */,
+				2CE1D88C6DDE406B0BB2B479 /* UITouch-KIFAdditions.h */,
+				41D7C88415DC997AF59895E7 /* UITouch-KIFAdditions.m */,
+				F1D026B65C53C8AA079D877C /* UIView-Debugging.h */,
+				B4CBB27C264552FCDE4DE4EB /* UIView-Debugging.m */,
+				7FBB93F6621A63AE903EEEE7 /* UIView-KIFAdditions.h */,
+				277049EAF8DA5FF501F3E31A /* UIView-KIFAdditions.m */,
+				EA77691E33B8D364FF937F45 /* UIWindow-KIFAdditions.h */,
+				EFFD0F8B13B67E3AAD220A73 /* UIWindow-KIFAdditions.m */,
+				E4562CB8E6D799DC65F110A6 /* XCTestCase-KIFAdditions.h */,
+				DE1C28462A912B78B3AA5325 /* XCTestCase-KIFAdditions.m */,
+			);
+			name = XCTest;
+			sourceTree = "<group>";
+		};
+		D72EACE5B7F17D7FF2BD5DF0 /* FetchedResults */ = {
+			isa = PBXGroup;
+			children = (
+				5B6EF9F3131F2CE52C2FBCD3 /* VOKFetchedResultsDataSource.h */,
+				A7664A4222F7D6777164E7C8 /* VOKFetchedResultsDataSource.m */,
+			);
+			name = FetchedResults;
+			sourceTree = "<group>";
+		};
+		D94D894B6FA814DA22F1A5D1 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				985C280868B7084CC45DC7D1 /* VOKCollectionDataSource.h */,
+				A5139279E52A1C6A371C4562 /* VOKCollectionDataSource.m */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		E8E72DE75325474954776805 = {
+			isa = PBXGroup;
+			children = (
+				B9B419AEFF30ACBB1A540FBD /* Podfile */,
+				F28403DBCCE112D46AF90A4A /* Frameworks */,
+				570A5166F79A3F574C490760 /* Pods */,
+				3DBB4E78237D9AF0F6F74F30 /* Products */,
+				CE4092EBB1793228F6C4D406 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		F04D3320E8E39B111E2C4D32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				241C2935E4FF19F85512DE6F /* Pods-Grocery Store ClientTests-ILGHttpConstants.xcconfig */,
+				472CD9429C60EB7F535C442A /* Pods-Grocery Store ClientTests-ILGHttpConstants-Private.xcconfig */,
+				AE2F1AE99BBDE295FA8B1BDE /* Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m */,
+				4D0A15428E38453EBE469295 /* Pods-Grocery Store ClientTests-ILGHttpConstants-prefix.pch */,
+				4135697ADABD6C66C63B4E42 /* Pods-Grocery Store ClientUITests-ILGHttpConstants.xcconfig */,
+				23963019803064B7E8F0B5F5 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig */,
+				D0D2F6BE56D12A41882B3C53 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m */,
+				FE8FFBB2F6CBEE274E6441B6 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Grocery Store ClientTests-ILGHttpConstants";
+			sourceTree = "<group>";
+		};
+		F28403DBCCE112D46AF90A4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C5AAE9B4EC43A69B9AE5545 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8C9B3C8A931AC9B347B8E3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC5467DF633ABBC6D42788EF /* Pods-AFNetworking.xcconfig */,
+				624104FF9B26EC4E35F8FC96 /* Pods-AFNetworking-Private.xcconfig */,
+				4BAECA978B4D599E80CE6DE1 /* Pods-AFNetworking-dummy.m */,
+				D9E630AF6FF403539C39403C /* Pods-AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-AFNetworking";
+			sourceTree = "<group>";
+		};
+		FACC9E7CAEB3E19061593176 /* XcodeCoverage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XcodeCoverage;
+			sourceTree = "<group>";
+		};
+		FD4F6CE561655ADE31A524C6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE5479BF49CB4D2D4DC57CE8 /* Pods-Grocery Store ClientUITests-KIF.xcconfig */,
+				3DB7CE10FA38CA58225C4525 /* Pods-Grocery Store ClientUITests-KIF-Private.xcconfig */,
+				184546DC1749ABCF80150FC8 /* Pods-Grocery Store ClientUITests-KIF-dummy.m */,
+				67695CCE0C3332E0A8C3B324 /* Pods-Grocery Store ClientUITests-KIF-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Grocery Store ClientUITests-KIF";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0AB3737F56E89C9245AFAF00 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F5A4E8869699E439C405FD7 /* AFHTTPRequestOperation.h in Headers */,
+				79D08DC0F125D918D77B6C8F /* AFHTTPRequestOperationManager.h in Headers */,
+				3DAA31CEFF8B47B3BBE19C84 /* AFHTTPSessionManager.h in Headers */,
+				8945B1C7D2663851541BAC76 /* AFNetworkActivityIndicatorManager.h in Headers */,
+				B6509A5899F3C87781BE1567 /* AFNetworkReachabilityManager.h in Headers */,
+				FA1540A0DC0A9BCC0B98460B /* AFNetworking.h in Headers */,
+				CD65680BA0A6C73BA24DEB62 /* AFSecurityPolicy.h in Headers */,
+				C3D93EE9281AA077F1696371 /* AFURLConnectionOperation.h in Headers */,
+				F5C6D17E9354E224AC530281 /* AFURLRequestSerialization.h in Headers */,
+				0CD6136D229D46C12A2FC84D /* AFURLResponseSerialization.h in Headers */,
+				AE5F0F885854372A351B8656 /* AFURLSessionManager.h in Headers */,
+				F023ECF9D6FDFD2D16A06A52 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				FBC4F4F1C97D3C9FE385159E /* UIAlertView+AFNetworking.h in Headers */,
+				203321B5334E09453AA682A0 /* UIButton+AFNetworking.h in Headers */,
+				1F3779DD2B094288F10A620C /* UIImageView+AFNetworking.h in Headers */,
+				5CD2E82DD9ECBAF7F9F3467E /* UIKit+AFNetworking.h in Headers */,
+				EDA4A26667611A9049EB38B8 /* UIProgressView+AFNetworking.h in Headers */,
+				F8F9E5B53D1D086935C09030 /* UIRefreshControl+AFNetworking.h in Headers */,
+				907B64015034CD74D3AD23F9 /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F9C24B45EFC341ED4EECDA4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E420CDFF81428C7F3F1EDF /* HTTPHeaderFields.h in Headers */,
+				5DC68BC122A9AA603F0E3530 /* HTTPMethods.h in Headers */,
+				08DF4D8D780C415C3000F5E7 /* HTTPStatusCodes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34B5961277708D65588A7096 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				902D83AA10D59E0122D10246 /* VOKMockUrlProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3776346D64B7F323F8BD8F92 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74FCFEF0D23630B88F0BEF08 /* VOKBenkode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93821E24DD04A50795DA0EEC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660AA3776DDC27D1E4DCD6DD /* VOKBenkode.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A18B8F2CDFC8CD1CB1B54AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9FBBE5682F160685EA7585 /* CGGeometry-KIFAdditions.h in Headers */,
+				244401BBACDDB1DF0BB3D94D /* KIF.h in Headers */,
+				A3212F729017E83A37AD40BF /* KIFSystemTestActor.h in Headers */,
+				A91A99F15927EC3AAAFAF036 /* KIFTestActor.h in Headers */,
+				0592DA54D495F2D1A6AED00F /* KIFTestCase.h in Headers */,
+				B3B6B094F3FCA49D6AA8FA84 /* KIFTestStepValidation.h in Headers */,
+				85581FE3F675284C109A352F /* KIFTypist.h in Headers */,
+				D708A8DC605817ED20D6188A /* KIFUITestActor-ConditionalTests.h in Headers */,
+				B23425E0629527BC107C943F /* KIFUITestActor.h in Headers */,
+				F4D22DFC7523E0F4EFCF8D9C /* LoadableCategory.h in Headers */,
+				88DD9B3E9E0F523ACDD61D78 /* NSBundle-KIFAdditions.h in Headers */,
+				4EFDDB6ABDEF9FDDE755559D /* NSError-KIFAdditions.h in Headers */,
+				187427D5AE98E56DD77735D8 /* NSException-KIFAdditions.h in Headers */,
+				DDF42D1236168B96520BF9A0 /* NSFileManager-KIFAdditions.h in Headers */,
+				31C3412EC32E85A6D6630548 /* UIAccessibilityElement-KIFAdditions.h in Headers */,
+				51BEF9ADE3B75CF10EE9C3C7 /* UIApplication-KIFAdditions.h in Headers */,
+				6F34E194C04A921E42B50226 /* UIAutomationHelper.h in Headers */,
+				C28B955186B47560197EDA1F /* UIEvent+KIFAdditions.h in Headers */,
+				4C1AB569208B8AA457014A44 /* UIScrollView-KIFAdditions.h in Headers */,
+				34557E625EB2A473A2F1E8C6 /* UITableView-KIFAdditions.h in Headers */,
+				20178C234429639C4982E615 /* UITouch-KIFAdditions.h in Headers */,
+				9E3956B1E3E967E6126FC9DB /* UIView-Debugging.h in Headers */,
+				53A4875971F2387FA9BE6F8E /* UIView-KIFAdditions.h in Headers */,
+				492206C5C1110DA9D0C92EA7 /* UIWindow-KIFAdditions.h in Headers */,
+				AC1611647309176BCF3D70E5 /* XCTestCase-KIFAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CA2C0C4ADC549B7DD75229 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97BA74E1187980D9CC1C6CBF /* VOKMockUrlProtocol.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8BB829473CE510164060319 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E3B760033BE1F56D16DA008 /* NSManagedObject+VOKManagedObjectAdditions.h in Headers */,
+				0DEA4996AD988C282665B337 /* VOKCollectionDataSource.h in Headers */,
+				3F57D5E9EE2A91948435CEBC /* VOKCoreDataManager.h in Headers */,
+				04CEA1983B9DDFF8ED9310B1 /* VOKCoreDataManagerInternalMacros.h in Headers */,
+				49B9B12F240E9D92CB70CC92 /* VOKDefaultPagingAccessory.h in Headers */,
+				0AD4ABFA38C621A58377F80C /* VOKFetchedResultsDataSource.h in Headers */,
+				17107985D65DFFC0349E823F /* VOKManagedObjectMap.h in Headers */,
+				B13FDBFA5C1AAE0CC44C6690 /* VOKManagedObjectMapper.h in Headers */,
+				C3D13AFD303635DB3FB78C65 /* VOKPagingFetchedResultsDataSource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E02AAF067C260E451FD3E7A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				927C0FB46B2372DF1CF1C2C5 /* HTTPHeaderFields.h in Headers */,
+				B9EA009ECE88EA7D0A3ED070 /* HTTPMethods.h in Headers */,
+				E5543DEBC2B92B0BA29E4F8A /* HTTPStatusCodes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		064ECCD3CFA7557B609E06B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2334BF9F17A7B41258806BEB /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-VOKMockUrlProtocol" */;
+			buildPhases = (
+				28EC1EC286DFA0A3C904B39A /* Sources */,
+				F4C370A78231DD5C11F851CA /* Frameworks */,
+				34B5961277708D65588A7096 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F26B397865DC82440EAE484C /* PBXTargetDependency */,
+				8C4F235D293CA89CA1DF1F95 /* PBXTargetDependency */,
+			);
+			name = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol";
+			productName = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol";
+			productReference = 1142FEF0A7CEF18CB645EF27 /* libPods-Grocery Store ClientTests-VOKMockUrlProtocol.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48ED6FA1ED0F40A03B89D09F /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2F1D5DC58F3C2E979B96922 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol" */;
+			buildPhases = (
+				B15008795C7DF32E7D14CF47 /* Sources */,
+				6FC7FE8BC05C6A40C9BE2C35 /* Frameworks */,
+				C4CA2C0C4ADC549B7DD75229 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				973D57A52669981CA06E949D /* PBXTargetDependency */,
+				977BED7778F304D91D4CF2FF /* PBXTargetDependency */,
+			);
+			name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol";
+			productName = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol";
+			productReference = E44E2CF5A20A3121C17F7EF5 /* libPods-Grocery Store ClientUITests-VOKMockUrlProtocol.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6098B334F5E51271C7E7C2F7 /* Pods-Grocery Store ClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194B6F06010B877DDA29F4B2 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests" */;
+			buildPhases = (
+				6A6A94668F4CD9F47D441F4D /* Sources */,
+				5A7BC76EB9BFEE394F4339DC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A29E5A836464B6173AEBDAFF /* PBXTargetDependency */,
+				D1D5A2259571AD29784B3DE2 /* PBXTargetDependency */,
+				353C15951539DD0B30C5454F /* PBXTargetDependency */,
+				5B4698F85C048AD8AE341F23 /* PBXTargetDependency */,
+			);
+			name = "Pods-Grocery Store ClientUITests";
+			productName = "Pods-Grocery Store ClientUITests";
+			productReference = C6DF6BBD71B5440B31E36EBC /* libPods-Grocery Store ClientUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		820A122634AEA6111A85B288 /* Pods-Vokoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 687E0A922ECB30446BEECC0C /* Build configuration list for PBXNativeTarget "Pods-Vokoder" */;
+			buildPhases = (
+				61720938ABFB15A5214C8845 /* Sources */,
+				CAF8705DD8BA7663E4783235 /* Frameworks */,
+				C8BB829473CE510164060319 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Vokoder";
+			productName = "Pods-Vokoder";
+			productReference = 6BD960BDF5D3E23F77A255DB /* libPods-Vokoder.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		99EA93EAD058D2EC13003986 /* Pods-AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF20FEDE5E410EBA683CDFDB /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */;
+			buildPhases = (
+				3D8F19E65785C91B8AF30C89 /* Sources */,
+				87BC8ACEA656E92892C271DA /* Frameworks */,
+				0AB3737F56E89C9245AFAF00 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-AFNetworking";
+			productName = "Pods-AFNetworking";
+			productReference = 8F3F64247A4BD0B23333BFE0 /* libPods-AFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9B0218C246AA9BDD6F15E0F0 /* Pods-Grocery Store ClientUITests-VOKBenkode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFB492BBFC5464B0AA3BB624 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-VOKBenkode" */;
+			buildPhases = (
+				0D9887B8A6E131F8698F3083 /* Sources */,
+				79D1B69C0481014525DA268D /* Frameworks */,
+				93821E24DD04A50795DA0EEC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Grocery Store ClientUITests-VOKBenkode";
+			productName = "Pods-Grocery Store ClientUITests-VOKBenkode";
+			productReference = A6ACD79842890B9C2C241EC5 /* libPods-Grocery Store ClientUITests-VOKBenkode.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D11514DB40B614183BD968E8 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB80E4446645FD22A93DAC45 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				0370A6FC57924E5A03E49A89 /* Sources */,
+				5B50E43FB549DF9F333AF211 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72BF98A09A72707A9A101A95 /* PBXTargetDependency */,
+				210668C55F90CBA1C8681BF8 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = EB235F5FE998E5FC3877D8EA /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D3BA515E42155BBF522CF556 /* Pods-Grocery Store ClientUITests-ILGHttpConstants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 987F26A5DC7E14671A57807C /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-ILGHttpConstants" */;
+			buildPhases = (
+				985D51F81343ED9D21EC0D35 /* Sources */,
+				D50BC1B53E9CEA79A6853ED7 /* Frameworks */,
+				E02AAF067C260E451FD3E7A9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+			productName = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+			productReference = B24B6DA99D4846F75B1DF810 /* libPods-Grocery Store ClientUITests-ILGHttpConstants.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D62B9D4A490A48EFD7E2E2B5 /* Pods-Grocery Store ClientUITests-KIF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CEEFB19CCC76BC5C56E361E /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-KIF" */;
+			buildPhases = (
+				B41E8DBC6EBADD51524CF95D /* Sources */,
+				BF7E2A30110A2C2528F0BBCB /* Frameworks */,
+				9A18B8F2CDFC8CD1CB1B54AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Grocery Store ClientUITests-KIF";
+			productName = "Pods-Grocery Store ClientUITests-KIF";
+			productReference = D8492626EF0DD1E09B2D503F /* libPods-Grocery Store ClientUITests-KIF.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DB87AD0A1A54577EF9049C91 /* Pods-Grocery Store ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 983DBA687E43A0E2C364145A /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests" */;
+			buildPhases = (
+				D7C732DC771F11230FC57324 /* Sources */,
+				2FBA74D5E25CA150EBB7580C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1983C9FBEC87F4CCF15B4359 /* PBXTargetDependency */,
+				E611FEEE73528439EDB3B6F9 /* PBXTargetDependency */,
+				4F407E10BEC55B2FCA93D8D3 /* PBXTargetDependency */,
+			);
+			name = "Pods-Grocery Store ClientTests";
+			productName = "Pods-Grocery Store ClientTests";
+			productReference = 5FAD84AA425CBB907D558BD1 /* libPods-Grocery Store ClientTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E3E43BB5D50783EA1090362A /* Pods-Grocery Store ClientTests-VOKBenkode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0500367C4B386ECE02FEEE08 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-VOKBenkode" */;
+			buildPhases = (
+				E47C4B25B6BEF76890EBDA5D /* Sources */,
+				72F22E0254E8D9C91CC4FD85 /* Frameworks */,
+				3776346D64B7F323F8BD8F92 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Grocery Store ClientTests-VOKBenkode";
+			productName = "Pods-Grocery Store ClientTests-VOKBenkode";
+			productReference = 280B20B99412D084C4AD8A95 /* libPods-Grocery Store ClientTests-VOKBenkode.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7A5A84621E73E70F975156E /* Pods-Grocery Store ClientTests-ILGHttpConstants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DBDE6F4A0C3AF7C264D9574 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-ILGHttpConstants" */;
+			buildPhases = (
+				826F1AD240CE5901AB1B60F5 /* Sources */,
+				088BD4EEB95E1D9ED8597C8D /* Frameworks */,
+				0F9C24B45EFC341ED4EECDA4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+			productName = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+			productReference = 6D0A5758C1B6DEA412DED54C /* libPods-Grocery Store ClientTests-ILGHttpConstants.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CFB9091E2771326F8E66C39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 94A66C39DBF42852B1A12DB9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8E72DE75325474954776805;
+			productRefGroup = 3DBB4E78237D9AF0F6F74F30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D11514DB40B614183BD968E8 /* Pods */,
+				99EA93EAD058D2EC13003986 /* Pods-AFNetworking */,
+				DB87AD0A1A54577EF9049C91 /* Pods-Grocery Store ClientTests */,
+				E7A5A84621E73E70F975156E /* Pods-Grocery Store ClientTests-ILGHttpConstants */,
+				E3E43BB5D50783EA1090362A /* Pods-Grocery Store ClientTests-VOKBenkode */,
+				064ECCD3CFA7557B609E06B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol */,
+				6098B334F5E51271C7E7C2F7 /* Pods-Grocery Store ClientUITests */,
+				D3BA515E42155BBF522CF556 /* Pods-Grocery Store ClientUITests-ILGHttpConstants */,
+				D62B9D4A490A48EFD7E2E2B5 /* Pods-Grocery Store ClientUITests-KIF */,
+				9B0218C246AA9BDD6F15E0F0 /* Pods-Grocery Store ClientUITests-VOKBenkode */,
+				48ED6FA1ED0F40A03B89D09F /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol */,
+				820A122634AEA6111A85B288 /* Pods-Vokoder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0370A6FC57924E5A03E49A89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA7FD099FFACC0354F1350F8 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D9887B8A6E131F8698F3083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7F0E78A3614AE6780CA7A8 /* Pods-Grocery Store ClientUITests-VOKBenkode-dummy.m in Sources */,
+				35023110911E3837814E2E90 /* VOKBenkode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28EC1EC286DFA0A3C904B39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA9947DB75F8CAD3376B3E2 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-dummy.m in Sources */,
+				C096426C600C27BF6E401549 /* VOKMockUrlProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D8F19E65785C91B8AF30C89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDA588407A79C8FA92A32F98 /* AFHTTPRequestOperation.m in Sources */,
+				3BFB137F391170D30547903F /* AFHTTPRequestOperationManager.m in Sources */,
+				6E1D826CBC52A48FB2898E5E /* AFHTTPSessionManager.m in Sources */,
+				2CC613E0E0EDDE69A3F287EC /* AFNetworkActivityIndicatorManager.m in Sources */,
+				07A344E6120D6218BBD3A9B0 /* AFNetworkReachabilityManager.m in Sources */,
+				0CE6031103A2E754BC203AA9 /* AFSecurityPolicy.m in Sources */,
+				CC672461C83CFDA0A9B9F1ED /* AFURLConnectionOperation.m in Sources */,
+				948DCFE6D768E99B96C94129 /* AFURLRequestSerialization.m in Sources */,
+				CEC99D79FF9A164D95D7AD3D /* AFURLResponseSerialization.m in Sources */,
+				AF9279501126035E9364D026 /* AFURLSessionManager.m in Sources */,
+				C6C591B4F1A51D2333B0C276 /* Pods-AFNetworking-dummy.m in Sources */,
+				208207BB6CF78E08D8AE3F94 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				0AE97E7640716DFAFD237D28 /* UIAlertView+AFNetworking.m in Sources */,
+				B8F7AE420B4652E68FEA1F9F /* UIButton+AFNetworking.m in Sources */,
+				ABA5455A9C9157259E21FF1F /* UIImageView+AFNetworking.m in Sources */,
+				BC76951686CF165D6597D2C3 /* UIProgressView+AFNetworking.m in Sources */,
+				5E5568D75448849740115964 /* UIRefreshControl+AFNetworking.m in Sources */,
+				04007CD49113C4234D4B3796 /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61720938ABFB15A5214C8845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E4BA0D9CB74F7F8AA299CD /* NSManagedObject+VOKManagedObjectAdditions.m in Sources */,
+				509BC9E1134C30DBE86D942B /* Pods-Vokoder-dummy.m in Sources */,
+				BDC0E7E4CFB0FA69962CC29B /* VOKCollectionDataSource.m in Sources */,
+				BF2B3ECB7E88D3B9AA7D8FA6 /* VOKCoreDataManager.m in Sources */,
+				28D52BD0A31262E35FC246A6 /* VOKDefaultPagingAccessory.m in Sources */,
+				8212DCE51852CC30149374A8 /* VOKFetchedResultsDataSource.m in Sources */,
+				A3A2C54CEACF600CC46CDCCE /* VOKManagedObjectMap.m in Sources */,
+				C87F14148B65415107C51429 /* VOKManagedObjectMapper.m in Sources */,
+				EC83F6229700FE308AF06F5B /* VOKPagingFetchedResultsDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6A94668F4CD9F47D441F4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F4AF9BF91955B1649904C7 /* Pods-Grocery Store ClientUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826F1AD240CE5901AB1B60F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64856A2AAA73C78A11116B32 /* HTTPHeaderFields.m in Sources */,
+				1A9742126E620DEEB4EDC072 /* HTTPMethods.m in Sources */,
+				5C5BC586E4E8D3D2A3F1ED70 /* Pods-Grocery Store ClientTests-ILGHttpConstants-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		985D51F81343ED9D21EC0D35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9086850DB89E29E17E8838DA /* HTTPHeaderFields.m in Sources */,
+				70EBB542AB420A1D6E52612D /* HTTPMethods.m in Sources */,
+				554A1F10D37136AF640E6F09 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B15008795C7DF32E7D14CF47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6FE658507250A843251EDDE /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-dummy.m in Sources */,
+				B650C2FD4960E6C3979866E7 /* VOKMockUrlProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41E8DBC6EBADD51524CF95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B688D2FA534EE593F26BA4BD /* CGGeometry-KIFAdditions.m in Sources */,
+				1411B9E224271CC432E6D0B5 /* KIFSystemTestActor.m in Sources */,
+				650BB337DBFC768789ED6868 /* KIFTestActor.m in Sources */,
+				531AAACB7B5CE2E53BCF1C03 /* KIFTestCase.m in Sources */,
+				44E98C6CE64FA215A205A399 /* KIFTestStepValidation.m in Sources */,
+				ACBEDDE91E649105F478E2B5 /* KIFTypist.m in Sources */,
+				0F77866A6938536482073F52 /* KIFUITestActor-ConditionalTests.m in Sources */,
+				09D484853B1C74BB92FB31B2 /* KIFUITestActor.m in Sources */,
+				74C0B13BAB9E09F92524EF80 /* NSBundle-KIFAdditions.m in Sources */,
+				25607A28071F59E77F6FEE00 /* NSError-KIFAdditions.m in Sources */,
+				1AABBFF984348C2C87470679 /* NSException-KIFAdditions.m in Sources */,
+				CF30C134CC4B1000689037B3 /* NSFileManager-KIFAdditions.m in Sources */,
+				609661B219339A47EA419296 /* Pods-Grocery Store ClientUITests-KIF-dummy.m in Sources */,
+				38F41DEB9802F26AB4DA1548 /* UIAccessibilityElement-KIFAdditions.m in Sources */,
+				5207DCED038D71AABA7FF902 /* UIApplication-KIFAdditions.m in Sources */,
+				4412BD5B44FC7FB07A4F8F1B /* UIAutomationHelper.m in Sources */,
+				D147E911755F93A994F495E1 /* UIEvent+KIFAdditions.m in Sources */,
+				A90A16CC3F7A3CB8877FDF71 /* UIScrollView-KIFAdditions.m in Sources */,
+				6A1CBE5B884ECD6DF75FDC14 /* UITableView-KIFAdditions.m in Sources */,
+				F16FD1C33240471FC82511E3 /* UITouch-KIFAdditions.m in Sources */,
+				1A81EEC67CC360B9EBB0E535 /* UIView-Debugging.m in Sources */,
+				F7F8728188BEF52EB7D5A9D1 /* UIView-KIFAdditions.m in Sources */,
+				D64DE253446CDF8734D496F8 /* UIWindow-KIFAdditions.m in Sources */,
+				28FCE65A52AB9C3F85DAE8E1 /* XCTestCase-KIFAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7C732DC771F11230FC57324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B156DBE8FA1B594AA9C5B968 /* Pods-Grocery Store ClientTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E47C4B25B6BEF76890EBDA5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F0CBEBF54164F41AC57C59B /* Pods-Grocery Store ClientTests-VOKBenkode-dummy.m in Sources */,
+				2D3FA07439F812743ECF9B16 /* VOKBenkode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1983C9FBEC87F4CCF15B4359 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+			target = E7A5A84621E73E70F975156E /* Pods-Grocery Store ClientTests-ILGHttpConstants */;
+			targetProxy = 66D99E6F9A851ABD1DEE6A06 /* PBXContainerItemProxy */;
+		};
+		210668C55F90CBA1C8681BF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Vokoder";
+			target = 820A122634AEA6111A85B288 /* Pods-Vokoder */;
+			targetProxy = 26D4EBA5799A55A56C4CEE74 /* PBXContainerItemProxy */;
+		};
+		353C15951539DD0B30C5454F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-VOKBenkode";
+			target = 9B0218C246AA9BDD6F15E0F0 /* Pods-Grocery Store ClientUITests-VOKBenkode */;
+			targetProxy = 3B7B70913D6238E0973BD49C /* PBXContainerItemProxy */;
+		};
+		4F407E10BEC55B2FCA93D8D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientTests-VOKMockUrlProtocol";
+			target = 064ECCD3CFA7557B609E06B1 /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol */;
+			targetProxy = 7D0895079B366720B0C9068D /* PBXContainerItemProxy */;
+		};
+		5B4698F85C048AD8AE341F23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol";
+			target = 48ED6FA1ED0F40A03B89D09F /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol */;
+			targetProxy = 2A371CE4E9DFDEE028C401B2 /* PBXContainerItemProxy */;
+		};
+		72BF98A09A72707A9A101A95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-AFNetworking";
+			target = 99EA93EAD058D2EC13003986 /* Pods-AFNetworking */;
+			targetProxy = 50F1ADB194162A87AB72E95D /* PBXContainerItemProxy */;
+		};
+		8C4F235D293CA89CA1DF1F95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientTests-VOKBenkode";
+			target = E3E43BB5D50783EA1090362A /* Pods-Grocery Store ClientTests-VOKBenkode */;
+			targetProxy = 67C4471BE112A34508FC2C1B /* PBXContainerItemProxy */;
+		};
+		973D57A52669981CA06E949D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+			target = D3BA515E42155BBF522CF556 /* Pods-Grocery Store ClientUITests-ILGHttpConstants */;
+			targetProxy = ACF3643453B66B1299E2C4A6 /* PBXContainerItemProxy */;
+		};
+		977BED7778F304D91D4CF2FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-VOKBenkode";
+			target = 9B0218C246AA9BDD6F15E0F0 /* Pods-Grocery Store ClientUITests-VOKBenkode */;
+			targetProxy = 993D51301DB7616FF1127378 /* PBXContainerItemProxy */;
+		};
+		A29E5A836464B6173AEBDAFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-ILGHttpConstants";
+			target = D3BA515E42155BBF522CF556 /* Pods-Grocery Store ClientUITests-ILGHttpConstants */;
+			targetProxy = 6FFF3FC1B51EDECBC77BF377 /* PBXContainerItemProxy */;
+		};
+		D1D5A2259571AD29784B3DE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientUITests-KIF";
+			target = D62B9D4A490A48EFD7E2E2B5 /* Pods-Grocery Store ClientUITests-KIF */;
+			targetProxy = 71285C28439BA04CD02D6039 /* PBXContainerItemProxy */;
+		};
+		E611FEEE73528439EDB3B6F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientTests-VOKBenkode";
+			target = E3E43BB5D50783EA1090362A /* Pods-Grocery Store ClientTests-VOKBenkode */;
+			targetProxy = 59EAC7A0740FB12B8431D3FC /* PBXContainerItemProxy */;
+		};
+		F26B397865DC82440EAE484C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Grocery Store ClientTests-ILGHttpConstants";
+			target = E7A5A84621E73E70F975156E /* Pods-Grocery Store ClientTests-ILGHttpConstants */;
+			targetProxy = 1B101C597F7453E59CEF3D3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E5BA6104475D94D1CE20A07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14B0F100C71838ECEF8B8BD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 624104FF9B26EC4E35F8FC96 /* Pods-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1853F66EB344C4F0DE9FE94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A0D30352FAF9CD79187F414 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		29B60102279E8CDF2DB9E470 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95512F221B9DAA34CEEAC55E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-VOKMockUrlProtocol/Pods-Grocery Store ClientTests-VOKMockUrlProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3BA36E7A2FD95C4BE170E5C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95512F221B9DAA34CEEAC55E /* Pods-Grocery Store ClientTests-VOKMockUrlProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-VOKMockUrlProtocol/Pods-Grocery Store ClientTests-VOKMockUrlProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		455082324229DE7EAF68D4C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472CD9429C60EB7F535C442A /* Pods-Grocery Store ClientTests-ILGHttpConstants-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-ILGHttpConstants/Pods-Grocery Store ClientTests-ILGHttpConstants-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4D7B1E092A133417550A4655 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4EA49D2A988339EAFEA1DD82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E940C7DEB7D74A600F1BBD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EFF7F2A921069FB80A7B3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F5BD82F4310ECC5CFC04EA /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		509D54D01B8485B31B87CFD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B373427B5C3239B0B7EFF2 /* Pods-Vokoder-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Vokoder/Pods-Vokoder-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6F44237F16E44655CFCA2A93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 472CD9429C60EB7F535C442A /* Pods-Grocery Store ClientTests-ILGHttpConstants-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-ILGHttpConstants/Pods-Grocery Store ClientTests-ILGHttpConstants-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		70823D552455DA6F7C8C102B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB7CE10FA38CA58225C4525 /* Pods-Grocery Store ClientUITests-KIF-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-KIF/Pods-Grocery Store ClientUITests-KIF-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7F39491524E47B9E64D7BB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23963019803064B7E8F0B5F5 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		842B4E5269E1E0BA80E99991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F5BD82F4310ECC5CFC04EA /* Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol/Pods-Grocery Store ClientUITests-VOKMockUrlProtocol-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8ED0081AC88BE98FB2DAF4E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5624DF6CD195BD5D1BBEBCAF /* Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		98B81483468F4EF539D4375F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD360CF9B3BD8DB539A14283 /* Pods-Grocery Store ClientUITests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A5161F1A357C8ECC47F50A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94BC3CC2B82DD6CA3848EB9 /* Pods-Grocery Store ClientTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AAA7570CB7E79F68ED3BB1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 624104FF9B26EC4E35F8FC96 /* Pods-AFNetworking-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AFNetworking/Pods-AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BF60AC8E63F455F7A84048D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100D18B8DB8E501A9628CD69 /* Pods-Grocery Store ClientTests-VOKBenkode-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-VOKBenkode/Pods-Grocery Store ClientTests-VOKBenkode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C20CB6879758B9F862843AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBA581B3D27576D836982B57 /* Pods-Grocery Store ClientTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D5D8AACEC05F72710E7DF3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DB7CE10FA38CA58225C4525 /* Pods-Grocery Store ClientUITests-KIF-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-KIF/Pods-Grocery Store ClientUITests-KIF-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D8A9CAB1DBAF0A8F65828BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD14C69C0044B19D392AE3C /* Pods-Grocery Store ClientUITests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DA6A0C9433BEB9FB7BF17F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100D18B8DB8E501A9628CD69 /* Pods-Grocery Store ClientTests-VOKBenkode-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientTests-VOKBenkode/Pods-Grocery Store ClientTests-VOKBenkode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DCDD0F758EA582ED9DFD9F2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88B373427B5C3239B0B7EFF2 /* Pods-Vokoder-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Vokoder/Pods-Vokoder-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F0F16E122FCFA7091CE67951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5624DF6CD195BD5D1BBEBCAF /* Pods-Grocery Store ClientUITests-VOKBenkode-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-VOKBenkode/Pods-Grocery Store ClientUITests-VOKBenkode-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F8B2DD962942C17CD448DDE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23963019803064B7E8F0B5F5 /* Pods-Grocery Store ClientUITests-ILGHttpConstants-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Grocery Store ClientUITests-ILGHttpConstants/Pods-Grocery Store ClientUITests-ILGHttpConstants-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0500367C4B386ECE02FEEE08 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-VOKBenkode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF60AC8E63F455F7A84048D1 /* Debug */,
+				DA6A0C9433BEB9FB7BF17F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194B6F06010B877DDA29F4B2 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A9CAB1DBAF0A8F65828BEA /* Debug */,
+				98B81483468F4EF539D4375F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2334BF9F17A7B41258806BEB /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-VOKMockUrlProtocol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29B60102279E8CDF2DB9E470 /* Debug */,
+				3BA36E7A2FD95C4BE170E5C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		687E0A922ECB30446BEECC0C /* Build configuration list for PBXNativeTarget "Pods-Vokoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509D54D01B8485B31B87CFD4 /* Debug */,
+				DCDD0F758EA582ED9DFD9F2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DBDE6F4A0C3AF7C264D9574 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests-ILGHttpConstants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				455082324229DE7EAF68D4C3 /* Debug */,
+				6F44237F16E44655CFCA2A93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A66C39DBF42852B1A12DB9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D7B1E092A133417550A4655 /* Debug */,
+				0E5BA6104475D94D1CE20A07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		983DBA687E43A0E2C364145A /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5161F1A357C8ECC47F50A81 /* Debug */,
+				C20CB6879758B9F862843AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		987F26A5DC7E14671A57807C /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-ILGHttpConstants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F39491524E47B9E64D7BB54 /* Debug */,
+				F8B2DD962942C17CD448DDE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CEEFB19CCC76BC5C56E361E /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-KIF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70823D552455DA6F7C8C102B /* Debug */,
+				D5D8AACEC05F72710E7DF3BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2F1D5DC58F3C2E979B96922 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-VOKMockUrlProtocol" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EFF7F2A921069FB80A7B3D8 /* Debug */,
+				842B4E5269E1E0BA80E99991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB80E4446645FD22A93DAC45 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA49D2A988339EAFEA1DD82 /* Debug */,
+				1853F66EB344C4F0DE9FE94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFB492BBFC5464B0AA3BB624 /* Build configuration list for PBXNativeTarget "Pods-Grocery Store ClientUITests-VOKBenkode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0F16E122FCFA7091CE67951 /* Debug */,
+				8ED0081AC88BE98FB2DAF4E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF20FEDE5E410EBA683CDFDB /* Build configuration list for PBXNativeTarget "Pods-AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B0F100C71838ECEF8B8BD7 /* Debug */,
+				AAA7570CB7E79F68ED3BB1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CFB9091E2771326F8E66C39 /* Project object */;
+}

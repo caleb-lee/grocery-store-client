@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0F889E25378275DAE210CB /* libPods-Grocery Store ClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */; };
+		1C21794D5AF9AD834AA187F3 /* libPods-Grocery Store ClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */; };
 		8442B1941B33712100148B8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1931B33712100148B8B /* main.m */; };
 		8442B1971B33712100148B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1961B33712100148B8B /* AppDelegate.m */; };
 		8442B1A31B33712100148B8B /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1A21B33712100148B8B /* remove-key.sh */; };
@@ -19,6 +21,7 @@
 		8442B1C61B33712100148B8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1C41B33712100148B8B /* LaunchScreen.xib */; };
 		8442B1D21B33712100148B8B /* Grocery_Store_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1D11B33712100148B8B /* Grocery_Store_ClientTests.m */; };
 		8442B1DE1B33712100148B8B /* Grocery_Store_ClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */; };
+		C2456DA3A65FB4A5ADD3B157 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B2EB23698DC7013FF5AF07 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17FB985FF00BB3E911644DDD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2FB7A672E052B54CEB5BD79E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5151A7052E71152B91906DB2 /* Pods-Grocery Store ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442B18E1B33712100148B8B /* Grocery Store Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Store Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442B1921B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442B1931B33712100148B8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,7 +59,7 @@
 		8442B19F1B33712100148B8B /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
 		8442B1A01B33712100148B8B /* codecov.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = codecov.sh; sourceTree = "<group>"; };
 		8442B1A11B33712100148B8B /* distribute.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = distribute.sh; sourceTree = "<group>"; };
-		8442B1A21B33712100148B8B /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "remove-key.sh"; sourceTree = "<group>"; };
+		8442B1A21B33712100148B8B /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "remove-key.sh"; sourceTree = "<group>"; };
 		8442B1A41B33712100148B8B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		8442B1A51B33712100148B8B /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; };
 		8442B1A61B33712100148B8B /* VokalObjCleanStyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VokalObjCleanStyleSettings.plist; path = ../VokalObjCleanStyleSettings.plist; sourceTree = "<group>"; };
@@ -75,6 +82,11 @@
 		8442B1D71B33712100148B8B /* Grocery Store ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grocery Store ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442B1DC1B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_Store_ClientUITests.m; sourceTree = "<group>"; };
+		9983F69C2E77FDB73E05B371 /* Pods-Grocery Store ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientTests/Pods-Grocery Store ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C29C4002BDC01B35F35EDA57 /* Pods-Grocery Store ClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D745661F36634ECB96317FFC /* Pods-Grocery Store ClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientTests/Pods-Grocery Store ClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		E2B2EB23698DC7013FF5AF07 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2456DA3A65FB4A5ADD3B157 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0F889E25378275DAE210CB /* libPods-Grocery Store ClientTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C21794D5AF9AD834AA187F3 /* libPods-Grocery Store ClientUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,8 @@
 				8442B1CE1B33712100148B8B /* Grocery Store ClientTests */,
 				8442B1DA1B33712100148B8B /* Grocery Store ClientUITests */,
 				8442B18F1B33712100148B8B /* Products */,
+				A912DB7FB8BF823C62852757 /* Pods */,
+				DC4756AB08A3BB0B0F9EB004 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -288,6 +305,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A912DB7FB8BF823C62852757 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17FB985FF00BB3E911644DDD /* Pods.debug.xcconfig */,
+				2FB7A672E052B54CEB5BD79E /* Pods.release.xcconfig */,
+				9983F69C2E77FDB73E05B371 /* Pods-Grocery Store ClientTests.debug.xcconfig */,
+				D745661F36634ECB96317FFC /* Pods-Grocery Store ClientTests.release.xcconfig */,
+				C29C4002BDC01B35F35EDA57 /* Pods-Grocery Store ClientUITests.debug.xcconfig */,
+				5151A7052E71152B91906DB2 /* Pods-Grocery Store ClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC4756AB08A3BB0B0F9EB004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2B2EB23698DC7013FF5AF07 /* libPods.a */,
+				A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */,
+				6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -295,12 +335,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8442B1E11B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store Client" */;
 			buildPhases = (
+				7C81049C42250787C34E581C /* Check Pods Manifest.lock */,
 				8442B1871B33712100148B8B /* Sources */,
 				8442B1881B33712100148B8B /* Frameworks */,
 				8442B1891B33712100148B8B /* Resources */,
 				8442B18A1B33712100148B8B /* Version Incrementing Run Script */,
 				8442B18B1B33712100148B8B /* Objective-Clean Run Script */,
 				8442B18C1B33712100148B8B /* Export Env Run Script */,
+				FFDE5CD736B1620B4AFF9A4B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -315,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8442B1E41B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientTests" */;
 			buildPhases = (
+				9610AED4B92BD1E247DF4535 /* Check Pods Manifest.lock */,
 				8442B1C71B33712100148B8B /* Sources */,
 				8442B1C81B33712100148B8B /* Frameworks */,
 				8442B1C91B33712100148B8B /* Resources */,
+				5ED2D22483ED875E793C3793 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,9 +377,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8442B1E71B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientUITests" */;
 			buildPhases = (
+				7335A0E1A22324B9C8DA2D12 /* Check Pods Manifest.lock */,
 				8442B1D31B33712100148B8B /* Sources */,
 				8442B1D41B33712100148B8B /* Frameworks */,
 				8442B1D51B33712100148B8B /* Resources */,
+				E36DBA1D26269D4980C6242C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,6 +465,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5ED2D22483ED875E793C3793 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grocery Store ClientTests/Pods-Grocery Store ClientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7335A0E1A22324B9C8DA2D12 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C81049C42250787C34E581C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8442B18A1B33712100148B8B /* Version Incrementing Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +551,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = Pods/XcodeCoverage/exportenv.sh;
+		};
+		9610AED4B92BD1E247DF4535 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E36DBA1D26269D4980C6242C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFDE5CD736B1620B4AFF9A4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -612,6 +748,7 @@
 		};
 		8442B1E21B33712100148B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17FB985FF00BB3E911644DDD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -624,6 +761,7 @@
 		};
 		8442B1E31B33712100148B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FB7A672E052B54CEB5BD79E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -636,6 +774,7 @@
 		};
 		8442B1E51B33712100148B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9983F69C2E77FDB73E05B371 /* Pods-Grocery Store ClientTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -655,6 +794,7 @@
 		};
 		8442B1E61B33712100148B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D745661F36634ECB96317FFC /* Pods-Grocery Store ClientTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -670,6 +810,7 @@
 		};
 		8442B1E81B33712100148B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C29C4002BDC01B35F35EDA57 /* Pods-Grocery Store ClientUITests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -689,6 +830,7 @@
 		};
 		8442B1E91B33712100148B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5151A7052E71152B91906DB2 /* Pods-Grocery Store ClientUITests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -721,6 +863,7 @@
 				8442B1E31B33712100148B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8442B1E41B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -729,6 +872,7 @@
 				8442B1E61B33712100148B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8442B1E71B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +881,7 @@
 				8442B1E91B33712100148B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

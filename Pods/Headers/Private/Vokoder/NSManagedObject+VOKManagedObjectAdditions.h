@@ -1,0 +1,1 @@
+../../../Vokoder/Pod/Classes/NSManagedObject+VOKManagedObjectAdditions.h

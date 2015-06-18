@@ -1,0 +1,6 @@
+#include "Pods-Grocery Store ClientTests-VOKMockUrlProtocol.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/VOKMockUrlProtocol" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ILGHttpConstants" "${PODS_ROOT}/Headers/Public/KIF" "${PODS_ROOT}/Headers/Public/VOKBenkode" "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" "${PODS_ROOT}/Headers/Public/Vokoder" "${PODS_ROOT}/Headers/Public/XcodeCoverage"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

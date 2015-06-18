@@ -1,0 +1,66 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - ILGHttpConstants (1.0.1)
+  - KIF (3.2.3):
+    - KIF/XCTest (= 3.2.3)
+  - KIF/XCTest (3.2.3)
+  - VOKBenkode (0.2.1)
+  - VOKMockUrlProtocol (2.0.3):
+    - ILGHttpConstants (~> 1.0.0)
+    - VOKBenkode (~> 0.2.1)
+  - Vokoder (1.2.0):
+    - Vokoder/Core (= 1.2.0)
+    - Vokoder/DataSources (= 1.2.0)
+  - Vokoder/Core (1.2.0)
+  - Vokoder/DataSources (1.2.0):
+    - Vokoder/Core
+    - Vokoder/DataSources/Collection (= 1.2.0)
+    - Vokoder/DataSources/FetchedResults (= 1.2.0)
+    - Vokoder/DataSources/PagingFetchedResults (= 1.2.0)
+  - Vokoder/DataSources/Collection (1.2.0):
+    - Vokoder/Core
+    - Vokoder/DataSources/FetchedResults
+  - Vokoder/DataSources/FetchedResults (1.2.0):
+    - Vokoder/Core
+  - Vokoder/DataSources/PagingFetchedResults (1.2.0):
+    - Vokoder/Core
+    - Vokoder/DataSources/FetchedResults
+  - XcodeCoverage (1.2.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - KIF
+  - VOKMockUrlProtocol
+  - Vokoder
+  - XcodeCoverage (~> 1.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  ILGHttpConstants: 715aca4c2b260527059242c0088abc748b52f98e
+  KIF: a94bffe9c97e449e44f8fa481c53243d21309e1e
+  VOKBenkode: 7f17656dbb496b472c12913d1a8b8bc15b43d0bd
+  VOKMockUrlProtocol: 7c310fc61974074cb1bb09612ae5da71d96f978c
+  Vokoder: 678d6667a0bebc61b75f0a666a95371b9a9ebd1e
+  XcodeCoverage: 46ab36f35da908cf70498a34610c95d24230303a
+
+COCOAPODS: 0.36.4

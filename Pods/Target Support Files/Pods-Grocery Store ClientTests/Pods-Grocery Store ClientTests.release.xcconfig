@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ILGHttpConstants" "${PODS_ROOT}/Headers/Public/KIF" "${PODS_ROOT}/Headers/Public/VOKBenkode" "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" "${PODS_ROOT}/Headers/Public/Vokoder" "${PODS_ROOT}/Headers/Public/XcodeCoverage"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/ILGHttpConstants" -isystem "${PODS_ROOT}/Headers/Public/KIF" -isystem "${PODS_ROOT}/Headers/Public/VOKBenkode" -isystem "${PODS_ROOT}/Headers/Public/VOKMockUrlProtocol" -isystem "${PODS_ROOT}/Headers/Public/Vokoder" -isystem "${PODS_ROOT}/Headers/Public/XcodeCoverage"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Grocery Store ClientTests-ILGHttpConstants" -l"Pods-Grocery Store ClientTests-VOKBenkode" -l"Pods-Grocery Store ClientTests-VOKMockUrlProtocol"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods
