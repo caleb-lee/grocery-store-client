@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8442B1941B33712100148B8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1931B33712100148B8B /* main.m */; };
+		8442B1971B33712100148B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1961B33712100148B8B /* AppDelegate.m */; };
+		8442B1A31B33712100148B8B /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1A21B33712100148B8B /* remove-key.sh */; };
+		8442B1B21B33712100148B8B /* GRSNetworkAPIUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */; };
+		8442B1B51B33712100148B8B /* GRSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */; };
+		8442B1BB1B33712100148B8B /* Grocery_Store_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B91B33712100148B8B /* Grocery_Store_Client.xcdatamodeld */; };
+		8442B1BE1B33712100148B8B /* GRSCoreDataUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1BD1B33712100148B8B /* GRSCoreDataUtility.m */; };
+		8442B1C11B33712100148B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1BF1B33712100148B8B /* Main.storyboard */; };
+		8442B1C31B33712100148B8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1C21B33712100148B8B /* Images.xcassets */; };
+		8442B1C61B33712100148B8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1C41B33712100148B8B /* LaunchScreen.xib */; };
+		8442B1D21B33712100148B8B /* Grocery_Store_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1D11B33712100148B8B /* Grocery_Store_ClientTests.m */; };
+		8442B1DE1B33712100148B8B /* Grocery_Store_ClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8442B1CC1B33712100148B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8442B1831B33712100148B8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8442B18D1B33712100148B8B;
+			remoteInfo = "Grocery Store Client";
+		};
+		8442B1D81B33712100148B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8442B1831B33712100148B8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8442B18D1B33712100148B8B;
+			remoteInfo = "Grocery Store Client";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8442B18E1B33712100148B8B /* Grocery Store Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Store Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8442B1921B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442B1931B33712100148B8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8442B1951B33712100148B8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8442B1961B33712100148B8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8442B1991B33712100148B8B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
+		8442B19A1B33712100148B8B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		8442B19B1B33712100148B8B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8442B19D1B33712100148B8B /* add-key.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "add-key.sh"; sourceTree = "<group>"; };
+		8442B19E1B33712100148B8B /* Apple Worldwide Developer Relations Certification Authority.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apple Worldwide Developer Relations Certification Authority.cer"; sourceTree = "<group>"; };
+		8442B19F1B33712100148B8B /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		8442B1A01B33712100148B8B /* codecov.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = codecov.sh; sourceTree = "<group>"; };
+		8442B1A11B33712100148B8B /* distribute.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = distribute.sh; sourceTree = "<group>"; };
+		8442B1A21B33712100148B8B /* remove-key.sh */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "remove-key.sh"; sourceTree = "<group>"; };
+		8442B1A41B33712100148B8B /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
+		8442B1A51B33712100148B8B /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; };
+		8442B1A61B33712100148B8B /* VokalObjCleanStyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VokalObjCleanStyleSettings.plist; path = ../VokalObjCleanStyleSettings.plist; sourceTree = "<group>"; };
+		8442B1AE1B33712100148B8B /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		8442B1B01B33712100148B8B /* GRSNetworkAPIUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRSNetworkAPIUtility.h; path = Utilities/GRSNetworkAPIUtility.h; sourceTree = "<group>"; };
+		8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GRSNetworkAPIUtility.m; path = Utilities/GRSNetworkAPIUtility.m; sourceTree = "<group>"; };
+		8442B1B31B33712100148B8B /* GRSHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRSHTTPSessionManager.h; path = Utilities/GRSHTTPSessionManager.h; sourceTree = "<group>"; };
+		8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GRSHTTPSessionManager.m; path = Utilities/GRSHTTPSessionManager.m; sourceTree = "<group>"; };
+		8442B1B61B33712100148B8B /* GRSHTTPSessionManager+MockData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GRSHTTPSessionManager+MockData.h"; sourceTree = "<group>"; };
+		8442B1B71B33712100148B8B /* GRSHTTPSessionManager+MockData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GRSHTTPSessionManager+MockData.m"; sourceTree = "<group>"; };
+		8442B1BA1B33712100148B8B /* Grocery_Store_Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Grocery_Store_Client.xcdatamodel; sourceTree = "<group>"; };
+		8442B1BC1B33712100148B8B /* GRSCoreDataUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRSCoreDataUtility.h; path = CoreDataAndModels/GRSCoreDataUtility.h; sourceTree = "<group>"; };
+		8442B1BD1B33712100148B8B /* GRSCoreDataUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GRSCoreDataUtility.m; path = CoreDataAndModels/GRSCoreDataUtility.m; sourceTree = "<group>"; };
+		8442B1C01B33712100148B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8442B1C21B33712100148B8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8442B1C51B33712100148B8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8442B1CB1B33712100148B8B /* Grocery Store ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grocery Store ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8442B1D01B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442B1D11B33712100148B8B /* Grocery_Store_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_Store_ClientTests.m; sourceTree = "<group>"; };
+		8442B1D71B33712100148B8B /* Grocery Store ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grocery Store ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8442B1DC1B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_Store_ClientUITests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8442B1881B33712100148B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1C81B33712100148B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1D41B33712100148B8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8442B1821B33712100148B8B = {
+			isa = PBXGroup;
+			children = (
+				8442B1901B33712100148B8B /* Grocery Store Client */,
+				8442B1CE1B33712100148B8B /* Grocery Store ClientTests */,
+				8442B1DA1B33712100148B8B /* Grocery Store ClientUITests */,
+				8442B18F1B33712100148B8B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8442B18F1B33712100148B8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8442B18E1B33712100148B8B /* Grocery Store Client.app */,
+				8442B1CB1B33712100148B8B /* Grocery Store ClientTests.xctest */,
+				8442B1D71B33712100148B8B /* Grocery Store ClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8442B1901B33712100148B8B /* Grocery Store Client */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1931B33712100148B8B /* main.m */,
+				8442B1951B33712100148B8B /* AppDelegate.h */,
+				8442B1961B33712100148B8B /* AppDelegate.m */,
+				8442B1BF1B33712100148B8B /* Main.storyboard */,
+				8442B1C21B33712100148B8B /* Images.xcassets */,
+				8442B1C41B33712100148B8B /* LaunchScreen.xib */,
+				8442B1AD1B33712100148B8B /* Views */,
+				8442B1AC1B33712100148B8B /* View Controllers */,
+				8442B1AB1B33712100148B8B /* Controls */,
+				8442B1AA1B33712100148B8B /* Data Sources */,
+				8442B1A91B33712100148B8B /* Categories */,
+				8442B1A81B33712100148B8B /* Resources */,
+				8442B1A71B33712100148B8B /* Storyboards */,
+				8442B1981B33712100148B8B /* Non-iOS Resources */,
+				8442B1AF1B33712100148B8B /* Utilities */,
+				8442B1B81B33712100148B8B /* CoreDataAndModels */,
+				8442B1911B33712100148B8B /* Supporting Files */,
+			);
+			path = "Grocery Store Client";
+			sourceTree = "<group>";
+		};
+		8442B1911B33712100148B8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1921B33712100148B8B /* Info.plist */,
+				8442B1A61B33712100148B8B /* VokalObjCleanStyleSettings.plist */,
+				8442B1AE1B33712100148B8B /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8442B1981B33712100148B8B /* Non-iOS Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1991B33712100148B8B /* .gitignore */,
+				8442B19A1B33712100148B8B /* .travis.yml */,
+				8442B19B1B33712100148B8B /* README.md */,
+				8442B1A41B33712100148B8B /* Podfile */,
+				8442B1A51B33712100148B8B /* Gemfile */,
+				8442B19C1B33712100148B8B /* travis */,
+			);
+			name = "Non-iOS Resources";
+			sourceTree = "<group>";
+		};
+		8442B19C1B33712100148B8B /* travis */ = {
+			isa = PBXGroup;
+			children = (
+				8442B19D1B33712100148B8B /* add-key.sh */,
+				8442B19E1B33712100148B8B /* Apple Worldwide Developer Relations Certification Authority.cer */,
+				8442B19F1B33712100148B8B /* build.sh */,
+				8442B1A01B33712100148B8B /* codecov.sh */,
+				8442B1A11B33712100148B8B /* distribute.sh */,
+				8442B1A21B33712100148B8B /* remove-key.sh */,
+			);
+			path = travis;
+			sourceTree = SOURCE_ROOT;
+		};
+		8442B1A71B33712100148B8B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8442B1A81B33712100148B8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8442B1A91B33712100148B8B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1B61B33712100148B8B /* GRSHTTPSessionManager+MockData.h */,
+				8442B1B71B33712100148B8B /* GRSHTTPSessionManager+MockData.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8442B1AA1B33712100148B8B /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		8442B1AB1B33712100148B8B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		8442B1AC1B33712100148B8B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8442B1AD1B33712100148B8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8442B1AF1B33712100148B8B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1B01B33712100148B8B /* GRSNetworkAPIUtility.h */,
+				8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */,
+				8442B1B31B33712100148B8B /* GRSHTTPSessionManager.h */,
+				8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		8442B1B81B33712100148B8B /* CoreDataAndModels */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1BC1B33712100148B8B /* GRSCoreDataUtility.h */,
+				8442B1BD1B33712100148B8B /* GRSCoreDataUtility.m */,
+				8442B1B91B33712100148B8B /* Grocery_Store_Client.xcdatamodeld */,
+			);
+			name = CoreDataAndModels;
+			sourceTree = "<group>";
+		};
+		8442B1CE1B33712100148B8B /* Grocery Store ClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1D11B33712100148B8B /* Grocery_Store_ClientTests.m */,
+				8442B1CF1B33712100148B8B /* Supporting Files */,
+			);
+			path = "Grocery Store ClientTests";
+			sourceTree = "<group>";
+		};
+		8442B1CF1B33712100148B8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1D01B33712100148B8B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8442B1DA1B33712100148B8B /* Grocery Store ClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */,
+				8442B1DB1B33712100148B8B /* Supporting Files */,
+			);
+			path = "Grocery Store ClientUITests";
+			sourceTree = "<group>";
+		};
+		8442B1DB1B33712100148B8B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8442B1DC1B33712100148B8B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8442B18D1B33712100148B8B /* Grocery Store Client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8442B1E11B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store Client" */;
+			buildPhases = (
+				8442B1871B33712100148B8B /* Sources */,
+				8442B1881B33712100148B8B /* Frameworks */,
+				8442B1891B33712100148B8B /* Resources */,
+				8442B18A1B33712100148B8B /* Version Incrementing Run Script */,
+				8442B18B1B33712100148B8B /* Objective-Clean Run Script */,
+				8442B18C1B33712100148B8B /* Export Env Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Grocery Store Client";
+			productName = "Grocery Store Client";
+			productReference = 8442B18E1B33712100148B8B /* Grocery Store Client.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8442B1CA1B33712100148B8B /* Grocery Store ClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8442B1E41B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientTests" */;
+			buildPhases = (
+				8442B1C71B33712100148B8B /* Sources */,
+				8442B1C81B33712100148B8B /* Frameworks */,
+				8442B1C91B33712100148B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8442B1CD1B33712100148B8B /* PBXTargetDependency */,
+			);
+			name = "Grocery Store ClientTests";
+			productName = "Grocery Store ClientTests";
+			productReference = 8442B1CB1B33712100148B8B /* Grocery Store ClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8442B1D61B33712100148B8B /* Grocery Store ClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8442B1E71B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientUITests" */;
+			buildPhases = (
+				8442B1D31B33712100148B8B /* Sources */,
+				8442B1D41B33712100148B8B /* Frameworks */,
+				8442B1D51B33712100148B8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8442B1D91B33712100148B8B /* PBXTargetDependency */,
+			);
+			name = "Grocery Store ClientUITests";
+			productName = "Grocery Store ClientUITests";
+			productReference = 8442B1D71B33712100148B8B /* Grocery Store ClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8442B1831B33712100148B8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GRS;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Vokal;
+				TargetAttributes = {
+					8442B18D1B33712100148B8B = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					8442B1CA1B33712100148B8B = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 8442B18D1B33712100148B8B;
+					};
+					8442B1D61B33712100148B8B = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 8442B18D1B33712100148B8B;
+					};
+				};
+			};
+			buildConfigurationList = 8442B1861B33712100148B8B /* Build configuration list for PBXProject "Grocery Store Client" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8442B1821B33712100148B8B;
+			productRefGroup = 8442B18F1B33712100148B8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8442B18D1B33712100148B8B /* Grocery Store Client */,
+				8442B1CA1B33712100148B8B /* Grocery Store ClientTests */,
+				8442B1D61B33712100148B8B /* Grocery Store ClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8442B1891B33712100148B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442B1C61B33712100148B8B /* LaunchScreen.xib in Resources */,
+				8442B1C31B33712100148B8B /* Images.xcassets in Resources */,
+				8442B1A31B33712100148B8B /* remove-key.sh in Resources */,
+				8442B1C11B33712100148B8B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1C91B33712100148B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1D51B33712100148B8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8442B18A1B33712100148B8B /* Version Incrementing Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Version Incrementing Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Update build number with number of git commits\n\t\t\tbuildNumber=$(git rev-list HEAD --count)\n\t\t\techo \"Updating build number to $buildNumber\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n\t\t\t/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"";
+		};
+		8442B18B1B33712100148B8B /* Objective-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Objective-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ ${CI} == 'true' && ${TRAVIS} == 'true' ]]; then\necho \"Objective-Clean will not be executed on Travis\"\nexit 0\nfi\nif [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\"\nelse\necho \"error: You have to install and set up Objective-Clean to use its features!\"\nexit 1\nfi\nfi";
+		};
+		8442B18C1B33712100148B8B /* Export Env Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Export Env Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = Pods/XcodeCoverage/exportenv.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8442B1871B33712100148B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442B1971B33712100148B8B /* AppDelegate.m in Sources */,
+				8442B1B51B33712100148B8B /* GRSHTTPSessionManager.m in Sources */,
+				8442B1941B33712100148B8B /* main.m in Sources */,
+				8442B1B21B33712100148B8B /* GRSNetworkAPIUtility.m in Sources */,
+				8442B1BE1B33712100148B8B /* GRSCoreDataUtility.m in Sources */,
+				8442B1BB1B33712100148B8B /* Grocery_Store_Client.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1C71B33712100148B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442B1D21B33712100148B8B /* Grocery_Store_ClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8442B1D31B33712100148B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8442B1DE1B33712100148B8B /* Grocery_Store_ClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8442B1CD1B33712100148B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8442B18D1B33712100148B8B /* Grocery Store Client */;
+			targetProxy = 8442B1CC1B33712100148B8B /* PBXContainerItemProxy */;
+		};
+		8442B1D91B33712100148B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8442B18D1B33712100148B8B /* Grocery Store Client */;
+			targetProxy = 8442B1D81B33712100148B8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8442B1BF1B33712100148B8B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8442B1C01B33712100148B8B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8442B1C41B33712100148B8B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8442B1C51B33712100148B8B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8442B1DF1B33712100148B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8442B1E01B33712100148B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8442B1E21B33712100148B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Grocery Store Client/Prefix.pch";
+				INFOPLIST_FILE = "Grocery Store Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8442B1E31B33712100148B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Grocery Store Client/Prefix.pch";
+				INFOPLIST_FILE = "Grocery Store Client/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8442B1E51B33712100148B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grocery Store ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grocery Store Client.app/Grocery Store Client";
+			};
+			name = Debug;
+		};
+		8442B1E61B33712100148B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grocery Store ClientTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grocery Store Client.app/Grocery Store Client";
+			};
+			name = Release;
+		};
+		8442B1E81B33712100148B8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grocery Store ClientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grocery Store Client.app/Grocery Store Client";
+			};
+			name = Debug;
+		};
+		8442B1E91B33712100148B8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Grocery Store ClientUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grocery Store Client.app/Grocery Store Client";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8442B1861B33712100148B8B /* Build configuration list for PBXProject "Grocery Store Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442B1DF1B33712100148B8B /* Debug */,
+				8442B1E01B33712100148B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8442B1E11B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store Client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442B1E21B33712100148B8B /* Debug */,
+				8442B1E31B33712100148B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8442B1E41B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442B1E51B33712100148B8B /* Debug */,
+				8442B1E61B33712100148B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8442B1E71B33712100148B8B /* Build configuration list for PBXNativeTarget "Grocery Store ClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8442B1E81B33712100148B8B /* Debug */,
+				8442B1E91B33712100148B8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8442B1B91B33712100148B8B /* Grocery_Store_Client.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8442B1BA1B33712100148B8B /* Grocery_Store_Client.xcdatamodel */,
+			);
+			currentVersion = 8442B1BA1B33712100148B8B /* Grocery_Store_Client.xcdatamodel */;
+			name = Grocery_Store_Client.xcdatamodeld;
+			path = CoreDataAndModels/Grocery_Store_Client.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8442B1831B33712100148B8B /* Project object */;
+}
