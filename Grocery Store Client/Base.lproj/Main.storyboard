@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Inventory List View Controller-->
+        <!--List-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="GRSInventoryListViewController" sceneMemberID="viewController">
@@ -50,7 +50,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wyY-SI-X40"/>
+                    <navigationItem key="navigationItem" title="List" id="wyY-SI-X40">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="b0O-uX-tPt">
+                            <connections>
+                                <action selector="refreshButtonAction:" destination="vXZ-lx-hvc" id="Hye-fe-kW4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PVr-P2-OYe" id="D3B-3t-Z7U"/>
                     </connections>

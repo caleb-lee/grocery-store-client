@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)refreshButtonAction:(id)sender;
+
 @property (strong, nonatomic) NSDictionary *inventoryList;
 
 @end
@@ -46,6 +48,11 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     }failure:^(AFHTTPRequestOperation *operation, NSError *error){
         NSLog(@"%@", error);
     }];
+}
+
+- (IBAction)refreshButtonAction:(id)sender
+{
+    [self loadGroceryInventory];
 }
 
 #pragma Mark - UITableViewDataSource
