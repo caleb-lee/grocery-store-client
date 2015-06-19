@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B0F889E25378275DAE210CB /* libPods-Grocery Store ClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */; };
 		1C21794D5AF9AD834AA187F3 /* libPods-Grocery Store ClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */; };
+		842CDD401B34B0FB00BA1097 /* GRSInventoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CDD3F1B34B0FB00BA1097 /* GRSInventoryListViewController.m */; };
 		8442B1941B33712100148B8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1931B33712100148B8B /* main.m */; };
 		8442B1971B33712100148B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1961B33712100148B8B /* AppDelegate.m */; };
 		8442B1A31B33712100148B8B /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1A21B33712100148B8B /* remove-key.sh */; };
@@ -46,6 +47,8 @@
 		2FB7A672E052B54CEB5BD79E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5151A7052E71152B91906DB2 /* Pods-Grocery Store ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842CDD3E1B34B0FB00BA1097 /* GRSInventoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSInventoryListViewController.h; sourceTree = "<group>"; };
+		842CDD3F1B34B0FB00BA1097 /* GRSInventoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSInventoryListViewController.m; sourceTree = "<group>"; };
 		8442B18E1B33712100148B8B /* Grocery Store Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Store Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442B1921B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442B1931B33712100148B8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -239,6 +242,8 @@
 		8442B1AC1B33712100148B8B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				842CDD3E1B34B0FB00BA1097 /* GRSInventoryListViewController.h */,
+				842CDD3F1B34B0FB00BA1097 /* GRSInventoryListViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -608,6 +613,7 @@
 				8442B1B51B33712100148B8B /* GRSHTTPSessionManager.m in Sources */,
 				8442B1941B33712100148B8B /* main.m in Sources */,
 				8442B1B21B33712100148B8B /* GRSNetworkAPIUtility.m in Sources */,
+				842CDD401B34B0FB00BA1097 /* GRSInventoryListViewController.m in Sources */,
 				8442B1BE1B33712100148B8B /* GRSCoreDataUtility.m in Sources */,
 				8442B1BB1B33712100148B8B /* Grocery_Store_Client.xcdatamodeld in Sources */,
 			);
