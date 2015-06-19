@@ -8,6 +8,8 @@
 
 #import "GRSInventoryListViewController.h"
 
+#import "GRSInventoryDetailViewController.h"
+
 @interface GRSInventoryListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -15,6 +17,7 @@
 - (IBAction)refreshButtonAction:(id)sender;
 
 @property (strong, nonatomic) NSDictionary *inventoryList;
+@property (strong, nonatomic) NSString *selectedItemName;
 
 @end
 
@@ -26,6 +29,11 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     [self loadGroceryInventory];
 }
@@ -55,6 +63,12 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     [self loadGroceryInventory];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    GRSInventoryDetailViewController *dest = segue.destinationViewController;
+    dest.itemName = self.selectedItemName;
+}
+
 #pragma Mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -74,6 +88,15 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", itemQuantity];
     
     return cell;
+}
+
+#pragma Mark - UITableViewDelegate
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedItemName = [self.inventoryList allKeys][indexPath.row];
+    
+    return indexPath;
 }
 
 @end

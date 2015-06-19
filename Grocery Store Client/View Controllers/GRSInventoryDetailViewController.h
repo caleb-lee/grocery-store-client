@@ -1,5 +1,5 @@
 //
-//  GRSInventoryListViewController.h
+//  GRSInventoryDetailViewController.h
 //  Grocery Store Client
 //
 //  Created by Caleb Lee on 2015/06/19.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GRSInventoryListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface GRSInventoryDetailViewController : UIViewController
+
+@property (strong, nonatomic) NSString *itemName;
 
 @end
