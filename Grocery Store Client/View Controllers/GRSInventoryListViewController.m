@@ -38,7 +38,7 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (void)loadGroceryInventory
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@/inventory", BaseURLString];
+    NSString *urlString = [NSString stringWithFormat:@"%@inventory", BaseURLString];
     
     [[AFHTTPRequestOperationManager manager] GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
         NSDictionary *groceryInventory = (NSDictionary *)responseObject;
@@ -70,7 +70,8 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     NSString *itemName = [self.inventoryList allKeys][indexPath.row];
     NSNumber *itemQuantity = [self.inventoryList objectForKey:itemName];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@", itemName, itemQuantity];
+    cell.textLabel.text = itemName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", itemQuantity];
     
     return cell;
 }
