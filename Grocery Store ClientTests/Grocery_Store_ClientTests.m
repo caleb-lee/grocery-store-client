@@ -29,12 +29,6 @@
     [super tearDown];
 }
 
-- (void)testExample
-{
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
-
 - (void)testFetchProductInventory
 {
     XCTestExpectation *expectation = [self expectationWithDescription:@"Test fetch full inventory"];
@@ -171,12 +165,47 @@
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
-- (void)testPerformanceExample
+- (void)testPurchaseOneOfOneItemSuccess
 {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test purchasing one of one item"];
+    
+    NSString *const itemName = @"apples";
+    
+    [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        NSNumber *originalInventory = [userInfo objectForKey:itemName];
+        
+        [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+            XCTAssertNil(error, @"error should be set to nil");
+            XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
+            XCTAssertEqual(originalInventory.integerValue - 1, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal original inventory minus one");
+            
+            [expectation fulfill];
+        }];
     }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
+- (void)testPurchaseMultipleOfOneItemSuccess
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test purchasing multiple of one item"];
+    
+    NSString *const itemName = @"apples";
+    NSInteger quantity = 5;
+    
+    [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        NSNumber *originalInventory = [userInfo objectForKey:itemName];
+        
+        [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName quantity:quantity completion:^(NSDictionary *userInfo, NSError *error) {
+            XCTAssertNil(error, @"error should be set to nil");
+            XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
+            XCTAssertEqual(originalInventory.integerValue - quantity, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal original inventory minus %ld", quantity);
+            
+            [expectation fulfill];
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
 @end
