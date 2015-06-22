@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		0B0F889E25378275DAE210CB /* libPods-Grocery Store ClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */; };
 		1C21794D5AF9AD834AA187F3 /* libPods-Grocery Store ClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */; };
+		8400D7851B385DBC00BDC306 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 8400D7841B385DBC00BDC306 /* Product.m */; };
 		842CDD401B34B0FB00BA1097 /* GRSInventoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CDD3F1B34B0FB00BA1097 /* GRSInventoryListViewController.m */; };
 		842CDD431B34B8B900BA1097 /* GRSInventoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842CDD421B34B8B900BA1097 /* GRSInventoryDetailViewController.m */; };
 		8442B1941B33712100148B8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1931B33712100148B8B /* main.m */; };
 		8442B1971B33712100148B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1961B33712100148B8B /* AppDelegate.m */; };
 		8442B1A31B33712100148B8B /* remove-key.sh in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1A21B33712100148B8B /* remove-key.sh */; };
-		8442B1B21B33712100148B8B /* GRSNetworkAPIUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */; };
-		8442B1B51B33712100148B8B /* GRSHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */; };
 		8442B1BB1B33712100148B8B /* Grocery_Store_Client.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1B91B33712100148B8B /* Grocery_Store_Client.xcdatamodeld */; };
 		8442B1BE1B33712100148B8B /* GRSCoreDataUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1BD1B33712100148B8B /* GRSCoreDataUtility.m */; };
 		8442B1C11B33712100148B8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1BF1B33712100148B8B /* Main.storyboard */; };
@@ -48,6 +47,8 @@
 		2FB7A672E052B54CEB5BD79E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5151A7052E71152B91906DB2 /* Pods-Grocery Store ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CCBAA9354F4B939AFD797F0 /* libPods-Grocery Store ClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8400D7831B385DBC00BDC306 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Product.h; path = CoreDataAndModels/Product.h; sourceTree = "<group>"; };
+		8400D7841B385DBC00BDC306 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = CoreDataAndModels/Product.m; sourceTree = "<group>"; };
 		842CDD3E1B34B0FB00BA1097 /* GRSInventoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSInventoryListViewController.h; sourceTree = "<group>"; };
 		842CDD3F1B34B0FB00BA1097 /* GRSInventoryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRSInventoryListViewController.m; sourceTree = "<group>"; };
 		842CDD411B34B8B900BA1097 /* GRSInventoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRSInventoryDetailViewController.h; sourceTree = "<group>"; };
@@ -70,10 +71,6 @@
 		8442B1A51B33712100148B8B /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Gemfile; path = ../Gemfile; sourceTree = "<group>"; };
 		8442B1A61B33712100148B8B /* VokalObjCleanStyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = VokalObjCleanStyleSettings.plist; path = ../VokalObjCleanStyleSettings.plist; sourceTree = "<group>"; };
 		8442B1AE1B33712100148B8B /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
-		8442B1B01B33712100148B8B /* GRSNetworkAPIUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRSNetworkAPIUtility.h; path = Utilities/GRSNetworkAPIUtility.h; sourceTree = "<group>"; };
-		8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GRSNetworkAPIUtility.m; path = Utilities/GRSNetworkAPIUtility.m; sourceTree = "<group>"; };
-		8442B1B31B33712100148B8B /* GRSHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GRSHTTPSessionManager.h; path = Utilities/GRSHTTPSessionManager.h; sourceTree = "<group>"; };
-		8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GRSHTTPSessionManager.m; path = Utilities/GRSHTTPSessionManager.m; sourceTree = "<group>"; };
 		8442B1B61B33712100148B8B /* GRSHTTPSessionManager+MockData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GRSHTTPSessionManager+MockData.h"; sourceTree = "<group>"; };
 		8442B1B71B33712100148B8B /* GRSHTTPSessionManager+MockData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GRSHTTPSessionManager+MockData.m"; sourceTree = "<group>"; };
 		8442B1BA1B33712100148B8B /* Grocery_Store_Client.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Grocery_Store_Client.xcdatamodel; sourceTree = "<group>"; };
@@ -263,10 +260,6 @@
 		8442B1AF1B33712100148B8B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8442B1B01B33712100148B8B /* GRSNetworkAPIUtility.h */,
-				8442B1B11B33712100148B8B /* GRSNetworkAPIUtility.m */,
-				8442B1B31B33712100148B8B /* GRSHTTPSessionManager.h */,
-				8442B1B41B33712100148B8B /* GRSHTTPSessionManager.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -274,6 +267,8 @@
 		8442B1B81B33712100148B8B /* CoreDataAndModels */ = {
 			isa = PBXGroup;
 			children = (
+				8400D7831B385DBC00BDC306 /* Product.h */,
+				8400D7841B385DBC00BDC306 /* Product.m */,
 				8442B1BC1B33712100148B8B /* GRSCoreDataUtility.h */,
 				8442B1BD1B33712100148B8B /* GRSCoreDataUtility.m */,
 				8442B1B91B33712100148B8B /* Grocery_Store_Client.xcdatamodeld */,
@@ -615,9 +610,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8442B1971B33712100148B8B /* AppDelegate.m in Sources */,
-				8442B1B51B33712100148B8B /* GRSHTTPSessionManager.m in Sources */,
 				8442B1941B33712100148B8B /* main.m in Sources */,
-				8442B1B21B33712100148B8B /* GRSNetworkAPIUtility.m in Sources */,
+				8400D7851B385DBC00BDC306 /* Product.m in Sources */,
 				842CDD401B34B0FB00BA1097 /* GRSInventoryListViewController.m in Sources */,
 				842CDD431B34B8B900BA1097 /* GRSInventoryDetailViewController.m in Sources */,
 				8442B1BE1B33712100148B8B /* GRSCoreDataUtility.m in Sources */,

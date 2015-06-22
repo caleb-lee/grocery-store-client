@@ -8,11 +8,17 @@
 
 #import "AppDelegate.h"
 
+#import "VOKCoreDataManager.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //TODO: Override point for customization after application launch.
+    // Set up the data model
+    [[VOKCoreDataManager sharedInstance] setResource:@"Grocery_Store_Client" database:nil];
+    // Access the main managed object context so that it's created
+    [[VOKCoreDataManager sharedInstance] managedObjectContext];
+    
     return YES;
 }
 
