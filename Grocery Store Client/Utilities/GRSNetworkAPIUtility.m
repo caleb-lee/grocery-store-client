@@ -92,14 +92,17 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (void)purchaseProductWithName:(NSString *)name
                      completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    
+    NSString *path = [self buildPurhcasePathStringForItemNamed:name];
+    [self POSTHelperMethod:path params:nil completion:completion];
 }
 
 - (void)purchaseProductWithName:(NSString *)name
                        quantity:(NSInteger)quantity
                      completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    
+    NSString *path = [self buildPurhcasePathStringForItemNamed:name];
+    NSDictionary *params = [self buildQuantityParamsDictionary:quantity];
+    [self POSTHelperMethod:path params:params completion:completion];
 }
 
 - (void)GETHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
@@ -140,6 +143,11 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (NSString *)buildInventoryPathStringForItemNamed:(NSString *)name
 {
     return [NSString stringWithFormat:@"inventory/%@", name];
+}
+
+- (NSString *)buildPurhcasePathStringForItemNamed:(NSString *)name
+{
+    return [NSString stringWithFormat:@"purchase/%@", name];
 }
 
 @end
