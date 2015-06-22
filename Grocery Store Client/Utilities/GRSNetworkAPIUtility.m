@@ -75,7 +75,19 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (void)incrementInventoryQuantityForProductWithName:(NSString *)name
                                           completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
+    NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
     
+    [self.manager POST:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *userInfo = (NSDictionary *)responseObject;
+        
+        if (completion != nil) {
+            completion(userInfo, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (completion != nil) {
+            completion(nil, error);
+        }
+    }];
 }
 
 - (void)setInventoryQuantity:(NSInteger)quantity
