@@ -82,6 +82,27 @@
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
+- (void)testIncrementInventoryQuantity
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test increment inventory quantity"];
+    
+    NSString *const itemName = @"eggs";
+    
+    [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        NSNumber *originalInventory = [userInfo objectForKey:itemName];
+        
+        [[GRSNetworkAPIUtility sharedUtility] incrementInventoryQuantityForProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+            XCTAssertNil(error, @"error should be set to nil");
+            XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
+            XCTAssertEqual(originalInventory.integerValue + 1, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal original inventory plus one");
+            
+            [expectation fulfill];
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
 - (void)testPerformanceExample
 {
     // This is an example of a performance test case.
