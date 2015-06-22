@@ -53,14 +53,14 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (void)fetchProductWithName:(NSString *)name
                   completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
+    NSString *path = [self buildInventoryPathStringForItemNamed:name];
     [self GETHelperMethod:path completion:completion];
 }
 
 - (void)incrementInventoryQuantityForProductWithName:(NSString *)name
                                           completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
+    NSString *path = [self buildInventoryPathStringForItemNamed:name];
     [self POSTHelperMethod:path params:nil completion:completion];
 }
 
@@ -68,7 +68,7 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
            toProductWithName:(NSString *)name
                   completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
+    NSString *path = [self buildInventoryPathStringForItemNamed:name];
     NSDictionary *params = [self buildQuantityParamsDictionary:quantity];
     [self POSTHelperMethod:path params:params completion:completion];
 }
@@ -76,7 +76,17 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (void)removeAllStockForProductWithName:(NSString *)name
                               completion:(GRSNetworkNoResponseNetworkCompletionBlock)completion
 {
+    NSString *path = [self buildInventoryPathStringForItemNamed:name];
     
+    [self.manager DELETE:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if (completion != nil) {
+            completion(nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (completion != nil) {
+            completion(error);
+        }
+    }];
 }
 
 - (void)purchaseProductWithName:(NSString *)name
@@ -125,6 +135,11 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (NSDictionary *)buildQuantityParamsDictionary:(NSInteger)quantity
 {
     return @{@"quantity": [NSNumber numberWithInteger:quantity]};
+}
+
+- (NSString *)buildInventoryPathStringForItemNamed:(NSString *)name
+{
+    return [NSString stringWithFormat:@"inventory/%@", name];
 }
 
 @end
