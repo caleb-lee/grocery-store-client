@@ -8,7 +8,6 @@
 
 #import "Product.h"
 
-
 @implementation Product
 
 @dynamic name;
