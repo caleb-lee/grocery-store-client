@@ -9,6 +9,7 @@
 #import "GRSInventoryListViewController.h"
 
 #import "GRSInventoryDetailViewController.h"
+#import "GRSNetworkAPIUtility.h"
 
 @interface GRSInventoryListViewController ()
 
@@ -46,15 +47,10 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (void)loadGroceryInventory
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@inventory", BaseURLString];
-    
-    [[AFHTTPRequestOperationManager manager] GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        self.inventoryList = groceryInventory;
+    [[GRSNetworkAPIUtility sharedUtility] fetchProductInventory:^(NSDictionary *userInfo, NSError *error) {
+        self.inventoryList = userInfo;
         
         [self.tableView reloadData];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
     }];
 }
 

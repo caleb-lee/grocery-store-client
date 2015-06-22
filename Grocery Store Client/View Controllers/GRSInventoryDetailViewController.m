@@ -8,6 +8,8 @@
 
 #import "GRSInventoryDetailViewController.h"
 
+#import "GRSNetworkAPIUtility.h"
+
 @interface GRSInventoryDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
@@ -36,16 +38,10 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (void)loadItemData
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@inventory/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
+    [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
         self.buyItemButton.titleLabel.text = [NSString stringWithFormat:@"Buy %@", self.itemName];
         self.restockItemButton.titleLabel.text = [NSString stringWithFormat:@"Restock %@", self.itemName];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
     }];
 }
 
@@ -62,27 +58,15 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (IBAction)buyItemAction:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@purchase/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
+    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
     }];
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@inventory/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
+    [[GRSNetworkAPIUtility sharedUtility] incrementInventoryQuantityForProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
     }];
 }
 
