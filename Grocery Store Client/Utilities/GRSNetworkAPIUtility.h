@@ -34,4 +34,8 @@ typedef void(^GRSNetworkNoResponseNetworkCompletionBlock)(NSError *error);
                        quantity:(NSInteger)quantity
                      completion:(GRSNetworkUserInfoCompletionBlock)completion;
 
+// purchases all products, where the product name string is the dictionary key
+//  and the quantity to be purchased is the value associated with the key
+- (void)purchaseProducts:(NSDictionary *)products completion:(GRSNetworkUserInfoCompletionBlock)completion;
+
 @end

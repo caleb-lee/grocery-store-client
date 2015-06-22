@@ -105,6 +105,12 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     [self POSTHelperMethod:path params:params completion:completion];
 }
 
+- (void)purchaseProducts:(NSDictionary *)products completion:(GRSNetworkUserInfoCompletionBlock)completion
+{
+    NSString *const path = @"purchase";
+    [self POSTHelperMethod:path params:products completion:completion];
+}
+
 - (void)GETHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
     [self.manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
