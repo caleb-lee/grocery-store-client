@@ -47,54 +47,30 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 - (void)fetchProductInventory:(GRSNetworkUserInfoCompletionBlock)completion
 {
     NSString *const path = @"inventory";
-    [self fetchProductsHelperMethod:path completion:completion];
+    [self GETHelperMethod:path completion:completion];
 }
 
 - (void)fetchProductWithName:(NSString *)name
                   completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
     NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
-    [self fetchProductsHelperMethod:path completion:completion];
-}
-
-- (void)fetchProductsHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
-{
-    [self.manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *userInfo = (NSDictionary *)responseObject;
-        
-        if (completion != nil) {
-            completion(userInfo, nil);
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (completion != nil) {
-            completion(nil, error);
-        }
-    }];
+    [self GETHelperMethod:path completion:completion];
 }
 
 - (void)incrementInventoryQuantityForProductWithName:(NSString *)name
                                           completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
     NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
-    
-    [self.manager POST:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *userInfo = (NSDictionary *)responseObject;
-        
-        if (completion != nil) {
-            completion(userInfo, nil);
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (completion != nil) {
-            completion(nil, error);
-        }
-    }];
+    [self POSTHelperMethod:path params:nil completion:completion];
 }
 
 - (void)setInventoryQuantity:(NSInteger)quantity
            toProductWithName:(NSString *)name
                   completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    
+    NSString *path = [NSString stringWithFormat:@"inventory/%@", name];
+    NSDictionary *params = [self buildQuantityParamsDictionary:quantity];
+    [self POSTHelperMethod:path params:params completion:completion];
 }
 
 - (void)removeAllStockForProductWithName:(NSString *)name
@@ -114,6 +90,41 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
                      completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
     
+}
+
+- (void)GETHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
+{
+    [self.manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *userInfo = (NSDictionary *)responseObject;
+        
+        if (completion != nil) {
+            completion(userInfo, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (completion != nil) {
+            completion(nil, error);
+        }
+    }];
+}
+
+- (void)POSTHelperMethod:(NSString *)path params:(NSDictionary *)paramsOrNil completion:(GRSNetworkUserInfoCompletionBlock)completion
+{
+    [self.manager POST:path parameters:paramsOrNil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *userInfo = (NSDictionary *)responseObject;
+        
+        if (completion != nil) {
+            completion(userInfo, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (completion != nil) {
+            completion(nil, error);
+        }
+    }];
+}
+
+- (NSDictionary *)buildQuantityParamsDictionary:(NSInteger)quantity
+{
+    return @{@"quantity": [NSNumber numberWithInteger:quantity]};
 }
 
 @end
