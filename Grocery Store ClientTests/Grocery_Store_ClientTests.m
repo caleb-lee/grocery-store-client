@@ -103,6 +103,42 @@
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
+- (void)testSetInventoryQuantitySuccess
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test set inventory quantity success"];
+    
+    NSString *const itemName = @"milk";
+    
+    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:50 toProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        XCTAssertNil(error, @"error should be set to nil");
+        XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
+        XCTAssertEqual(50, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal 50");
+            
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
+- (void)testSetInventoryQuantityFailureNegativeValue
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test set inventory quantity success"];
+    
+    NSString *const itemName = @"milk";
+    
+    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:-50 toProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+        XCTAssertNil(userInfo, @"userInfo should be set to nil");
+        
+        NSDictionary *errorInfo = error.userInfo;
+        NSHTTPURLResponse *response = [errorInfo objectForKey:@"com.alamofire.serialization.response.error.response"];
+        XCTAssertEqual(response.statusCode, 400, @"Status code should be 400");
+        
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
 - (void)testPerformanceExample
 {
     // This is an example of a performance test case.
