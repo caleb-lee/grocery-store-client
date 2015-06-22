@@ -139,6 +139,38 @@
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
 
+- (void)testSetInventoryToZero
+{
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Test set inventory to zero"];
+    
+    NSString *const itemName = @"milk";
+    
+    [[GRSNetworkAPIUtility sharedUtility] removeAllStockForProductWithName:itemName completion:^(NSError *error) {
+        XCTAssertNil(error, @"error should be nil");
+        
+        [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+            NSInteger quantity = ((NSNumber *)[userInfo objectForKey:itemName]).integerValue;
+            XCTAssertEqual(0, quantity, @"Quantity should be zeroed here");
+            
+            // test the error case
+            [[GRSNetworkAPIUtility sharedUtility] removeAllStockForProductWithName:itemName completion:^(NSError *error) {
+                XCTAssertNotNil(error, @"error SHOULD NOT be nil here");
+                
+                NSDictionary *errorInfo = error.userInfo;
+                NSHTTPURLResponse *response = [errorInfo objectForKey:@"com.alamofire.serialization.response.error.response"];
+                XCTAssertEqual(response.statusCode, 404, @"Status code should be 404");
+                
+                // make the item have a quantity again
+                [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:100 toProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+                    [expectation fulfill];
+                }];
+            }];
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:nil];
+}
+
 - (void)testPerformanceExample
 {
     // This is an example of a performance test case.
