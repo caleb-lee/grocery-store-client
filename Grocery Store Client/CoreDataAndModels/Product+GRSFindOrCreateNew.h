@@ -10,4 +10,6 @@
 
 @interface Product (GRSFindOrCreateNew)
 
++ (Product *)productWithNameOrNew:(NSString *)name;
+
 @end
