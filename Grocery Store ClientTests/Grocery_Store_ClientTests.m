@@ -11,6 +11,9 @@
 
 #import "GRSNetworkAPIUtility.h"
 
+static const NSInteger TimeoutOneNetworkConnection = 2;
+static const NSInteger TimeoutMultipleNetworkConnections = 10;
+
 @interface Grocery_Store_ClientTests : XCTestCase
 
 @end
@@ -41,7 +44,7 @@
         [expectation fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutOneNetworkConnection handler:nil];
 }
 
 - (void)testFetchProductInventoryWithNameSuccess
@@ -56,7 +59,7 @@
         [expectation fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutOneNetworkConnection handler:nil];
 }
 
 - (void)testFetchProductInventoryWithNameFailure
@@ -73,7 +76,7 @@
         [expectation fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutOneNetworkConnection handler:nil];
 }
 
 - (void)testIncrementInventoryQuantity
@@ -94,7 +97,7 @@
         }];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutMultipleNetworkConnections handler:nil];
 }
 
 - (void)testSetInventoryQuantitySuccess
@@ -111,7 +114,7 @@
         [expectation fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutOneNetworkConnection handler:nil];
 }
 
 - (void)testSetInventoryQuantityFailureNegativeValue
@@ -130,7 +133,7 @@
         [expectation fulfill];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutOneNetworkConnection handler:nil];
 }
 
 - (void)testSetInventoryToZero
@@ -162,7 +165,7 @@
         }];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutMultipleNetworkConnections handler:nil];
 }
 
 - (void)testPurchaseOneOfOneItemSuccess
@@ -183,7 +186,7 @@
         }];
     }];
     
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+    [self waitForExpectationsWithTimeout:TimeoutMultipleNetworkConnections handler:nil];
 }
 
 - (void)testPurchaseMultipleOfOneItemSuccess
@@ -204,8 +207,8 @@
             [expectation fulfill];
         }];
     }];
-    
-    [self waitForExpectationsWithTimeout:10 handler:nil];
+
+    [self waitForExpectationsWithTimeout:TimeoutMultipleNetworkConnections handler:nil];
 }
 
 @end
