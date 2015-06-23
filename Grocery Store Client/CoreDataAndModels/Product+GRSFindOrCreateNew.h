@@ -10,6 +10,15 @@
 
 @interface Product (GRSFindOrCreateNew)
 
+/**
+ *  Finds the product in the database with a certain name and returns it.
+ *  If no such product exists, one gets created and returned.
+ *
+ *  @param name the name of the product we're trying to find; the name used
+ *          to create the product if not found
+ *
+ *  @return the found/created product
+ */
 + (Product *)productWithNameOrNew:(NSString *)name;
 
 @end
