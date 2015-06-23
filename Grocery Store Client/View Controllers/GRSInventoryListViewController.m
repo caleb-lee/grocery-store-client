@@ -8,6 +8,8 @@
 
 #import "GRSInventoryListViewController.h"
 
+#import "UIAlertController+Convenience.h"
+
 #import "GRSInventoryDetailViewController.h"
 #import "GRSInventoryFetchedResultsDataSource.h"
 #import "GRSSyncUtility.h"
@@ -41,7 +43,11 @@
 
 - (IBAction)refreshButtonAction:(id)sender
 {
-    [[GRSSyncUtility sharedUtility] downSync:nil];
+    [[GRSSyncUtility sharedUtility] downSync:^(NSError *error){
+        if (error != nil) {
+            [UIAlertController presentAlertWithTitle:@"Error" andMessage:error.localizedDescription inViewController:self];
+        }
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

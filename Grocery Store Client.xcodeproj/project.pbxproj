@@ -27,6 +27,7 @@
 		8442B1C61B33712100148B8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8442B1C41B33712100148B8B /* LaunchScreen.xib */; };
 		8442B1D21B33712100148B8B /* Grocery_Store_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1D11B33712100148B8B /* Grocery_Store_ClientTests.m */; };
 		8442B1DE1B33712100148B8B /* Grocery_Store_ClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */; };
+		84F900C81B3A010C002B0F6D /* UIAlertController+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F900C71B3A010C002B0F6D /* UIAlertController+Convenience.m */; };
 		C2456DA3A65FB4A5ADD3B157 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2B2EB23698DC7013FF5AF07 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,8 @@
 		8442B1D71B33712100148B8B /* Grocery Store ClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Grocery Store ClientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8442B1DC1B33712100148B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8442B1DD1B33712100148B8B /* Grocery_Store_ClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Grocery_Store_ClientUITests.m; sourceTree = "<group>"; };
+		84F900C61B3A010C002B0F6D /* UIAlertController+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Convenience.h"; sourceTree = "<group>"; };
+		84F900C71B3A010C002B0F6D /* UIAlertController+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Convenience.m"; sourceTree = "<group>"; };
 		9983F69C2E77FDB73E05B371 /* Pods-Grocery Store ClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientTests/Pods-Grocery Store ClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A3119F35B7A1513E75CDB281 /* libPods-Grocery Store ClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grocery Store ClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29C4002BDC01B35F35EDA57 /* Pods-Grocery Store ClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Store ClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Store ClientUITests/Pods-Grocery Store ClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 				8442B1B71B33712100148B8B /* GRSHTTPSessionManager+MockData.m */,
 				8400D7951B38A2DF00BDC306 /* Product+API_Interaction.h */,
 				8400D7961B38A2DF00BDC306 /* Product+API_Interaction.m */,
+				84F900C61B3A010C002B0F6D /* UIAlertController+Convenience.h */,
+				84F900C71B3A010C002B0F6D /* UIAlertController+Convenience.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				840F0E441B39AC4F006181C6 /* GRSInventoryFetchedResultsDataSource.m in Sources */,
 				8400D7851B385DBC00BDC306 /* Product.m in Sources */,
 				842CDD401B34B0FB00BA1097 /* GRSInventoryListViewController.m in Sources */,
+				84F900C81B3A010C002B0F6D /* UIAlertController+Convenience.m in Sources */,
 				840F0E411B39A76D006181C6 /* Product+GRSFindOrCreateNew.m in Sources */,
 				842CDD431B34B8B900BA1097 /* GRSInventoryDetailViewController.m in Sources */,
 				8400D7941B388DED00BDC306 /* GRSNetworkAPIUtility.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "GRSInventoryDetailViewController.h"
 
+#import "UIAlertController+Convenience.h"
+
 #import "GRSNetworkAPIUtility.h"
 #import "Product+API_Interaction.h"
 
@@ -52,15 +54,25 @@
 - (IBAction)buyItemAction:(id)sender
 {
     [self.selectedProduct purchase:^(NSError *error){
-        [self loadItemData];
+        [self handleStockChange:error];
     }];
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
     [self.selectedProduct incrementInventory:^(NSError *error){
-        [self loadItemData];
+        [self handleStockChange:error];
     }];
+}
+
+// returns YES if the error is fatal
+- (void)handleStockChange:(NSError *)error
+{
+    if (error != nil) {
+        [UIAlertController presentAlertWithTitle:@"Error" andMessage:error.localizedDescription inViewController:self];
+    } else {
+        [self loadItemData];
+    }
 }
 
 #pragma Mark - VOKFetchedResultsDataSourceDelegate
