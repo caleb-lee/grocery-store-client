@@ -11,6 +11,9 @@
 #import "AFNetworking.h"
 
 static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
+static NSString *const InventoryPath = @"inventory";
+static NSString *const PurchasePath = @"purchase";
+static NSString *const QuantityKey = @"quantity";
 
 @interface GRSNetworkAPIUtility ()
 
@@ -46,8 +49,7 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (void)fetchProductInventory:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    NSString *const path = @"inventory";
-    [self GETHelperMethod:path completion:completion];
+    [self GETHelperMethod:InventoryPath completion:completion];
 }
 
 - (void)fetchProductWithName:(NSString *)name
@@ -107,8 +109,7 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (void)purchaseProducts:(NSDictionary *)products completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    NSString *const path = @"purchase";
-    [self POSTHelperMethod:path params:products completion:completion];
+    [self POSTHelperMethod:PurchasePath params:products completion:completion];
 }
 
 - (void)GETHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
@@ -143,17 +144,17 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (NSDictionary *)buildQuantityParamsDictionary:(NSInteger)quantity
 {
-    return @{@"quantity": [NSNumber numberWithInteger:quantity]};
+    return @{QuantityKey: @(quantity)};
 }
 
 - (NSString *)buildInventoryPathStringForItemNamed:(NSString *)name
 {
-    return [NSString stringWithFormat:@"inventory/%@", name];
+    return [NSString stringWithFormat:@"%@/%@", InventoryPath, name];
 }
 
 - (NSString *)buildPurhcasePathStringForItemNamed:(NSString *)name
 {
-    return [NSString stringWithFormat:@"purchase/%@", name];
+    return [NSString stringWithFormat:@"%@/%@", PurchasePath, name];
 }
 
 @end
