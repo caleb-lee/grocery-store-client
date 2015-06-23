@@ -8,16 +8,15 @@
 
 #import "GRSNetworkAPIUtility.h"
 
-#import "AFNetworking.h"
+#import "GRSHTTPSessionManager.h"
 
-static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 static NSString *const InventoryPath = @"inventory";
 static NSString *const PurchasePath = @"purchase";
 static NSString *const QuantityKey = @"quantity";
 
 @interface GRSNetworkAPIUtility ()
 
-@property (strong, nonatomic) AFHTTPRequestOperationManager *manager;
+@property (strong, nonatomic) GRSHTTPSessionManager *manager;
 
 @end
 
@@ -39,7 +38,7 @@ static NSString *const QuantityKey = @"quantity";
 {
     if (self = [super init]) {
         // set up the AFHTTPRequestOperationManager
-        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:BaseURLString]];
+        self.manager = [GRSHTTPSessionManager sharedManager];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
@@ -80,11 +79,11 @@ static NSString *const QuantityKey = @"quantity";
 {
     NSString *path = [self buildInventoryPathStringForItemNamed:name];
     
-    [self.manager DELETE:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager DELETE:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         if (completion != nil) {
             completion(nil);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (completion != nil) {
             completion(error);
         }
@@ -114,13 +113,13 @@ static NSString *const QuantityKey = @"quantity";
 
 - (void)GETHelperMethod:(NSString *)path completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    [self.manager GET:path parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *userInfo = (NSDictionary *)responseObject;
         
         if (completion != nil) {
             completion(userInfo, nil);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (completion != nil) {
             completion(nil, error);
         }
@@ -129,13 +128,13 @@ static NSString *const QuantityKey = @"quantity";
 
 - (void)POSTHelperMethod:(NSString *)path params:(NSDictionary *)paramsOrNil completion:(GRSNetworkUserInfoCompletionBlock)completion
 {
-    [self.manager POST:path parameters:paramsOrNil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.manager POST:path parameters:paramsOrNil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *userInfo = (NSDictionary *)responseObject;
         
         if (completion != nil) {
             completion(userInfo, nil);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (completion != nil) {
             completion(nil, error);
         }
