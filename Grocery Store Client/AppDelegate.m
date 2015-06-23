@@ -9,16 +9,15 @@
 #import "AppDelegate.h"
 
 #import "GRSSyncUtility.h"
-#import "VOKCoreDataManager.h"
+#import "GRSCoreDataUtility.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Set up the data model
-    [[VOKCoreDataManager sharedInstance] setResource:@"Grocery_Store_Client" database:nil];
-    // Access the main managed object context so that it's created
-    [[VOKCoreDataManager sharedInstance] managedObjectContext];
+    // Set up Core Data
+    [GRSCoreDataUtility setupCoreData];
+    
     // First sync of data from the server
     [[GRSSyncUtility sharedUtility] downSync:nil];
     
