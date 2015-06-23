@@ -46,7 +46,7 @@
             return;
         }
         
-        NSMutableArray *products = [[NSMutableArray alloc] init];
+        NSMutableArray *products = [NSMutableArray arrayWithCapacity:userInfo.count];
         
         for (NSString *productName in userInfo.allKeys) {
             Product *product = [Product productWithNameOrNew:productName];
