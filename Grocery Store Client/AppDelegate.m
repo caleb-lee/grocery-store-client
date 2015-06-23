@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "GRSSyncUtility.h"
 #import "VOKCoreDataManager.h"
 
 @implementation AppDelegate
@@ -18,6 +19,8 @@
     [[VOKCoreDataManager sharedInstance] setResource:@"Grocery_Store_Client" database:nil];
     // Access the main managed object context so that it's created
     [[VOKCoreDataManager sharedInstance] managedObjectContext];
+    // First sync of data from the server
+    [[GRSSyncUtility sharedUtility] downSync:nil];
     
     return YES;
 }
