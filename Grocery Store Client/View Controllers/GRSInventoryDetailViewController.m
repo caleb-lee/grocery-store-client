@@ -9,19 +9,18 @@
 #import "GRSInventoryDetailViewController.h"
 
 #import "GRSNetworkAPIUtility.h"
+#import "Product+API_Interaction.h"
 
 @interface GRSInventoryDetailViewController ()
 
+@property (strong, nonatomic) Product *selectedProduct;
+
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
-@property (weak, nonatomic) IBOutlet UIButton *buyItemButton;
-@property (weak, nonatomic) IBOutlet UIButton *restockItemButton;
 
 - (IBAction)buyItemAction:(id)sender;
 - (IBAction)restockItemAction:(id)sender;
 
 @end
-
-static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 @implementation GRSInventoryDetailViewController
 
@@ -30,19 +29,13 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = self.itemName;
-    self.quantityLabel.text = @"";
-    
     [self loadItemData];
 }
 
 - (void)loadItemData
 {
-    [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
-        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
-        self.buyItemButton.titleLabel.text = [NSString stringWithFormat:@"Buy %@", self.itemName];
-        self.restockItemButton.titleLabel.text = [NSString stringWithFormat:@"Restock %@", self.itemName];
-    }];
+    self.navigationItem.title = self.selectedProduct.name;
+    [self updateQuantityLabel:self.selectedProduct.quantity];
 }
 
 - (void)updateQuantityLabel:(NSNumber *)quantity
@@ -58,16 +51,23 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (IBAction)buyItemAction:(id)sender
 {
-    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
-        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
+    [self.selectedProduct purchase:^(NSError *error){
+        [self loadItemData];
     }];
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
-    [[GRSNetworkAPIUtility sharedUtility] incrementInventoryQuantityForProductWithName:self.itemName completion:^(NSDictionary *userInfo, NSError *error) {
-        [self updateQuantityLabel:[userInfo objectForKey:self.itemName]];
+    [self.selectedProduct incrementInventory:^(NSError *error){
+        [self loadItemData];
     }];
+}
+
+#pragma Mark - VOKFetchedResultsDataSourceDelegate
+
+- (void)fetchResultsDataSourceSelectedObject:(NSManagedObject *)object
+{
+    self.selectedProduct = (Product *)object;
 }
 
 @end

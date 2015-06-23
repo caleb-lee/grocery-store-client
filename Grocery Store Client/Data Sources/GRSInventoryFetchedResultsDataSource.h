@@ -10,4 +10,6 @@
 
 @interface GRSInventoryFetchedResultsDataSource : VOKFetchedResultsDataSource
 
+- (id)initWithTableView:(UITableView *)tableView;
+
 @end

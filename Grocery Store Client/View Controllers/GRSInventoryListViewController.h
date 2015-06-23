@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GRSInventoryListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface GRSInventoryListViewController : UIViewController
 
 @end

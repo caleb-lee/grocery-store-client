@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GRSInventoryDetailViewController : UIViewController
+#import "GRSInventoryFetchedResultsDataSource.h"
 
-@property (strong, nonatomic) NSString *itemName;
+@interface GRSInventoryDetailViewController : UIViewController <VOKFetchedResultsDataSourceDelegate>
 
 @end

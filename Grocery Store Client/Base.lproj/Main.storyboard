@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3VX-vY-ffI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3VX-vY-ffI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -45,10 +45,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="pcx-9N-CqL"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="gaP-wO-IzY"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -98,7 +94,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztM-PL-twW">
                                 <rect key="frame" x="25" y="122" width="79" height="44"/>
-                                <state key="normal" title="Buy Apples">
+                                <state key="normal" title="Buy Item">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -107,7 +103,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-VR-YuH">
                                 <rect key="frame" x="127" y="122" width="108" height="44"/>
-                                <state key="normal" title="Restock Apples">
+                                <state key="normal" title="Restock Item">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -123,9 +119,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Apples" id="zK4-hv-7w1"/>
                     <connections>
-                        <outlet property="buyItemButton" destination="ztM-PL-twW" id="Rfp-6e-BQM"/>
                         <outlet property="quantityLabel" destination="eQL-mk-ctx" id="AJM-X1-ncg"/>
-                        <outlet property="restockItemButton" destination="Gqf-VR-YuH" id="AgS-KS-TNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfL-Kz-czD" userLabel="First Responder" sceneMemberID="firstResponder"/>
