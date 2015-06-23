@@ -13,9 +13,13 @@
 
 - (id)initWithTableView:(UITableView *)tableView
 {
-    if (self = [self initWithPredicate:nil cacheName:nil tableView:tableView sectionNameKeyPath:nil sortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]] managedObjectClass:[Product class] delegate:nil]) {
-        
-    }
+    self = [self initWithPredicate:nil
+                         cacheName:nil
+                         tableView:tableView
+                sectionNameKeyPath:nil
+                   sortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]
+                managedObjectClass:[Product class]
+                          delegate:nil];
     
     return self;
 }
