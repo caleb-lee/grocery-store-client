@@ -27,7 +27,7 @@ typedef void(^GRSSyncUtilityCompletionMultipleProducts)(NSArray *products, NSErr
  *
  *  @return the shared instance
  */
-+ (GRSSyncUtility *)sharedUtility;
++ (instancetype)sharedUtility;
 
 /**
  *  Asynchronously downloads all inventory data from the server and

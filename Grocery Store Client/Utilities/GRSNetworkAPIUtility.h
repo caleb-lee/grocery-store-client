@@ -24,7 +24,7 @@ typedef void(^GRSNetworkNoResponseNetworkCompletionBlock)(NSError *error);
  *
  *  @return returns the shared GRSNetworkAPIUtility object
  */
-+ (GRSNetworkAPIUtility *)sharedUtility;
++ (instancetype)sharedUtility;
 
 /**
  *  Asyncrhonously fetches the product inventory from the server. Calls completion with either the

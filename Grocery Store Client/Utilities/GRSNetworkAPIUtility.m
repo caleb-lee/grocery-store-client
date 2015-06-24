@@ -22,7 +22,7 @@ static NSString *const QuantityKey = @"quantity";
 
 @implementation GRSNetworkAPIUtility
 
-+ (GRSNetworkAPIUtility *)sharedUtility
++ (instancetype)sharedUtility
 {
     static GRSNetworkAPIUtility *_sharedInstance = nil;
     

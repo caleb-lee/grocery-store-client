@@ -14,7 +14,7 @@
 
 @implementation GRSSyncUtility
 
-+ (GRSSyncUtility *)sharedUtility
++ (instancetype)sharedUtility
 {
     static GRSSyncUtility *_sharedInstance = nil;
     
