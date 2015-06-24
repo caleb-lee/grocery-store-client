@@ -40,6 +40,13 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
     self.dataSource.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self refresh];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -47,6 +54,11 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 }
 
 - (IBAction)refreshButtonAction:(id)sender
+{
+    [self refresh];
+}
+
+- (void)refresh
 {
     [[GRSSyncUtility sharedUtility] downSync:^(NSError *error){
         if (error != nil) {

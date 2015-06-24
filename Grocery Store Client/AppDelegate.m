@@ -18,9 +18,6 @@
     // Set up Core Data
     [GRSCoreDataUtility setupCoreData];
     
-    // First sync of data from the server
-    [[GRSSyncUtility sharedUtility] downSync:nil];
-    
     return YES;
 }
 
