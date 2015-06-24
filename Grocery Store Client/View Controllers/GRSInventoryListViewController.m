@@ -50,7 +50,9 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 {
     [[GRSSyncUtility sharedUtility] downSync:^(NSError *error){
         if (error != nil) {
-            [UIAlertController presentAlertWithTitle:@"Error" andMessage:error.localizedDescription inViewController:self];
+            [UIAlertController presentAlertWithTitle:@"Error"
+                                          andMessage:error.localizedDescription
+                                    inViewController:self];
         }
     }];
 }

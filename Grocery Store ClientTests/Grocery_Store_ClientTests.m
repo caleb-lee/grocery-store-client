@@ -110,7 +110,9 @@ static NSString *const ErrorJSONKey = @"error";
     
     NSString *const itemName = @"milk";
     
-    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:50 toProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:50
+                                             toProductWithName:itemName
+                                                    completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(error, @"error should be set to nil");
         XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
         XCTAssertEqual(50, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal 50");
@@ -127,7 +129,9 @@ static NSString *const ErrorJSONKey = @"error";
     
     NSString *const itemName = @"milk";
     
-    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:-50 toProductWithName:itemName completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] setInventoryQuantity:-50
+                                             toProductWithName:itemName
+                                                    completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(userInfo, @"userInfo should be set to nil");
         
         NSHTTPURLResponse *response = [self httpResponseFromError:error];
@@ -224,7 +228,9 @@ static NSString *const ErrorJSONKey = @"error";
     NSString *const itemName = @"apples";
     NSInteger const quantity = 5;
     
-    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName quantity:quantity completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName
+                                                         quantity:quantity
+                                                       completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(error, @"error should be set to nil");
         XCTAssertEqual(userInfo.count, 1, @"There should be one key in userInfo");
         XCTAssertEqual(118, ((NSNumber *)[userInfo objectForKey:itemName]).integerValue, @"New inventory should equal 118");
@@ -242,7 +248,9 @@ static NSString *const ErrorJSONKey = @"error";
     NSString *const itemName = @"apples";
     NSInteger const quantity = -5;
     
-    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName quantity:quantity completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName
+                                                         quantity:quantity
+                                                       completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(userInfo, @"userInfo should be set to nil");
         
         NSHTTPURLResponse *response = [self httpResponseFromError:error];
@@ -264,7 +272,9 @@ static NSString *const ErrorJSONKey = @"error";
     NSString *const itemName = @"apples";
     NSInteger const quantity = 5000;
     
-    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName quantity:quantity completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName
+                                                         quantity:quantity
+                                                       completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(userInfo, @"userInfo should be set to nil");
         
         NSHTTPURLResponse *response = [self httpResponseFromError:error];
@@ -286,7 +296,9 @@ static NSString *const ErrorJSONKey = @"error";
     NSString *const itemName = @"appples";
     NSInteger const quantity = 5000;
     
-    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName quantity:quantity completion:^(NSDictionary *userInfo, NSError *error) {
+    [[GRSNetworkAPIUtility sharedUtility] purchaseProductWithName:itemName
+                                                         quantity:quantity
+                                                       completion:^(NSDictionary *userInfo, NSError *error) {
         XCTAssertNil(userInfo, @"userInfo should be set to nil");
         
         NSHTTPURLResponse *response = [self httpResponseFromError:error];

@@ -67,7 +67,9 @@
 - (void)handleStockChange:(NSError *)error
 {
     if (error != nil) {
-        [UIAlertController presentAlertWithTitle:@"Error" andMessage:error.localizedDescription inViewController:self];
+        [UIAlertController presentAlertWithTitle:@"Error"
+                                      andMessage:error.localizedDescription
+                                inViewController:self];
     } else {
         [self loadItemData];
     }
