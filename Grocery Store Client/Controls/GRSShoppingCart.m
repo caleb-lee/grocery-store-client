@@ -48,7 +48,12 @@
 
 - (void)removeProductFromCart:(Product *)product
 {
-    [self.productsInCart removeObjectForKey:product.name];
+    [self removeProductWithNameFromCart:product.name];
+}
+
+- (void)removeProductWithNameFromCart:(NSString *)productName
+{
+    [self.productsInCart removeObjectForKey:productName];
 }
 
 - (void)purchaseProductsInCart:(GRSShoppingCartPurchaseCompletion)completion

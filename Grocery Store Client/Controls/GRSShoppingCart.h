@@ -47,6 +47,13 @@ typedef void(^GRSShoppingCartPurchaseCompletion)(NSArray *products, NSError *err
 - (void)removeProductFromCart:(Product *)product;
 
 /**
+ *  Removes the product with the given name from the cart. Does nothing if no product of that name exists.
+ *
+ *  @param productName NSString of the product's name
+ */
+- (void)removeProductWithNameFromCart:(NSString *)productName;
+
+/**
  *  Sends the call to the server to purchase all the products in the cart at the quantites
  *  specified.
  *
