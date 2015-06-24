@@ -19,6 +19,11 @@
 
 - (IBAction)buyItemAction:(id)sender;
 - (IBAction)restockItemAction:(id)sender;
+- (IBAction)addToCartAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *buyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *restockTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addToCartTextField;
 
 @end
 
@@ -51,16 +56,39 @@
 
 - (IBAction)buyItemAction:(id)sender
 {
-    [self.selectedProduct purchase:^(NSError *error){
-        [self handleStockChange:error];
-    }];
+    if ([self.buyTextField.text isEqualToString:@""]) {
+        [self.selectedProduct purchase:^(NSError *error){
+            [self handleStockChange:error];
+        }];
+    } else {
+        NSInteger quantity = self.buyTextField.text.integerValue;
+        
+        [self.selectedProduct purchaseQuantitiy:quantity completion:^(NSError *error){
+            [self handleStockChange:error];
+            self.buyTextField.text = @"";
+        }];
+    }
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
-    [self.selectedProduct incrementInventory:^(NSError *error){
-        [self handleStockChange:error];
-    }];
+    if ([self.restockTextField.text isEqualToString:@""]) {
+        [self.selectedProduct purchase:^(NSError *error){
+            [self handleStockChange:error];
+        }];
+    } else {
+        NSInteger quantity = self.restockTextField.text.integerValue;
+        __weak GRSInventoryDetailViewController *weakSelf = self;
+        
+        [self.selectedProduct setInventoryQuantity:quantity completion:^(NSError *error){
+            [weakSelf handleStockChange:error];
+            weakSelf.restockTextField.text = @"";
+        }];
+    }
+}
+
+- (IBAction)addToCartAction:(id)sender
+{
 }
 
 // returns YES if the error is fatal

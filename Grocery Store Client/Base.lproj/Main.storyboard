@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="-351"/>
         </scene>
-        <!--Apples-->
+        <!--Item Name-->
         <scene sceneID="EgS-LH-lmn">
             <objects>
                 <viewController id="IPY-3n-Tub" customClass="GRSInventoryDetailViewController" sceneMemberID="viewController">
@@ -137,6 +137,9 @@
                                 <state key="normal" title="Buy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buyItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="KvF-19-ETB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-Sb-KJn">
                                 <rect key="frame" x="352" y="175" width="57" height="44"/>
@@ -147,6 +150,9 @@
                                 <state key="normal" title="Restock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="restockItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="ZSt-cH-7Br"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXW-tZ-jh4">
                                 <rect key="frame" x="352" y="227" width="82" height="44"/>
@@ -157,6 +163,9 @@
                                 <state key="normal" title="Add To Cart">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCartAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="3oI-zl-1SQ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeZ-0a-huz">
                                 <rect key="frame" x="279" y="234" width="55" height="30"/>
@@ -207,9 +216,12 @@
                             <constraint firstItem="N8R-qS-at0" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="28" id="ujB-fb-d02"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Apples" id="zK4-hv-7w1"/>
+                    <navigationItem key="navigationItem" title="Item Name" id="zK4-hv-7w1"/>
                     <connections>
+                        <outlet property="addToCartTextField" destination="FeZ-0a-huz" id="HKp-a1-2bM"/>
+                        <outlet property="buyTextField" destination="OkK-fT-qwm" id="fFJ-Kd-e60"/>
                         <outlet property="quantityLabel" destination="eQL-mk-ctx" id="AJM-X1-ncg"/>
+                        <outlet property="restockTextField" destination="cLW-I8-rLM" id="5Zy-rl-Fxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfL-Kz-czD" userLabel="First Responder" sceneMemberID="firstResponder"/>
