@@ -11,6 +11,7 @@
 #import "UIAlertController+Convenience.h"
 
 #import "GRSNetworkAPIUtility.h"
+#import "GRSShoppingCart.h"
 #import "Product+API_Interaction.h"
 
 @interface GRSInventoryDetailViewController ()
@@ -89,6 +90,18 @@
 
 - (IBAction)addToCartAction:(id)sender
 {
+    NSInteger quantity;
+    
+    if ([self.addToCartTextField.text isEqualToString:@""]) {
+        quantity = 1;
+    } else {
+        quantity = self.addToCartTextField.text.integerValue;
+    }
+    
+    [[GRSShoppingCart sharedInstance] addProductToCart:self.selectedProduct quantity:quantity];
+    [UIAlertController presentAlertWithTitle:@"Shopping Cart"
+                                  andMessage:[NSString stringWithFormat:@"Added a quantity of %ld %@ to the shopping cart.", quantity, self.selectedProduct.name]
+                            inViewController:self];
 }
 
 // returns YES if the error is fatal
