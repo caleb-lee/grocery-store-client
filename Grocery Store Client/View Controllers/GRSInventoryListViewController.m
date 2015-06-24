@@ -11,8 +11,10 @@
 #import "UIAlertController+Convenience.h"
 
 #import "GRSInventoryDetailViewController.h"
-#import "GRSInventoryFetchedResultsDataSource.h"
 #import "GRSSyncUtility.h"
+#import "Product.h"
+
+static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 
 @interface GRSInventoryListViewController ()
 
@@ -22,6 +24,8 @@
 
 @property (strong, nonatomic) NSString *selectedItemName;
 @property (strong, nonatomic) GRSInventoryFetchedResultsDataSource *dataSource;
+
+@property (strong, nonatomic) Product *selectedProduct;
 
 @end
 
@@ -33,6 +37,7 @@
     // Do any additional setup after loading the view.
     
     self.dataSource = [[GRSInventoryFetchedResultsDataSource alloc] initWithTableView:self.tableView];
+    self.dataSource.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +58,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     GRSInventoryDetailViewController *dest = segue.destinationViewController;
-    self.dataSource.delegate = dest;
+    dest.selectedProduct = self.selectedProduct;
+}
+
+#pragma Mark - VOKFetchedResultsDataSourceDelegate
+
+- (void)fetchResultsDataSourceSelectedObject:(NSManagedObject *)object
+{
+    self.selectedProduct = (Product *)object;
+    [self performSegueWithIdentifier:ListToDetailSegue sender:self];
 }
 
 @end

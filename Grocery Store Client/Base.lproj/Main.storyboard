@@ -40,9 +40,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="IPY-3n-Tub" kind="show" id="PtD-PZ-ma3"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -64,6 +61,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="PVr-P2-OYe" id="D3B-3t-Z7U"/>
+                        <segue destination="IPY-3n-Tub" kind="show" identifier="InventoryListToProductDetailSegue" id="8fB-gy-79O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

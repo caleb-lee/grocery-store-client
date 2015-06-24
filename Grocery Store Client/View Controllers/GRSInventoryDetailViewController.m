@@ -15,8 +15,6 @@
 
 @interface GRSInventoryDetailViewController ()
 
-@property (strong, nonatomic) Product *selectedProduct;
-
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
 
 - (IBAction)buyItemAction:(id)sender;
@@ -73,13 +71,6 @@
     } else {
         [self loadItemData];
     }
-}
-
-#pragma Mark - VOKFetchedResultsDataSourceDelegate
-
-- (void)fetchResultsDataSourceSelectedObject:(NSManagedObject *)object
-{
-    self.selectedProduct = (Product *)object;
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GRSInventoryListViewController : UIViewController
+#import "GRSInventoryFetchedResultsDataSource.h"
+
+@interface GRSInventoryListViewController : UIViewController <VOKFetchedResultsDataSourceDelegate>
 
 @end
