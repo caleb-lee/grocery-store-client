@@ -6,12 +6,6 @@
 //  Copyright (c) 2015年 Vokal. All rights reserved.
 //
 
-/**
- *  GRSSyncUtility takes care of downloading data from the server and syncing
- *  with local data on the phone. It is a singleton class and therefore its
- *  instance can be accessed from anywhere in the app.
- */
-
 #import <Foundation/Foundation.h>
 
 #import "Product.h"
@@ -20,6 +14,12 @@ typedef void(^GRSSyncUtilityCompletionNoProducts)(NSError *error);
 typedef void(^GRSSyncUtilityCompletionSingleProduct)(Product *product, NSError *error);
 typedef void(^GRSSyncUtilityCompletionMultipleProducts)(NSArray *products, NSError *error);
 
+
+/**
+ *  GRSSyncUtility takes care of downloading data from the server and syncing
+ *  with local data on the phone. It is a singleton class and therefore its
+ *  instance can be accessed from anywhere in the app.
+ */
 @interface GRSSyncUtility : NSObject
 
 /**

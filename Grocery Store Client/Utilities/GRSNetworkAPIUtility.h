@@ -6,10 +6,6 @@
 //  Copyright (c) 2015年 Vokal. All rights reserved.
 //
 
-/**
- *  GRSNetworkAPIUtility handles all direct API calls in the Grocery Store application
- */
-
 #import <Foundation/Foundation.h>
 
 // --> typedefs taken from Vokal's URLNetworkAPIUtility
@@ -18,6 +14,9 @@ typedef void(^GRSNetworkUserInfoCompletionBlock)(NSDictionary *userInfo, NSError
 /// Completion block for API endpoints that don't return any response body.
 typedef void(^GRSNetworkNoResponseNetworkCompletionBlock)(NSError *error);
 
+/**
+ *  GRSNetworkAPIUtility handles all direct API calls in the Grocery Store application
+ */
 @interface GRSNetworkAPIUtility : NSObject
 
  /**
