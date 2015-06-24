@@ -34,7 +34,7 @@
 
 - (void)loadItemData
 {
-    self.navigationItem.title = self.selectedProduct.name;
+    self.navigationItem.title = [self.selectedProduct.name capitalizedString];
     [self updateQuantityLabel:self.selectedProduct.quantity];
 }
 

@@ -31,7 +31,7 @@
     
     Product *product = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = product.name;
+    cell.textLabel.text = [product.name capitalizedString];
     cell.detailTextLabel.text = product.quantity.stringValue;
     
     return cell;
