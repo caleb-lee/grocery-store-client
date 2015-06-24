@@ -263,6 +263,19 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coN-Mh-KkE">
+                                <rect key="frame" x="239" y="281" width="122" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3cf-cm-XZH"/>
+                                    <constraint firstAttribute="width" constant="122" id="GQe-oz-Ebd"/>
+                                </constraints>
+                                <state key="normal" title="Remove All Stock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAllStockAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="MQf-dc-X6t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -273,6 +286,7 @@
                             <constraint firstItem="cLW-I8-rLM" firstAttribute="leading" secondItem="8ci-9l-Zuj" secondAttribute="trailing" constant="4" id="8WQ-4b-tXJ"/>
                             <constraint firstItem="OkK-fT-qwm" firstAttribute="leading" secondItem="N8R-qS-at0" secondAttribute="trailing" constant="4" id="EC6-eC-9fK"/>
                             <constraint firstItem="hXW-tZ-jh4" firstAttribute="leading" secondItem="FeZ-0a-huz" secondAttribute="trailing" constant="18" id="ELy-va-bn0"/>
+                            <constraint firstItem="coN-Mh-KkE" firstAttribute="top" secondItem="FeZ-0a-huz" secondAttribute="bottom" constant="17" id="Km4-HS-niC"/>
                             <constraint firstItem="8ci-9l-Zuj" firstAttribute="top" secondItem="N8R-qS-at0" secondAttribute="bottom" constant="31" id="Nwg-St-bjs"/>
                             <constraint firstItem="66U-ag-teB" firstAttribute="leading" secondItem="OkK-fT-qwm" secondAttribute="trailing" constant="8" id="QBI-ra-PnY"/>
                             <constraint firstItem="FeZ-0a-huz" firstAttribute="leading" secondItem="EQY-FB-iNF" secondAttribute="trailing" constant="4" id="RD6-Rv-Idf"/>
@@ -284,6 +298,7 @@
                             <constraint firstItem="OkK-fT-qwm" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="24" id="jFA-gy-X8H"/>
                             <constraint firstItem="eQL-mk-ctx" firstAttribute="top" secondItem="2yJ-2L-zKG" secondAttribute="top" constant="85" id="jJc-73-ACS"/>
                             <constraint firstItem="66U-ag-teB" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="17" id="lUw-VZ-p7E"/>
+                            <constraint firstAttribute="centerX" secondItem="coN-Mh-KkE" secondAttribute="centerX" id="reK-xu-193"/>
                             <constraint firstAttribute="centerX" secondItem="cLW-I8-rLM" secondAttribute="centerX" constant="-6" id="uhX-hv-trm"/>
                             <constraint firstItem="N8R-qS-at0" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="28" id="ujB-fb-d02"/>
                         </constraints>

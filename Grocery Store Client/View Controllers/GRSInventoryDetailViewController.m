@@ -21,6 +21,7 @@
 - (IBAction)buyItemAction:(id)sender;
 - (IBAction)restockItemAction:(id)sender;
 - (IBAction)addToCartAction:(id)sender;
+- (IBAction)removeAllStockAction:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *buyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *restockTextField;
@@ -103,6 +104,15 @@
     [UIAlertController presentAlertWithTitle:@"Shopping Cart"
                                   andMessage:[NSString stringWithFormat:@"Added a quantity of %ld %@ to the shopping cart.", quantity, self.selectedProduct.name]
                             inViewController:self];
+}
+
+- (IBAction)removeAllStockAction:(id)sender
+{
+    __weak GRSInventoryDetailViewController *weakSelf = self;
+    
+    [self.selectedProduct setNoInventory:^(NSError *error){
+        [weakSelf handleStockChange:error];
+    }];
 }
 
 // returns YES if the error is fatal
