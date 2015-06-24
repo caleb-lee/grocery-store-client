@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GRSShoppingCartViewController : UIViewController
+@interface GRSShoppingCartViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

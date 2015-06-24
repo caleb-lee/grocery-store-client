@@ -71,8 +71,10 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    GRSInventoryDetailViewController *dest = segue.destinationViewController;
-    dest.selectedProduct = self.selectedProduct;
+    if ([segue.identifier isEqualToString:ListToDetailSegue]) {
+        GRSInventoryDetailViewController *dest = segue.destinationViewController;
+        dest.selectedProduct = self.selectedProduct;
+    }
 }
 
 #pragma Mark - VOKFetchedResultsDataSourceDelegate
