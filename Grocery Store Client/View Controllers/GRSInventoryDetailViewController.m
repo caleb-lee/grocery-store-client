@@ -99,6 +99,7 @@
     }
     
     [[GRSShoppingCart sharedInstance] addProductToCart:self.selectedProduct quantity:quantity];
+    self.addToCartTextField.text = @"";
     [UIAlertController presentAlertWithTitle:@"Shopping Cart"
                                   andMessage:[NSString stringWithFormat:@"Added a quantity of %ld %@ to the shopping cart.", quantity, self.selectedProduct.name]
                             inViewController:self];
