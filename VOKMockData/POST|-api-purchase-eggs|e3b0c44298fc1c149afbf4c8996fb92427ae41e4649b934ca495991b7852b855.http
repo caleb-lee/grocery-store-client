@@ -1,0 +1,3 @@
+HTTP/1.1 404 Not Found
+
+{"error":"Product eggs is not available."}
