@@ -24,10 +24,10 @@
  */
 #ifndef PRODUCTION_ENVIRONMENT
 // Staging API
-static NSString *const APIBaseURL = @"https://api-staging.example.com";
+static NSString *const APIBaseURL = @"http://127.0.0.1:4567/api";
 #else
 // Production API
-static NSString *const APIBaseURL = @"https://api.example.com";
+static NSString *const APIBaseURL = @"http://127.0.0.1:4567/api";
 #endif
 
 @implementation GRSHTTPSessionManager

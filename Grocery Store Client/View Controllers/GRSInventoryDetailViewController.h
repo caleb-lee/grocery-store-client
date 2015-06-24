@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Product.h"
+
 @interface GRSInventoryDetailViewController : UIViewController
 
-@property (strong, nonatomic) NSString *itemName;
+@property (strong, nonatomic) Product *selectedProduct;
 
 @end

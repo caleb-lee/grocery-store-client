@@ -1,0 +1,3 @@
+HTTP/1.1 400 Bad Request
+
+{"error":"No product with the name appples exists."}

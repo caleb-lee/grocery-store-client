@@ -8,11 +8,16 @@
 
 #import "AppDelegate.h"
 
+#import "GRSSyncUtility.h"
+#import "GRSCoreDataUtility.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //TODO: Override point for customization after application launch.
+    // Set up Core Data
+    [GRSCoreDataUtility setupCoreData];
+    
     return YES;
 }
 

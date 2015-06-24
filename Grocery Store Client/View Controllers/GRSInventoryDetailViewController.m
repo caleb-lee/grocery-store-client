@@ -8,18 +8,19 @@
 
 #import "GRSInventoryDetailViewController.h"
 
+#import "UIAlertController+Convenience.h"
+
+#import "GRSNetworkAPIUtility.h"
+#import "Product+API_Interaction.h"
+
 @interface GRSInventoryDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
-@property (weak, nonatomic) IBOutlet UIButton *buyItemButton;
-@property (weak, nonatomic) IBOutlet UIButton *restockItemButton;
 
 - (IBAction)buyItemAction:(id)sender;
 - (IBAction)restockItemAction:(id)sender;
 
 @end
-
-static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 @implementation GRSInventoryDetailViewController
 
@@ -28,25 +29,13 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = self.itemName;
-    self.quantityLabel.text = @"";
-    
     [self loadItemData];
 }
 
 - (void)loadItemData
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@inventory/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
-        self.buyItemButton.titleLabel.text = [NSString stringWithFormat:@"Buy %@", self.itemName];
-        self.restockItemButton.titleLabel.text = [NSString stringWithFormat:@"Restock %@", self.itemName];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
-    }];
+    self.navigationItem.title = self.selectedProduct.name;
+    [self updateQuantityLabel:self.selectedProduct.quantity];
 }
 
 - (void)updateQuantityLabel:(NSNumber *)quantity
@@ -62,28 +51,28 @@ static NSString *const BaseURLString = @"http://127.0.0.1:4567/api/";
 
 - (IBAction)buyItemAction:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@purchase/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
+    [self.selectedProduct purchase:^(NSError *error){
+        [self handleStockChange:error];
     }];
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@inventory/%@", BaseURLString, self.itemName];
-    
-    [[AFHTTPRequestOperationManager manager] POST:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        NSDictionary *groceryInventory = (NSDictionary *)responseObject;
-        
-        [self updateQuantityLabel:[groceryInventory objectForKey:self.itemName]];
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error){
-        NSLog(@"%@", error);
+    [self.selectedProduct incrementInventory:^(NSError *error){
+        [self handleStockChange:error];
     }];
+}
+
+// returns YES if the error is fatal
+- (void)handleStockChange:(NSError *)error
+{
+    if (error != nil) {
+        [UIAlertController presentAlertWithTitle:@"Error"
+                                      andMessage:error.localizedDescription
+                                inViewController:self];
+    } else {
+        [self loadItemData];
+    }
 }
 
 @end
