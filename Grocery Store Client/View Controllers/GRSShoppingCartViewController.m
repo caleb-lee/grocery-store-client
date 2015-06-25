@@ -48,6 +48,11 @@
     }];
 }
 
+- (NSString *)productNameFromIndexPath:(NSIndexPath *)indexPath
+{
+    return [GRSShoppingCart sharedInstance].productsInCart.allKeys[indexPath.row];
+}
+
 #pragma Mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView
@@ -55,7 +60,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSString *productName = [GRSShoppingCart sharedInstance].productsInCart.allKeys[indexPath.row];;
+        NSString *productName = [self productNameFromIndexPath:indexPath];
         
         [[GRSShoppingCart sharedInstance] removeProductWithNameFromCart:productName];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -74,7 +79,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    NSString *productName = [GRSShoppingCart sharedInstance].productsInCart.allKeys[indexPath.row];
+    NSString *productName = [self productNameFromIndexPath:indexPath];
     NSNumber *quantityToBuy = [GRSShoppingCart sharedInstance].productsInCart[productName];
     
     cell.textLabel.text = productName;
