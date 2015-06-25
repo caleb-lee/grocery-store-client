@@ -31,14 +31,14 @@
 
 + (instancetype)sharedInstance
 {
-    static GRSShoppingCart *_sharedInstance = nil;
+    static GRSShoppingCart *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[GRSShoppingCart alloc] init];
+        sharedInstance = [[GRSShoppingCart alloc] init];
     });
     
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 - (void)addProductToCart:(Product *)product quantity:(NSInteger)quantity

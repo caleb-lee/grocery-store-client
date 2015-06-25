@@ -24,14 +24,14 @@ static NSString *const QuantityKey = @"quantity";
 
 + (instancetype)sharedUtility
 {
-    static GRSNetworkAPIUtility *_sharedInstance = nil;
+    static GRSNetworkAPIUtility *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[GRSNetworkAPIUtility alloc] init];
+        sharedInstance = [[GRSNetworkAPIUtility alloc] init];
     });
     
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 - (id)init

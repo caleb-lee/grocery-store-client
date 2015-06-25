@@ -16,14 +16,14 @@
 
 + (instancetype)sharedUtility
 {
-    static GRSSyncUtility *_sharedInstance = nil;
+    static GRSSyncUtility *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[GRSSyncUtility alloc] init];
+        sharedInstance = [[GRSSyncUtility alloc] init];
     });
     
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 - (void)downSync:(GRSSyncUtilityCompletionNoProducts)completion
