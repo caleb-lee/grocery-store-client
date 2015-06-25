@@ -43,7 +43,7 @@
 
 - (void)addProductToCart:(Product *)product quantity:(NSInteger)quantity
 {
-    [self.productsInCart setObject:@(quantity) forKey:product.name];
+    self.productsInCart[product.name] = @(quantity);
 }
 
 - (void)removeProductFromCart:(Product *)product
