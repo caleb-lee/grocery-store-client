@@ -50,7 +50,9 @@
 
 #pragma Mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSString *productName = [[GRSShoppingCart sharedInstance].productsInCart.allKeys objectAtIndex:indexPath.row];
