@@ -78,7 +78,9 @@
             [self.productsInCart removeObjectForKey:productName];
         }];
         
-        [[VOKCoreDataManager sharedInstance] saveMainContext];
+        if (userInfo.count > 0) {
+            [[VOKCoreDataManager sharedInstance] saveMainContext];
+        }
         
         if (completion) {
             completion(productsArray, nil);
