@@ -47,12 +47,6 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
     [self refresh];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)refreshButtonAction:(id)sender
 {
     [self refresh];

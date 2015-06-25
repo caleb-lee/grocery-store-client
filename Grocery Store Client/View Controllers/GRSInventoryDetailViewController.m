@@ -50,12 +50,6 @@
     self.quantityLabel.text = [NSString stringWithFormat:@"Qty: %@", quantity];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)buyItemAction:(id)sender
 {
     GRSInventoryDetailViewController *__weak weakSelf = self;

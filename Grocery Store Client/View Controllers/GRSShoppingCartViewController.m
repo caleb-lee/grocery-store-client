@@ -29,12 +29,6 @@
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)purchaseButtonAction:(id)sender
 {
     [[GRSShoppingCart sharedInstance] purchaseProductsInCart:^(NSArray *products, NSError *error){
