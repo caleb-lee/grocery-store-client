@@ -4,6 +4,73 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Shopping Cart-->
+        <scene sceneID="lLm-wq-4pU">
+            <objects>
+                <viewController id="Tgo-PI-guo" customClass="GRSShoppingCartViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WxM-Ct-FxE"/>
+                        <viewControllerLayoutGuide type="bottom" id="BgH-Rq-NLA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kez-mJ-hiR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="u3U-ed-vBZ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="1pb-jd-vDb" detailTextLabel="3V7-k9-TTz" style="IBUITableViewCellStyleValue1" id="SOr-cU-vcS">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SOr-cU-vcS" id="2Ks-kY-62M">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1pb-jd-vDb">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3V7-k9-TTz">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Tgo-PI-guo" id="opR-wm-d4X"/>
+                                    <outlet property="delegate" destination="Tgo-PI-guo" id="gkl-af-Fha"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u3U-ed-vBZ" secondAttribute="trailing" id="HVl-SI-Hzi"/>
+                            <constraint firstItem="u3U-ed-vBZ" firstAttribute="top" secondItem="kez-mJ-hiR" secondAttribute="top" id="Qct-0h-5aP"/>
+                            <constraint firstItem="u3U-ed-vBZ" firstAttribute="leading" secondItem="kez-mJ-hiR" secondAttribute="leading" id="fwe-7O-n0I"/>
+                            <constraint firstAttribute="bottom" secondItem="u3U-ed-vBZ" secondAttribute="bottom" id="hAc-Eg-MZ2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping Cart" id="XUU-Ch-Jju">
+                        <barButtonItem key="rightBarButtonItem" title="Purchase" id="Ntf-mS-vlS">
+                            <connections>
+                                <action selector="purchaseButtonAction:" destination="Tgo-PI-guo" id="ltN-d4-Z0A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="u3U-ed-vBZ" id="yqi-lb-EHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGd-Ji-TiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-1099"/>
+        </scene>
         <!--Inventory List-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -53,6 +120,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Inventory List" id="wyY-SI-X40">
+                        <barButtonItem key="leftBarButtonItem" title="Cart" id="WMo-gT-tJ6">
+                            <connections>
+                                <segue destination="Tgo-PI-guo" kind="show" id="tIY-9b-Sww"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="b0O-uX-tPt">
                             <connections>
                                 <action selector="refreshButtonAction:" destination="vXZ-lx-hvc" id="Hye-fe-kW4"/>
@@ -68,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="-351"/>
         </scene>
-        <!--Apples-->
+        <!--Item Name-->
         <scene sceneID="EgS-LH-lmn">
             <objects>
                 <viewController id="IPY-3n-Tub" customClass="GRSInventoryDetailViewController" sceneMemberID="viewController">
@@ -90,34 +162,153 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztM-PL-twW">
-                                <rect key="frame" x="25" y="122" width="79" height="44"/>
-                                <state key="normal" title="Buy Item">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-fT-qwm">
+                                <rect key="frame" x="279" y="130" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Oy-Z6-hCO"/>
+                                    <constraint firstAttribute="width" constant="55" id="Za4-v2-lAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8R-qS-at0">
+                                <rect key="frame" x="235" y="134" width="40" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AaV-AK-2e6"/>
+                                    <constraint firstAttribute="width" constant="40" id="HBF-jc-oRc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cLW-I8-rLM">
+                                <rect key="frame" x="279" y="182" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="UhI-RQ-rcR"/>
+                                    <constraint firstAttribute="height" constant="30" id="gXD-R7-SJ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restock to: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ci-9l-Zuj">
+                                <rect key="frame" x="182" y="186" width="93" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="O7t-4f-xSc"/>
+                                    <constraint firstAttribute="width" constant="93" id="OUc-mG-8aw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66U-ag-teB">
+                                <rect key="frame" x="342" y="123" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AAB-ah-Zxd"/>
+                                    <constraint firstAttribute="width" constant="44" id="mZ5-bv-3Ja"/>
+                                </constraints>
+                                <state key="normal" title="Buy">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buyItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="viP-bK-LUI"/>
+                                    <action selector="buyItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="KvF-19-ETB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqf-VR-YuH">
-                                <rect key="frame" x="127" y="122" width="108" height="44"/>
-                                <state key="normal" title="Restock Item">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-Sb-KJn">
+                                <rect key="frame" x="352" y="175" width="57" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="lwi-sq-4Pa"/>
+                                    <constraint firstAttribute="height" constant="44" id="sIo-sU-crO"/>
+                                </constraints>
+                                <state key="normal" title="Restock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="restockItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="rV9-mR-akX"/>
+                                    <action selector="restockItemAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="ZSt-cH-7Br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXW-tZ-jh4">
+                                <rect key="frame" x="352" y="227" width="82" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Uff-lS-cAa"/>
+                                    <constraint firstAttribute="width" constant="82" id="ojZ-M2-MjB"/>
+                                </constraints>
+                                <state key="normal" title="Add To Cart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToCartAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="3oI-zl-1SQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FeZ-0a-huz">
+                                <rect key="frame" x="279" y="234" width="55" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="3Y8-fw-mus"/>
+                                    <constraint firstAttribute="height" constant="30" id="gru-fu-xKM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add quantity: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQY-FB-iNF">
+                                <rect key="frame" x="167" y="238" width="108" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="9xe-SG-u5a"/>
+                                    <constraint firstAttribute="height" constant="21" id="MJu-fN-UDO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9xe-SG-u5a"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coN-Mh-KkE">
+                                <rect key="frame" x="239" y="281" width="122" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3cf-cm-XZH"/>
+                                    <constraint firstAttribute="width" constant="122" id="GQe-oz-Ebd"/>
+                                </constraints>
+                                <state key="normal" title="Remove All Stock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeAllStockAction:" destination="IPY-3n-Tub" eventType="touchUpInside" id="MQf-dc-X6t"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FeZ-0a-huz" secondAttribute="centerX" constant="-6" id="0ay-xH-wOY"/>
+                            <constraint firstItem="JGD-Sb-KJn" firstAttribute="leading" secondItem="cLW-I8-rLM" secondAttribute="trailing" constant="18" id="17G-s0-fEc"/>
+                            <constraint firstItem="FeZ-0a-huz" firstAttribute="top" secondItem="cLW-I8-rLM" secondAttribute="bottom" constant="22" id="6Or-Gd-zfh"/>
+                            <constraint firstItem="EQY-FB-iNF" firstAttribute="top" secondItem="8ci-9l-Zuj" secondAttribute="bottom" constant="31" id="6qT-PG-vwZ"/>
+                            <constraint firstItem="cLW-I8-rLM" firstAttribute="leading" secondItem="8ci-9l-Zuj" secondAttribute="trailing" constant="4" id="8WQ-4b-tXJ"/>
+                            <constraint firstItem="OkK-fT-qwm" firstAttribute="leading" secondItem="N8R-qS-at0" secondAttribute="trailing" constant="4" id="EC6-eC-9fK"/>
+                            <constraint firstItem="hXW-tZ-jh4" firstAttribute="leading" secondItem="FeZ-0a-huz" secondAttribute="trailing" constant="18" id="ELy-va-bn0"/>
+                            <constraint firstItem="coN-Mh-KkE" firstAttribute="top" secondItem="FeZ-0a-huz" secondAttribute="bottom" constant="17" id="Km4-HS-niC"/>
+                            <constraint firstItem="8ci-9l-Zuj" firstAttribute="top" secondItem="N8R-qS-at0" secondAttribute="bottom" constant="31" id="Nwg-St-bjs"/>
+                            <constraint firstItem="66U-ag-teB" firstAttribute="leading" secondItem="OkK-fT-qwm" secondAttribute="trailing" constant="8" id="QBI-ra-PnY"/>
+                            <constraint firstItem="FeZ-0a-huz" firstAttribute="leading" secondItem="EQY-FB-iNF" secondAttribute="trailing" constant="4" id="RD6-Rv-Idf"/>
+                            <constraint firstItem="cLW-I8-rLM" firstAttribute="top" secondItem="OkK-fT-qwm" secondAttribute="bottom" constant="22" id="Sig-Te-ufd"/>
+                            <constraint firstItem="hXW-tZ-jh4" firstAttribute="top" secondItem="JGD-Sb-KJn" secondAttribute="bottom" constant="8" id="TdM-Ig-8HU"/>
+                            <constraint firstAttribute="centerX" secondItem="OkK-fT-qwm" secondAttribute="centerX" constant="-6" id="VRA-XJ-Gq3"/>
+                            <constraint firstItem="JGD-Sb-KJn" firstAttribute="top" secondItem="66U-ag-teB" secondAttribute="bottom" constant="8" id="Yzi-zp-yJG"/>
                             <constraint firstAttribute="centerX" secondItem="eQL-mk-ctx" secondAttribute="centerX" id="bcM-Cy-N6x"/>
+                            <constraint firstItem="OkK-fT-qwm" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="24" id="jFA-gy-X8H"/>
                             <constraint firstItem="eQL-mk-ctx" firstAttribute="top" secondItem="2yJ-2L-zKG" secondAttribute="top" constant="85" id="jJc-73-ACS"/>
+                            <constraint firstItem="66U-ag-teB" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="17" id="lUw-VZ-p7E"/>
+                            <constraint firstAttribute="centerX" secondItem="coN-Mh-KkE" secondAttribute="centerX" id="reK-xu-193"/>
+                            <constraint firstAttribute="centerX" secondItem="cLW-I8-rLM" secondAttribute="centerX" constant="-6" id="uhX-hv-trm"/>
+                            <constraint firstItem="N8R-qS-at0" firstAttribute="top" secondItem="eQL-mk-ctx" secondAttribute="bottom" constant="28" id="ujB-fb-d02"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Apples" id="zK4-hv-7w1"/>
+                    <navigationItem key="navigationItem" title="Item Name" id="zK4-hv-7w1"/>
                     <connections>
+                        <outlet property="addToCartTextField" destination="FeZ-0a-huz" id="HKp-a1-2bM"/>
+                        <outlet property="buyTextField" destination="OkK-fT-qwm" id="fFJ-Kd-e60"/>
                         <outlet property="quantityLabel" destination="eQL-mk-ctx" id="AJM-X1-ncg"/>
+                        <outlet property="restockTextField" destination="cLW-I8-rLM" id="5Zy-rl-Fxu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfL-Kz-czD" userLabel="First Responder" sceneMemberID="firstResponder"/>

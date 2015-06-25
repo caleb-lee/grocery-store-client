@@ -16,7 +16,7 @@
 
 static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 
-@interface GRSInventoryListViewController ()
+@interface GRSInventoryListViewController () <VOKFetchedResultsDataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -47,12 +47,6 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
     [self refresh];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (IBAction)refreshButtonAction:(id)sender
 {
     [self refresh];
@@ -61,7 +55,7 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 - (void)refresh
 {
     [[GRSSyncUtility sharedUtility] downSync:^(NSError *error){
-        if (error != nil) {
+        if (error) {
             [UIAlertController presentAlertWithTitle:@"Error"
                                           andMessage:error.localizedDescription
                                     inViewController:self];
@@ -71,8 +65,10 @@ static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    GRSInventoryDetailViewController *dest = segue.destinationViewController;
-    dest.selectedProduct = self.selectedProduct;
+    if ([segue.identifier isEqualToString:ListToDetailSegue]) {
+        GRSInventoryDetailViewController *dest = segue.destinationViewController;
+        dest.selectedProduct = self.selectedProduct;
+    }
 }
 
 #pragma Mark - VOKFetchedResultsDataSourceDelegate

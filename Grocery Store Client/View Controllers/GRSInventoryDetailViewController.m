@@ -11,6 +11,7 @@
 #import "UIAlertController+Convenience.h"
 
 #import "GRSNetworkAPIUtility.h"
+#import "GRSShoppingCart.h"
 #import "Product+API_Interaction.h"
 
 @interface GRSInventoryDetailViewController ()
@@ -19,6 +20,12 @@
 
 - (IBAction)buyItemAction:(id)sender;
 - (IBAction)restockItemAction:(id)sender;
+- (IBAction)addToCartAction:(id)sender;
+- (IBAction)removeAllStockAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *buyTextField;
+@property (weak, nonatomic) IBOutlet UITextField *restockTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addToCartTextField;
 
 @end
 
@@ -34,7 +41,7 @@
 
 - (void)loadItemData
 {
-    self.navigationItem.title = self.selectedProduct.name;
+    self.navigationItem.title = self.selectedProduct.name.capitalizedString;
     [self updateQuantityLabel:self.selectedProduct.quantity];
 }
 
@@ -43,30 +50,77 @@
     self.quantityLabel.text = [NSString stringWithFormat:@"Qty: %@", quantity];
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL)useSingleInventoryMethod:(UITextField *)textField
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return [textField.text isEqualToString:@""];
 }
 
 - (IBAction)buyItemAction:(id)sender
 {
-    [self.selectedProduct purchase:^(NSError *error){
-        [self handleStockChange:error];
-    }];
+    GRSInventoryDetailViewController *__weak weakSelf = self;
+    
+    void (^buyItemCompletion)(NSError *error) = ^void(NSError *error) {
+        [weakSelf handleStockChange:error];
+        weakSelf.buyTextField.text = @"";
+    };
+    
+    if ([self useSingleInventoryMethod:self.buyTextField]) {
+        [self.selectedProduct purchase:buyItemCompletion];
+    } else {
+        NSInteger quantity = self.buyTextField.text.integerValue;
+        
+        [self.selectedProduct purchaseQuantitiy:quantity completion:buyItemCompletion];
+    }
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
-    [self.selectedProduct incrementInventory:^(NSError *error){
-        [self handleStockChange:error];
+    GRSInventoryDetailViewController *__weak weakSelf = self;
+    
+    void (^restockItemCompletion)(NSError *error) = ^void(NSError *error) {
+        [weakSelf handleStockChange:error];
+        weakSelf.restockTextField.text = @"";
+    };
+    
+    if ([self useSingleInventoryMethod:self.restockTextField]) {
+        [self.selectedProduct incrementInventory:restockItemCompletion];
+    } else {
+        NSInteger quantity = self.restockTextField.text.integerValue;
+        
+        [self.selectedProduct setInventoryQuantity:quantity completion:restockItemCompletion];
+    }
+}
+
+- (IBAction)addToCartAction:(id)sender
+{
+    NSInteger quantity;
+    
+    if ([self useSingleInventoryMethod:self.addToCartTextField]) {
+        quantity = 1;
+    } else {
+        quantity = self.addToCartTextField.text.integerValue;
+    }
+    
+    [[GRSShoppingCart sharedInstance] addProductToCart:self.selectedProduct quantity:quantity];
+    self.addToCartTextField.text = @"";
+    [UIAlertController presentAlertWithTitle:@"Shopping Cart"
+                                  andMessage:[NSString stringWithFormat:@"Added a quantity of %ld %@ to the shopping cart.", quantity, self.selectedProduct.name]
+                            inViewController:self];
+}
+
+- (IBAction)removeAllStockAction:(id)sender
+{
+    GRSInventoryDetailViewController *__weak weakSelf = self;
+    
+    [self.selectedProduct setNoInventory:^(NSError *error){
+        [weakSelf handleStockChange:error];
     }];
 }
 
 // returns YES if the error is fatal
 - (void)handleStockChange:(NSError *)error
 {
-    if (error != nil) {
+    if (error) {
         [UIAlertController presentAlertWithTitle:@"Error"
                                       andMessage:error.localizedDescription
                                 inViewController:self];

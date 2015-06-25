@@ -10,10 +10,30 @@
 
 #import "Product.h"
 
+/**
+ *  Completion handler for when nothing is expected upon successful completion
+ *
+ *  @param error non-nil if method was unsuccessful
+ */
 typedef void(^GRSSyncUtilityCompletionNoProducts)(NSError *error);
-typedef void(^GRSSyncUtilityCompletionSingleProduct)(Product *product, NSError *error);
-typedef void(^GRSSyncUtilityCompletionMultipleProducts)(NSArray *products, NSError *error);
 
+/**
+ *  Completion handler for when a single Product object is expected upon successful completion.
+ *  Product is nil if unsuccessful, error is nil if successful.
+ *
+ *  @param product the returned product
+ *  @param error   the error if unsuccessful
+ */
+typedef void(^GRSSyncUtilityCompletionSingleProduct)(Product *product, NSError *error);
+
+/**
+ *  Completion handler for when multiple Product objects are expected to be returned upon successful completion.
+ *  products is nil if unsuccessful, error is nil if successful.
+ *
+ *  @param products the returned products
+ *  @param error    the error if unsucessful
+ */
+typedef void(^GRSSyncUtilityCompletionMultipleProducts)(NSArray *products, NSError *error);
 
 /**
  *  GRSSyncUtility takes care of downloading data from the server and syncing

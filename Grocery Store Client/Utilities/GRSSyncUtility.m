@@ -16,20 +16,20 @@
 
 + (instancetype)sharedUtility
 {
-    static GRSSyncUtility *_sharedInstance = nil;
+    static GRSSyncUtility *sharedInstance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[GRSSyncUtility alloc] init];
+        sharedInstance = [[GRSSyncUtility alloc] init];
     });
     
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 - (void)downSync:(GRSSyncUtilityCompletionNoProducts)completion
 {
     [self fetchProductInventory:^(NSArray *products, NSError *error) {
-        if (completion != nil) {
+        if (completion) {
             completion(error);
         }
     }];
@@ -44,14 +44,14 @@
             // add and update products from the server
             for (NSString *productName in userInfo.allKeys) {
                 Product *product = [Product productWithNameOrNew:productName];
-                product.quantity = [userInfo objectForKey:productName];
+                product.quantity = userInfo[productName];
                 [products addObject:product];
             }
             
             // remove any products that no longer exist on the server
             NSArray *localProducts = [[VOKCoreDataManager sharedInstance] arrayForClass:[Product class]];
             for (Product *product in localProducts) {
-                NSNumber *quantity = [userInfo objectForKey:product.name];
+                NSNumber *quantity = userInfo[product.name];
                 
                 if (quantity == nil) {
                     [[VOKCoreDataManager sharedInstance] deleteObject:product];
@@ -60,7 +60,7 @@
             
             [[VOKCoreDataManager sharedInstance] saveMainContext];
             
-            if (completion != nil) {
+            if (completion) {
                 completion(products, error);
             }
         }
@@ -72,11 +72,11 @@
     [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:name completion:^(NSDictionary *userInfo, NSError *error){
         if (![self handleError:error withCompletion:completion]) {
             Product *product = [Product productWithNameOrNew:name];
-            product.quantity = [userInfo objectForKey:name];
+            product.quantity = userInfo[product.name];
             
             [[VOKCoreDataManager sharedInstance] saveMainContext];
             
-            if (completion != nil) {
+            if (completion) {
                 completion(product, error);
             }
         }
@@ -85,8 +85,8 @@
 
 - (BOOL)handleError:(NSError *)error withCompletion:(void (^)(id returnedObject, NSError *error))completion
 {
-    if (error != nil) {
-        if (completion != nil) {
+    if (error) {
+        if (completion) {
             completion(nil, error);
         }
     }

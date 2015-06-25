@@ -27,12 +27,12 @@
 
 - (void)completionHelper:(NSDictionary *)userInfo error:(NSError *)error completion:(GRSNetworkNoResponseNetworkCompletionBlock)completion
 {
-    if (userInfo != nil) {
-        self.quantity = (NSNumber *)[userInfo objectForKey:self.name];
+    if (userInfo) {
+        self.quantity = userInfo[self.name];
         [[VOKCoreDataManager sharedInstance] saveMainContext];
     }
     
-    if (completion != nil) {
+    if (completion) {
         completion(error);
     }
 }
@@ -59,7 +59,7 @@
             [[VOKCoreDataManager sharedInstance] saveMainContext];
         }
         
-        if (completion != nil) {
+        if (completion) {
             completion(error);
         }
     }];
