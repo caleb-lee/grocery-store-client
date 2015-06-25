@@ -28,7 +28,7 @@
 - (void)completionHelper:(NSDictionary *)userInfo error:(NSError *)error completion:(GRSNetworkNoResponseNetworkCompletionBlock)completion
 {
     if (userInfo) {
-        self.quantity = (NSNumber *)[userInfo objectForKey:self.name];
+        self.quantity = userInfo[self.name];
         [[VOKCoreDataManager sharedInstance] saveMainContext];
     }
     

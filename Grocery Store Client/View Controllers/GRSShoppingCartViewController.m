@@ -55,7 +55,7 @@ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSString *productName = [[GRSShoppingCart sharedInstance].productsInCart.allKeys objectAtIndex:indexPath.row];
+        NSString *productName = [GRSShoppingCart sharedInstance].productsInCart.allKeys[indexPath.row];;
         
         [[GRSShoppingCart sharedInstance] removeProductWithNameFromCart:productName];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -74,8 +74,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    NSString *productName = [[GRSShoppingCart sharedInstance].productsInCart.allKeys objectAtIndex:indexPath.row];
-    NSNumber *quantityToBuy = [[GRSShoppingCart sharedInstance].productsInCart objectForKey:productName];
+    NSString *productName = [GRSShoppingCart sharedInstance].productsInCart.allKeys[indexPath.row];
+    NSNumber *quantityToBuy = [GRSShoppingCart sharedInstance].productsInCart[productName];
     
     cell.textLabel.text = productName;
     cell.detailTextLabel.text = quantityToBuy.stringValue;

@@ -44,14 +44,14 @@
             // add and update products from the server
             for (NSString *productName in userInfo.allKeys) {
                 Product *product = [Product productWithNameOrNew:productName];
-                product.quantity = [userInfo objectForKey:productName];
+                product.quantity = userInfo[productName];
                 [products addObject:product];
             }
             
             // remove any products that no longer exist on the server
             NSArray *localProducts = [[VOKCoreDataManager sharedInstance] arrayForClass:[Product class]];
             for (Product *product in localProducts) {
-                NSNumber *quantity = [userInfo objectForKey:product.name];
+                NSNumber *quantity = userInfo[product.name];
                 
                 if (quantity == nil) {
                     [[VOKCoreDataManager sharedInstance] deleteObject:product];
@@ -72,7 +72,7 @@
     [[GRSNetworkAPIUtility sharedUtility] fetchProductWithName:name completion:^(NSDictionary *userInfo, NSError *error){
         if (![self handleError:error withCompletion:completion]) {
             Product *product = [Product productWithNameOrNew:name];
-            product.quantity = [userInfo objectForKey:name];
+            product.quantity = userInfo[product.name];
             
             [[VOKCoreDataManager sharedInstance] saveMainContext];
             
