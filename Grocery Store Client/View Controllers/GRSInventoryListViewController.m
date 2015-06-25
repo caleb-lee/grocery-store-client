@@ -16,7 +16,7 @@
 
 static NSString *const ListToDetailSegue = @"InventoryListToProductDetailSegue";
 
-@interface GRSInventoryListViewController ()
+@interface GRSInventoryListViewController () <VOKFetchedResultsDataSourceDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

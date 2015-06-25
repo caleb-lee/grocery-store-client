@@ -11,7 +11,7 @@
 #import "GRSShoppingCart.h"
 #import "UIAlertController+Convenience.h"
 
-@interface GRSShoppingCartViewController ()
+@interface GRSShoppingCartViewController () <UITableViewDataSource, UITableViewDelegate>
 
 - (IBAction)purchaseButtonAction:(id)sender;
 

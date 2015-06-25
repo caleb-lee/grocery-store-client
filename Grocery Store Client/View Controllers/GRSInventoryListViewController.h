@@ -10,6 +10,6 @@
 
 #import "GRSInventoryFetchedResultsDataSource.h"
 
-@interface GRSInventoryListViewController : UIViewController <VOKFetchedResultsDataSourceDelegate>
+@interface GRSInventoryListViewController : UIViewController
 
 @end
