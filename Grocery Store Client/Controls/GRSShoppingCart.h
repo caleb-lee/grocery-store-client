@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Product.h"
 
+/**
+ *  Completion block for when a purchase completes. products is nil if unsuccessful
+ *  and error is nil if successful
+ *
+ *  @param products the list of purchased products
+ *  @param error    the error if there were any issues
+ */
 typedef void(^GRSShoppingCartPurchaseCompletion)(NSArray *products, NSError *error);
 
 /**
