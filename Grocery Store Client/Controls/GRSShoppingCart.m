@@ -68,14 +68,15 @@
         }
         
         NSMutableArray *productsArray = [[NSMutableArray alloc] initWithCapacity:userInfo.count];
-        for (NSString *productName in userInfo) {
+        
+        [userInfo enumerateKeysAndObjectsUsingBlock:^(NSString *productName, NSNumber *quantity, BOOL *stop){
             Product *product = [Product productWithNameOrNew:productName];
             
-            product.quantity = [userInfo objectForKey:productName];
+            product.quantity = quantity;
             
             [productsArray addObject:product];
             [self.productsInCart removeObjectForKey:productName];
-        }
+        }];
         
         [[VOKCoreDataManager sharedInstance] saveMainContext];
         
