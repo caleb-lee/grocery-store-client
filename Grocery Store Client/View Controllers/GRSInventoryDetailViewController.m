@@ -105,7 +105,7 @@
 
 - (IBAction)removeAllStockAction:(id)sender
 {
-    __weak GRSInventoryDetailViewController *weakSelf = self;
+    GRSInventoryDetailViewController *__weak weakSelf = self;
     
     [self.selectedProduct setNoInventory:^(NSError *error){
         [weakSelf handleStockChange:error];
