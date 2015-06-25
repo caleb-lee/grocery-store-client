@@ -75,7 +75,7 @@
 - (IBAction)restockItemAction:(id)sender
 {
     if ([self.restockTextField.text isEqualToString:@""]) {
-        [self.selectedProduct purchase:^(NSError *error){
+        [self.selectedProduct incrementInventory:^(NSError *error){
             [self handleStockChange:error];
         }];
     } else {
