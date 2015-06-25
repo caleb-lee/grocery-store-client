@@ -31,17 +31,19 @@
 
 - (IBAction)purchaseButtonAction:(id)sender
 {
+    GRSShoppingCartViewController *__weak weakSelf = self;
+    
     [[GRSShoppingCart sharedInstance] purchaseProductsInCart:^(NSArray *products, NSError *error){
         if (error) {
             [UIAlertController presentAlertWithTitle:@"Error"
                                           andMessage:error.localizedDescription
-                                    inViewController:self];
+                                    inViewController:weakSelf];
         } else {
             [UIAlertController presentAlertWithTitle:@"Shopping Cart"
                                           andMessage:@"The items in this cart have been successfully purchased."
-                                    inViewController:self];
+                                    inViewController:weakSelf];
             
-            [self.tableView reloadData];
+            [weakSelf.tableView reloadData];
         }
     }];
 }
