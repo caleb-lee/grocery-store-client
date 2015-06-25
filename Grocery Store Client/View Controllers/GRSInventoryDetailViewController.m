@@ -50,6 +50,11 @@
     self.quantityLabel.text = [NSString stringWithFormat:@"Qty: %@", quantity];
 }
 
+- (BOOL)useSingleInventoryMethod:(UITextField *)textField
+{
+    return [textField.text isEqualToString:@""];
+}
+
 - (IBAction)buyItemAction:(id)sender
 {
     GRSInventoryDetailViewController *__weak weakSelf = self;
@@ -59,7 +64,7 @@
         weakSelf.buyTextField.text = @"";
     };
     
-    if ([self.buyTextField.text isEqualToString:@""]) {
+    if ([self useSingleInventoryMethod:self.buyTextField]) {
         [self.selectedProduct purchase:buyItemCompletion];
     } else {
         NSInteger quantity = self.buyTextField.text.integerValue;
@@ -77,7 +82,7 @@
         weakSelf.restockTextField.text = @"";
     };
     
-    if ([self.restockTextField.text isEqualToString:@""]) {
+    if ([self useSingleInventoryMethod:self.restockTextField]) {
         [self.selectedProduct incrementInventory:restockItemCompletion];
     } else {
         NSInteger quantity = self.restockTextField.text.integerValue;
@@ -90,7 +95,7 @@
 {
     NSInteger quantity;
     
-    if ([self.addToCartTextField.text isEqualToString:@""]) {
+    if ([self useSingleInventoryMethod:self.addToCartTextField]) {
         quantity = 1;
     } else {
         quantity = self.addToCartTextField.text.integerValue;
