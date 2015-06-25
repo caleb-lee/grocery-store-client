@@ -29,7 +29,7 @@
 - (void)downSync:(GRSSyncUtilityCompletionNoProducts)completion
 {
     [self fetchProductInventory:^(NSArray *products, NSError *error) {
-        if (completion != nil) {
+        if (completion) {
             completion(error);
         }
     }];
@@ -60,7 +60,7 @@
             
             [[VOKCoreDataManager sharedInstance] saveMainContext];
             
-            if (completion != nil) {
+            if (completion) {
                 completion(products, error);
             }
         }
@@ -76,7 +76,7 @@
             
             [[VOKCoreDataManager sharedInstance] saveMainContext];
             
-            if (completion != nil) {
+            if (completion) {
                 completion(product, error);
             }
         }
@@ -85,8 +85,8 @@
 
 - (BOOL)handleError:(NSError *)error withCompletion:(void (^)(id returnedObject, NSError *error))completion
 {
-    if (error != nil) {
-        if (completion != nil) {
+    if (error) {
+        if (completion) {
             completion(nil, error);
         }
     }

@@ -38,7 +38,7 @@
 - (IBAction)purchaseButtonAction:(id)sender
 {
     [[GRSShoppingCart sharedInstance] purchaseProductsInCart:^(NSArray *products, NSError *error){
-        if (error != nil) {
+        if (error) {
             [UIAlertController presentAlertWithTitle:@"Error"
                                           andMessage:error.localizedDescription
                                     inViewController:self];

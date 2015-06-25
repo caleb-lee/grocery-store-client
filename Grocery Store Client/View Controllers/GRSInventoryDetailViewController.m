@@ -118,7 +118,7 @@
 // returns YES if the error is fatal
 - (void)handleStockChange:(NSError *)error
 {
-    if (error != nil) {
+    if (error) {
         [UIAlertController presentAlertWithTitle:@"Error"
                                       andMessage:error.localizedDescription
                                 inViewController:self];

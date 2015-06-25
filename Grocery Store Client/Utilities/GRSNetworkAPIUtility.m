@@ -80,11 +80,11 @@ static NSString *const QuantityKey = @"quantity";
     NSString *path = [self buildInventoryPathStringForItemNamed:name];
     
     [self.manager DELETE:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        if (completion != nil) {
+        if (completion) {
             completion(nil);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (completion != nil) {
+        if (completion) {
             completion(error);
         }
     }];
@@ -116,11 +116,11 @@ static NSString *const QuantityKey = @"quantity";
     [self.manager GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *userInfo = (NSDictionary *)responseObject;
         
-        if (completion != nil) {
+        if (completion) {
             completion(userInfo, nil);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (completion != nil) {
+        if (completion) {
             completion(nil, error);
         }
     }];
@@ -131,11 +131,11 @@ static NSString *const QuantityKey = @"quantity";
     [self.manager POST:path parameters:paramsOrNil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *userInfo = (NSDictionary *)responseObject;
         
-        if (completion != nil) {
+        if (completion) {
             completion(userInfo, nil);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (completion != nil) {
+        if (completion) {
             completion(nil, error);
         }
     }];

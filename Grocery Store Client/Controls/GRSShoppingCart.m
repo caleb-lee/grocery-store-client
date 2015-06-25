@@ -59,8 +59,8 @@
 - (void)purchaseProductsInCart:(GRSShoppingCartPurchaseCompletion)completion
 {
     [[GRSNetworkAPIUtility sharedUtility] purchaseProducts:self.productsInCart completion:^(NSDictionary *userInfo, NSError *error){
-        if (error != nil) {
-            if (completion != nil) {
+        if (error) {
+            if (completion) {
                 completion(nil, error);
             }
             
@@ -79,7 +79,7 @@
         
         [[VOKCoreDataManager sharedInstance] saveMainContext];
         
-        if (completion != nil) {
+        if (completion) {
             completion(productsArray, nil);
         }
     }];
