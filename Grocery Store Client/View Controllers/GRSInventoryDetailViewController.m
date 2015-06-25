@@ -58,34 +58,37 @@
 
 - (IBAction)buyItemAction:(id)sender
 {
+    GRSInventoryDetailViewController *__weak weakSelf = self;
+    
+    void (^buyItemCompletion)(NSError *error) = ^void(NSError *error) {
+        [weakSelf handleStockChange:error];
+        weakSelf.buyTextField.text = @"";
+    };
+    
     if ([self.buyTextField.text isEqualToString:@""]) {
-        [self.selectedProduct purchase:^(NSError *error){
-            [self handleStockChange:error];
-        }];
+        [self.selectedProduct purchase:buyItemCompletion];
     } else {
         NSInteger quantity = self.buyTextField.text.integerValue;
         
-        [self.selectedProduct purchaseQuantitiy:quantity completion:^(NSError *error){
-            [self handleStockChange:error];
-            self.buyTextField.text = @"";
-        }];
+        [self.selectedProduct purchaseQuantitiy:quantity completion:buyItemCompletion];
     }
 }
 
 - (IBAction)restockItemAction:(id)sender
 {
+    GRSInventoryDetailViewController *__weak weakSelf = self;
+    
+    void (^restockItemCompletion)(NSError *error) = ^void(NSError *error) {
+        [weakSelf handleStockChange:error];
+        weakSelf.restockTextField.text = @"";
+    };
+    
     if ([self.restockTextField.text isEqualToString:@""]) {
-        [self.selectedProduct incrementInventory:^(NSError *error){
-            [self handleStockChange:error];
-        }];
+        [self.selectedProduct incrementInventory:restockItemCompletion];
     } else {
         NSInteger quantity = self.restockTextField.text.integerValue;
-        __weak GRSInventoryDetailViewController *weakSelf = self;
         
-        [self.selectedProduct setInventoryQuantity:quantity completion:^(NSError *error){
-            [weakSelf handleStockChange:error];
-            weakSelf.restockTextField.text = @"";
-        }];
+        [self.selectedProduct setInventoryQuantity:quantity completion:restockItemCompletion];
     }
 }
 
